@@ -1,0 +1,8 @@
+.test {
+	font-size: var(--btn-size);
+	line-height: 45px;
+
+	@media (--small) {
+		font-size: 10px;
+	}
+}

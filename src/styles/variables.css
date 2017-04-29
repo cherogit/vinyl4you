@@ -1,0 +1,16 @@
+:root {
+	--text-size: 20px;
+	--subtitle-size: 50px;
+	--btn-size: 15px;
+	--font-color: #272727;
+	--BellGothic-Bold: 'BellGothic-Bold', 'Arial', 'Helvetica', sans-serif;
+	--BellGothic-Regular: 'BellGothic-Regular', 'Arial', 'Helvetica', sans-serif;
+	--BellGothicBlack-Regular: 'BellGothicBlack-Regular', 'Arial', 'Helvetica', sans-serif;
+	--BellGothicStd-Black: 'BellGothicStd-Black', 'Arial', 'Helvetica', sans-serif;
+	--BellGothicStd-Bold: 'BellGothicStd-Bold', 'Arial', 'Helvetica', sans-serif;
+	--red: #ed2c2b;
+	--blue: #025498;
+	--grey: #c0c0c0;
+}
+
+@custom-media --small screen and (width <= 767px);
