@@ -10,7 +10,7 @@
     "cssnano": "^3.10.0",
     "cssnext": "^1.8.4",
     "del": "^2.2.2",
-    "gulp": "^3.9.1",
+    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-concat": "^2.6.1",
     "gulp-debug": "^3.1.0",
     "gulp-imagemin": "^3.2.0",
@@ -33,5 +33,6 @@
     "url": "git+https://github.com/cherogit/vinyl4you.git"
   },
   "author": "Cherogit",
-  "license": "ISC"
+  "license": "ISC",
+  "optionalDependencies": {}
 }
