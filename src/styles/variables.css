@@ -11,6 +11,7 @@
 	--red: #ed2c2b;
 	--blue: #025498;
 	--grey: #c0c0c0;
+	--test: #c1c1c1;
 }
 
 @custom-media --small screen and (width <= 767px);
