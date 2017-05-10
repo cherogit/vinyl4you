@@ -19,3 +19,8 @@ input, button {
 	margin: 0 auto;
 	/*border: 1px solid orange;*/
 }
+
+.bx-wrapper {
+	box-shadow: none;
+	border: none;
+}

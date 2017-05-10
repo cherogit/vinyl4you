@@ -32,6 +32,12 @@ gulp.task('pug', function() {
 });
 
 // Css =====================================
+
+gulp.task('styles:vendor', function() {
+    return gulp.src('./src/styles/vendorCss/*.css')
+        .pipe(gulp.dest('./build/css/vendorCSS/'))
+});
+
 gulp.task('styles', function () {
     var processors = [
     	Import,
@@ -52,7 +58,7 @@ gulp.task('styles', function () {
     return gulp.src('./src/styles/style.css')
         .pipe(postcss(processors))
         .pipe(rename('styles.css')) // как называется новый файл
-        .pipe(gulp.dest('build/css/')) // куда его положить
+        .pipe(gulp.dest('./build/css/')) // куда его положить
 });
 
 // Scripts =================================
@@ -78,7 +84,8 @@ gulp.task('img', function() {
 // Watch =================================
 gulp.task('watch', function() {
 	gulp.watch('src/pug/**/*.pug', gulp.series('pug'));
-	gulp.watch('src/styles/**/*.css', gulp.series('styles'));
+    gulp.watch('src/styles/**/*.css', gulp.series('styles'));
+	gulp.watch('src/styles/vendorCss/*.css', gulp.series('styles:vendor'));
 	gulp.watch('src/scripts/**/*.js', gulp.series('js'));
 	gulp.watch('src/assets/fonts/**/*', gulp.series('fonts'));
 	gulp.watch('src/assets/images/**/*', gulp.series('img'));
@@ -87,7 +94,7 @@ gulp.task('watch', function() {
 // Build =================================
 gulp.task('build', gulp.series(
     'clean', 
-    gulp.parallel('pug', 'styles', 'js', 'fonts', 'img'))
+    gulp.parallel('pug', 'styles', 'styles:vendor', 'js', 'fonts', 'img'))
 );
 
 // Server =================================
