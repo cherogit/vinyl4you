@@ -1,8 +1,21 @@
-.test {
-	font-size: 72px;
-	line-height: 45px;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
-	@media (--small) {
-		font-size: 10px;
-	}
+input, button {
+	border: none;
+	outline: none;
+}
+
+.container-fluid {
+
+}
+
+.container {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	/*border: 1px solid orange;*/
 }

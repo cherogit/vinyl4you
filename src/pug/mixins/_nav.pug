@@ -1,0 +1,4 @@
+mixin nav(list, active)
+	nav.main-nav
+		each item, ndx in list
+			a(href="#")(class='main-nav__link' + ( (ndx === active) ? ' _active' : ''))=item

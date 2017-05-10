@@ -1,0 +1,38 @@
+.main-nav {
+	display: inline-block;
+	margin: 0 70px 0 auto;
+
+	&__link {
+		position: relative;
+		display: inline-block;
+		margin: 0 35px 0 0;
+		text-decoration: none;
+		text-transform: uppercase;
+		font: 14px/16px var(--Lato-Regular);
+		color: #fff;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 125%;
+			left: 0;
+			display: block;
+			width: 25px;
+			height: 2px;
+			background: var(--red);
+			opacity: 0;
+			transition: 400ms;
+		}
+
+		&:hover, &._active {
+			&:before {
+				opacity: 1;
+			}
+		}
+	}
+
+}

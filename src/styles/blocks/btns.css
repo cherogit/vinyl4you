@@ -1,0 +1,37 @@
+.btn {
+	text-decoration: none;
+	
+	&__callback {
+		position: relative;
+		display: inline-block;
+		width: 210px;
+		padding: 0 20px 0 55px;
+		font: 18px/40px var(--Lato-Regular);
+		color: #fff;
+		background: var(--red);
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 10px;
+			transform: translate(0, -50%);
+			display: block;
+			width: 25px;
+			height: 25px;
+			background: resolve('callback-icon.svg') center/cover no-repeat;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 45px;
+			transform: translate(0, -50%);
+			display: block;
+			height: 26px;
+			width: 2px;
+			background: #fff;
+		}
+	}
+}
