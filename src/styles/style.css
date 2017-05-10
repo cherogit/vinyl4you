@@ -1,4 +1,9 @@
 @import "variables";
+@import "global/typography";
 @import "global/global";
 
-@import "blocks/test";
+@import "blocks/header";
+@import "blocks/main-nav";
+@import "blocks/catalog-menu";
+@import "blocks/search";
+@import "blocks/btns";

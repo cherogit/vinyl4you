@@ -1,0 +1,26 @@
+.search {
+	position: relative;
+	display: inline-block;
+	width: 300px;
+	margin: 0 45px 0 0;
+
+	input {
+		display: inline-block;
+		max-width: 100%;
+		width: 100%;
+		padding: 0 45px 0 15px;
+		font: 14px/30px var(--Lato-Light);
+		color: #646464;
+	}
+
+	button {
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: block;
+		width: 30px;
+		height: 30px;
+		background: #fff resolve('search-icon.png') center left no-repeat;
+		cursor: pointer;
+	}
+}

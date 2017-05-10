@@ -1,0 +1,49 @@
+.header
+	.header__top.container_fluid
+		.header__top-wrap.container
+			a.main-logo(href='/')
+				img(src="./assets/images/img/main-logo.png", alt="Логотип")
+			+nav(['О компании', 'Доставка и оплата', 'Отзывы', 'Оптовые закупки', 'Контакты'], 1)
+			a.header__busket(href='#')
+				.header__busket-count 
+					span 10 
+					| товаров7
+				.header__busket-price на сумму 
+					span 1200 руб.
+					| 7
+	
+	.header__bottom.container_fluid
+		.header__bottom-wrap.container
+			.catalog-menu
+				a.catalog-menu__btn(href="#") Каталог товаров
+					.catalog-menu__burger
+						span
+						span
+						span
+			form.search
+				input(type="text" placeholder="Поиск товаров")
+				button(type="submit")
+			.header__contacts
+				.header__contacts-reg
+					a.header__contacts-phone(href="tel:84951502262")
+						span 8 (495) 
+						| 150-22-62
+					.header__contacts-info Звонки по Москве
+				.header__contacts-reg
+					a.header__contacts-phone(href="tel:88005502262")
+						span 8 (800) 
+						| 550-22-62
+					.header__contacts-info Звонки по всей России
+
+
+			a.btn.btn__callback(href='#') Заказать звонок
+
+
+
+
+
+
+
+
+
+

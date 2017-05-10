@@ -1,0 +1,147 @@
+.header {
+	&__top {
+		background: rgba(0, 0, 0, .74);
+
+		&-wrap {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 100px;
+		}
+
+		.main-logo {
+			display: inline-block;
+			width: 100px;
+			height: 65px;
+			text-decoration: none;
+
+			img {
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+	}
+
+	&__busket {
+		float: right;
+		position: relative;
+		display: inline-block;
+		padding: 0 0 0 50px;
+		text-decoration: none;
+		color: #fff;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(0, -50%);
+			display: block;
+			width: 24px;
+			height: 24px;
+			background: resolve('busket-icon.svg') center/cover no-repeat;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 35px;
+			transform: translate(0, -50%);
+			display: block;
+			width: 2px;
+			height: 26px;
+			background: var(--red);
+		}
+
+		&-count {
+			font: 16px/20px var(--Lato-Medium);
+		}
+
+		&-price {
+			font: 16px/20px var(--Lato-Light);
+
+			span {
+				font-family: var(--Lato-Medium);
+			}
+		}
+	}
+
+	&__bottom {
+		background: #282828;
+		color: white;
+		box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+
+		&-wrap {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 60px;
+		}
+	}
+	
+	&__contacts {
+		display: inline-block;
+		margin: 0 45px 0 0;
+
+		&-reg {
+			display: inline-block;
+
+			&:last-child {
+				.header__contacts-phone {
+					margin: 0;
+					padding: 0;
+
+					&:after {
+						display: none;
+					}
+				}
+			}
+		}
+
+		&-phone {
+			position: relative;
+			display: inline-block;
+			margin: 0 20px 0 0;
+			padding: 0 20px 0 0;
+			text-decoration: none;
+			font: 18px/22px var(--Lato-Medium);
+			color: #fff;
+
+			span {
+				color: #c8c8c8;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translate(0, -50%);
+				display: block;
+				width: 2px;
+				height: 18px;
+				background: #fff;
+			}
+		}
+
+		&-info {
+			font: 14px/16px var(--Lato-Light);
+			color: #a7a7a7;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
