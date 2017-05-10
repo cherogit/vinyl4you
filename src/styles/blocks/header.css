@@ -1,4 +1,6 @@
 .header {
+	position: relative;
+	z-index: 999;
 	&__top {
 		background: rgba(0, 0, 0, .74);
 
