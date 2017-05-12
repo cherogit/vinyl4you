@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	
-	$('.promo-block._slider').bxSlider({
+	$('.promo-block__slider._slider').bxSlider({
 		mode: 'horizontal',
 		slideMargin: 0,
 		touchEnabled: false,

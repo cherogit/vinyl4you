@@ -1,8 +1,14 @@
 .promo-block {
+	margin: -160px 0 0 0;
+
+	&__wrapper {
+
+	}
+
 	&__slide {
 		width: 100%;
-		height: 530px;
-		padding: 60px 0;
+		height: 690px;
+		padding: 220px 0;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;

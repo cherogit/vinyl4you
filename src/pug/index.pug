@@ -6,22 +6,23 @@ html(lang="ru")
 	body
 		include includes/header.pug
 
-		.promo-block._slider.bxslider
-			.promo-block__slide(style='background-image: url("../assets/images/pict/slide-1.jpg")')
-				.container
-					.promo-block__title MERCEDES E-COUPE
-					.promo-block__desc Полная оклейка кузова плёнкой Hexis - Red Chrome.
-					a.promo-block__more(href='#') Подробнее
-			.promo-block__slide(style='background-image: url("http://lvtuning.ru/template/images/slide_img2amg.jpg")')
-				.container
-					.promo-block__title ANOTHER MERCEDES
-					.promo-block__desc Полная оклейка кузова плёнкой Hexis - Blue Chrome.
-					a.promo-block__more(href='#') Подробнее
-			.promo-block__slide(style='background-image: url("http://www.bestsiling.ru/images/gory/13.jpg")')
-				.container
-					.promo-block__title Горы
-					.promo-block__desc Красивые горы
-					a.promo-block__more(href='#') Подробнее
+		.promo-block
+			.promo-block__slider._slider.bxslider
+				.promo-block__slide(style='background-image: url("../assets/images/pict/slide-1.jpg")')
+					.container
+						.promo-block__title MERCEDES E-COUPE
+						.promo-block__desc Полная оклейка кузова плёнкой Hexis - Red Chrome.
+						a.promo-block__more(href='#') Подробнее
+				.promo-block__slide(style='background-image: url("http://lvtuning.ru/template/images/slide_img2amg.jpg")')
+					.container
+						.promo-block__title ANOTHER MERCEDES
+						.promo-block__desc Полная оклейка кузова плёнкой Hexis - Blue Chrome.
+						a.promo-block__more(href='#') Подробнее
+				.promo-block__slide(style='background-image: url("http://www.bestsiling.ru/images/gory/13.jpg")')
+					.container
+						.promo-block__title Горы
+						.promo-block__desc Красивые горы
+						a.promo-block__more(href='#') Подробнее
 
 
 		script(src='js/vendor/jquery-3.1.0.min.js')
