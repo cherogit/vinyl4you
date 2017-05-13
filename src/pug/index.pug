@@ -1,4 +1,6 @@
 include mixins/_nav.pug
+include mixins/_categories.pug
+include mixins/_product-slider.pug
 
 doctype html
 html(lang="ru")
@@ -13,16 +15,122 @@ html(lang="ru")
 						.promo-block__title MERCEDES E-COUPE
 						.promo-block__desc Полная оклейка кузова плёнкой Hexis - Red Chrome.
 						a.promo-block__more(href='#') Подробнее
-				.promo-block__slide(style='background-image: url("http://lvtuning.ru/template/images/slide_img2amg.jpg")')
+				.promo-block__slide(style='background-image: url("../assets/images/pict/slide-2.jpg")')
 					.container
-						.promo-block__title ANOTHER MERCEDES
+						.promo-block__title ANOTHER CAR
 						.promo-block__desc Полная оклейка кузова плёнкой Hexis - Blue Chrome.
 						a.promo-block__more(href='#') Подробнее
-				.promo-block__slide(style='background-image: url("http://www.bestsiling.ru/images/gory/13.jpg")')
+				.promo-block__slide(style='background-image: url("../assets/images/pict/slide-3.jpg")')
 					.container
-						.promo-block__title Горы
-						.promo-block__desc Красивые горы
+						.promo-block__title ANOTHER CAR
+						.promo-block__desc Another description
 						a.promo-block__more(href='#') Подробнее
+				.promo-block__slide(style='background-image: url("../assets/images/pict/slide-4.jpg")')
+					.container
+						.promo-block__title ANOTHER CAR
+						.promo-block__desc Another description
+						a.promo-block__more(href='#') Подробнее
+		.advantages.container
+			.advantages__wrapper
+				.advantages__item
+					.advantages__img
+						img(src="../assets/images/img/advantages__img-1.svg", alt="")
+					.advantages__desc Выгодная 
+						br
+						span бонусная 
+						| программа
+				.advantages__item
+					.advantages__img
+						img(src="../assets/images/img/advantages__img-2.svg", alt="")
+					.advantages__desc Широкий 
+						br 
+						span ассортимент
+				.advantages__item
+					.advantages__img
+						img(src="../assets/images/img/advantages__img-3.svg", alt="")
+					.advantages__desc Нашли товар дешевле?  
+						br
+						span Cнизим цену!
+				.advantages__item
+					.advantages__img
+						img(src="../assets/images/img/advantages__img-4.svg", alt="")
+					.advantages__desc Эксклюзивный  
+						br
+						span дистрибьютор
+				.advantages__item
+					.advantages__img
+						img(src="../assets/images/img/advantages__img-5.svg", alt="")
+					.advantages__desc Доставки  
+						br
+						span по всей России
+		.categories
+			.categories__wrapper.container
+				h2.h2._white
+					span Категории 
+					| товаров
+				.categories__inner
+					+categories([
+						{
+							url: '../assets/images/img/categories__img-1.png',
+							caption: 'Инструменты'
+						},
+						{
+							url: '../assets/images/img/categories__img-2.png',
+							caption: 'Тонировка'
+						},
+						{
+							url: '../assets/images/img/categories__img-3.png',
+							caption: 'Алькантара'
+						},
+						{
+							url: '../assets/images/img/categories__img-4.png',
+							caption: 'Жидкая резина'
+						},
+						{
+							url: '../assets/images/img/categories__img-5.png',
+							caption: 'Автосвет'
+						}
+					])
+		.bestsellers
+			.bestsellers__wrapper.container
+				h2.h2
+					span Хиты 
+					| продаж
+				.product-slider
+					.bx-slider
+						+product-slider([
+							{
+								img: 'test.png',
+								caption: '-17%  Осталось 2 дня',
+								desc: 'Алькантара Корея Decoin',
+								price: '549 руб.',
+								sale: 'Акция',
+							},
+							{
+								img: 'test.png',
+								caption: '-17%  Осталось 2 дня',
+								desc: 'Алькантара Корея Decoin',
+								price: '549 руб.',
+								sale: 'Акция',
+							},
+							{
+								img: 'test.png',
+								caption: '-17%  Осталось 2 дня',
+								desc: 'Алькантара Корея Decoin',
+								price: '549 руб.',
+								sale: 'Акция',
+								hit: 'Хит'
+							},
+							{
+								img: 'test.png',
+								desc: 'Алькантара Корея Decoin',
+								price: '549 руб.',
+								hit: 'Хит'
+							}
+						])
+
+
+			
 
 
 		script(src='js/vendor/jquery-3.1.0.min.js')

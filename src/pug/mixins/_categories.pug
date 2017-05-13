@@ -1,0 +1,7 @@
+mixin categories(list)
+	each item in list
+		a.categories__item(href="")
+			figure
+				.categories__img
+					img(src= item.url, alt="")
+				figcaption.categories__caption= item.caption
