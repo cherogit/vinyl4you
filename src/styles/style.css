@@ -8,3 +8,7 @@
 @import "blocks/search";
 @import "blocks/btns";
 @import "blocks/promo-block";
+@import "blocks/advantages";
+@import "blocks/categories";
+@import "blocks/bestsellers";
+@import "blocks/product-slider";

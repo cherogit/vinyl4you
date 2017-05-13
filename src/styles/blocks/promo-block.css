@@ -1,8 +1,12 @@
 .promo-block {
 	margin: -160px 0 0 0;
 
-	&__wrapper {
+	.bx-wrapper {
+		margin: 0 0 60px 0;
+	}
 
+	&__slider {
+		
 	}
 
 	&__slide {
