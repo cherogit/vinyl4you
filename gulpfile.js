@@ -35,7 +35,7 @@ gulp.task('pug', function() {
 
 gulp.task('styles:vendor', function() {
     return gulp.src('./src/styles/vendorCss/*.css')
-        .pipe(gulp.dest('./build/css/vendorCSS/'))
+        .pipe(gulp.dest('./build/css/vendorCss/'))
 });
 
 gulp.task('styles', function () {
