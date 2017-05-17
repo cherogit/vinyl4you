@@ -40,6 +40,13 @@
 		display: inline-block;
 		padding: 0 43px 0 0;
 
+		&:hover {
+			&:after {
+				content: '';
+				background: #282828;
+			}
+		}
+
 		span {
 			display: inline-block;
 			height: 38px;
@@ -47,6 +54,20 @@
 			font: 18px/38px var(--Lato-Regular);
 			color: #fff;
 			background: var(--red);
+		}
+
+		&:before {
+			content: ' ';
+		    position: absolute;
+		    top: 50%;
+		    right: 0;
+		    display: none;
+		    width: 15px;
+		    height: 15px;
+		    border-top: 4px solid black;
+		    border-right: 4px solid black;
+		    transform: rotate(45deg) translate(0, -50%);
+		    z-index: 2;
 		}
 
 		&:after {
@@ -57,15 +78,9 @@
 			display: block;
 			width: 40px;
 			height: 38px;
-			background: #fff resolve('btn-more__arrow_white.svg') center/50% no-repeat;
-		}
-
-		&._gray {
-
-			&:after {
-				content: '';
-				background: #282828 resolve('btn-more__arrow_black.svg') center/50% no-repeat;
-			}
+			background: #fff;
+			transition: 400ms;
+			z-index: 1;
 		}
 	}
 }
