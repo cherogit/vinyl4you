@@ -31,28 +31,6 @@
 		font: 18px/22px var(--Lato-Regular);
 		color: #fff;
 	}
-
-	&__more {
-		position: relative;
-		display: inline-block;
-		text-decoration: none;
-		padding: 0 25px 0 25px;
-		height: 38px;
-		font: 18px/38px var(--Lato-Regular);
-		color: #fff;
-		background: var(--red);
-
-		&:after {
-			content: '';
-			position: absolute;
-			top: 0;
-			right: -43px;
-			display: block;
-			width: 40px;
-			height: 38px;
-			background: #fff resolve('btn-more__arrow.svg') center/50% no-repeat;
-		}
-	}
 }
 
 .bx-wrapper .bx-pager {

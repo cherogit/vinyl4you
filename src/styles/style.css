@@ -12,3 +12,6 @@
 @import "blocks/categories";
 @import "blocks/bestsellers";
 @import "blocks/product-slider";
+@import "blocks/recently-viewed";
+@import "blocks/content";
+@import "blocks/sidebar";

@@ -1,6 +1,129 @@
 .bestsellers {
 
 	&__wrapper {
+		padding: 0 20px;
+	}
 
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		position: relative;
+		width: 560px;
+		height: 260px;
+		margin: 0 0 70px 0;
+		padding: 25px 30px;
+		padding-right: 110px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: left center;
+
+		&._sidebar {
+			width: 100%;
+			padding: 30px;
+			padding-left: 45px;
+
+			.bestsellers__item-title {
+				font-size: 24px;
+				line-height: 28px;
+			}
+
+			.bestsellers__item-desc {
+				margin: 0 0 10px 0;
+				font-size: 16px;
+				line-height: 20px;
+			}
+
+			.bestsellers__item-sale {
+				margin: 0 0 15px 0;
+				color: #fff;
+			}
+
+			.bestsellers__item-more {
+				bottom: 30px;
+				left: 45px;
+			}
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 45px;
+			left: -15px;
+			display: block;
+			width: 40px;
+			height: 3px;
+			background: var(--red);
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 10px;
+			display: block;
+			width: 100px;
+			height: 100%;
+			background: resolve('bestsellers__item-after.png') center/cover no-repeat;
+		}
+
+		&-carbon {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			display: block;
+			background: resolve('carbon-texture.png');
+		}
+
+		&-title {
+			position: relative;
+			margin: 0 0 10px 0;
+			text-transform: uppercase;
+			font: 36px/40px var(--Lato-Regular);
+			color: #fff;
+			z-index: 2;
+		}
+
+		&-desc {
+			position: relative;
+			margin: 0 0 30px 0;
+			font: 18px/22px var(--Lato-Regular);
+			color: #fff;
+			z-index: 2;
+
+			&._uppercase {
+				text-transform: uppercase;
+			}
+		}
+
+		&-sale {
+			position: relative;
+			text-transform: uppercase;
+			font: 30px/30px var(--Lato-Bold);
+			color: var(--red);
+			z-index: 2;
+
+			span {
+				position: relative;
+				display: inline-block;
+				margin: 0 0 0 15px;
+				padding: 0 15px 0 10px;
+				font: 18px/30px var(--Lato-Bold);
+				color: #18191d;
+				background: #fff;
+			}
+		}
+
+		&-more {
+			position: absolute;
+			bottom: 25px;
+			left: 30px;
+			z-index: 2;
+		}
 	}
 }

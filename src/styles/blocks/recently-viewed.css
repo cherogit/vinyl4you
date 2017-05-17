@@ -1,0 +1,7 @@
+.recently-viewed {
+	background: #efeded;
+
+	&__wrapper {
+		padding: 55px 20px 65px 20px;
+	}
+}

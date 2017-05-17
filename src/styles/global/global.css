@@ -18,17 +18,24 @@ input, button {
 	width: 100%;
 	margin: 0 auto;
 	/*border: 1px solid orange;*/
+
+	&._info {
+		display: flex;
+		justify-content: space-between;
+		padding: 80px 0 15px 20px;
+	}
 }
 
 .bx-wrapper {
 	margin: 0 auto;
 	box-shadow: none;
 	border: none;
+	background: transparent;
 }
 
 .h2 {
 	position: relative;
-	margin: 0 0 35px 0;
+	margin: 0 0 40px 0;
 	font: 32px/34px var(--Lato-Regular);
 	color: #000000;
 

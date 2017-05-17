@@ -14,22 +14,26 @@ html(lang="ru")
 					.container
 						.promo-block__title MERCEDES E-COUPE
 						.promo-block__desc Полная оклейка кузова плёнкой Hexis - Red Chrome.
-						a.promo-block__more(href='#') Подробнее
+						a.btn.btn__more(href='#') 
+							span Подробнее
 				.promo-block__slide(style='background-image: url("../assets/images/pict/slide-2.jpg")')
 					.container
 						.promo-block__title ANOTHER CAR
 						.promo-block__desc Полная оклейка кузова плёнкой Hexis - Blue Chrome.
-						a.promo-block__more(href='#') Подробнее
+						a.btn.btn__more(href='#') 
+							span Подробнее
 				.promo-block__slide(style='background-image: url("../assets/images/pict/slide-3.jpg")')
 					.container
 						.promo-block__title ANOTHER CAR
 						.promo-block__desc Another description
-						a.promo-block__more(href='#') Подробнее
+						a.btn.btn__more(href='#') 
+							span Подробнее
 				.promo-block__slide(style='background-image: url("../assets/images/pict/slide-4.jpg")')
 					.container
 						.promo-block__title ANOTHER CAR
 						.promo-block__desc Another description
-						a.promo-block__more(href='#') Подробнее
+						a.btn.btn__more(href='#') 
+							span Подробнее
 		.advantages.container
 			.advantages__wrapper
 				.advantages__item
@@ -100,34 +104,168 @@ html(lang="ru")
 					.bx-slider
 						+product-slider([
 							{
-								img: 'test.png',
-								caption: '-17%  Осталось 2 дня',
+								img: '../assets/images/img/product-slide__img-1.png',
+								caption: '<span>-17%</span> Осталось 2 дня',
 								desc: 'Алькантара Корея Decoin',
 								price: '549 руб.',
 								sale: 'Акция',
 							},
 							{
-								img: 'test.png',
-								caption: '-17%  Осталось 2 дня',
-								desc: 'Алькантара Корея Decoin',
+								img: '../assets/images/img/product-slide__img-2.png',
+								caption: '<span>-17%</span> Осталось 2 дня',
+								desc: 'Диодные лампы в головной свет',
 								price: '549 руб.',
 								sale: 'Акция',
 							},
 							{
-								img: 'test.png',
-								caption: '-17%  Осталось 2 дня',
-								desc: 'Алькантара Корея Decoin',
+								img: '../assets/images/img/product-slide__img-3.png',
+								caption: '<span>-17%</span> Осталось 2 дня',
+								desc: 'Ракель магнит + замша 3м.',
 								price: '549 руб.',
 								sale: 'Акция',
 								hit: 'Хит'
 							},
 							{
-								img: 'test.png',
+								img: '../assets/images/img/product-slide__img-1.png',
 								desc: 'Алькантара Корея Decoin',
 								price: '549 руб.',
 								hit: 'Хит'
+							},
+							{
+								img: '../assets/images/img/product-slide__img-1.png',
+								desc: 'Алькантара Корея Decoin',
+								price: '549 руб.'
 							}
 						])
+				.bestsellers__inner
+					.bestsellers__item(style='background-image: url("../assets/images/img/bestsellers__img-1.jpg")')
+						.bestsellers__item-carbon
+						.bestsellers__item-title MERCEDES E-COUPE
+						.bestsellers__item-desc Полная оклейка кузова плёнкой Hexis - Red Chrome. 
+						a.btn.btn__more._gray.bestsellers__item-more(href="#")
+							span Подробнее
+					.bestsellers__item(style='background-image: url("../assets/images/img/bestsellers__img-2.jpg")')
+						.bestsellers__item-title Жидкая резина
+						.bestsellers__item-desc._uppercase Розово-красный 450ML
+						.bestsellers__item-sale 549 руб.
+							span -20%
+						a.btn.btn__more.bestsellers__item-more(href="#")
+							span Подробнее
+		.recently-viewed
+			.recently-viewed__wrapper.container
+				h2.h2
+					span Недавно 
+					| смотрели
+				.product-slider._m0
+					.bx-slider
+						+product-slider([
+							{
+								img: '../assets/images/img/product-slide__img-1.png',
+								desc: 'Алькантара Корея Decoin',
+								price: '549 руб.'
+							},
+							{
+								img: '../assets/images/img/product-slide__img-2.png',
+								desc: 'Диодные лампы в головной свет',
+								price: '549 руб.',
+								hit: 'Хит'
+							},
+							{
+								img: '../assets/images/img/product-slide__img-3.png',
+								desc: 'Ракель магнит + замша 3м.',
+								price: '389 руб.'
+							},
+							{
+								img: '../assets/images/img/product-slide__img-1.png',
+								desc: 'Алькантара Корея Decoin',
+								price: '549 руб.'
+							},
+							{
+								img: '../assets/images/img/product-slide__img-1.png',
+								desc: 'Алькантара Корея Decoin',
+								price: '549 руб.'
+							}
+						])
+		.container._info
+			.content
+				.content__inner
+					h2.h2
+						span Пленки 
+						| для авто
+					p
+						| В интернет-магазине «Vinyl4you» представлен большой выбор автопленок, которые можно купить по выгодным ценам в Москве. На Ваш выбор разнообразные виниловые, тонировочные пленки, тонировка для фар, а также материалы для отделки салона машины и создания в автомобиле шумоизоляции. Мы работаем с оптовыми и розничными покупателями.
+					.categories._content
+						.categories__inner
+							+categories([
+								{
+									url: '../assets/images/img/categories__img-2.png',
+									caption: 'Тонировка',
+									borderItem: ' '
+								},
+								{
+									url: '../assets/images/img/categories__img-6.png',
+									caption: 'Автовинил',
+									borderItem: ' '
+								},
+								{
+									url: '../assets/images/img/categories__img-5.png',
+									caption: 'Автосвет',
+									borderItem: ' '
+								}
+							])
+
+					h2.h2
+						span Автовинил 
+						| – отличное решение для любого
+
+					p
+						| Виниловая самоклеющаяся пленка – один из самых эффективных способов сохранить лакокрасочное покрытие автомобиля. Она надежно защищает машину от сколов, царапин и других повреждений. Сейчас на рынках авто товаров в Москве можно найти и купить различную самоклеющуюся пленку для авто, различаемую по качеству и цене.
+
+					p
+						| Автовинил отличается по своему типу и функциональности. Это могут быть защитные прозрачные, глянцевые и матовые пленки, пленки под карбон, антигравийные или декоративные пленки с цветными рисунками. Широкий ассортимент автовинила облегчает выбор вариантов, которые лучше всего подходят для конкретной модели автомобиля
+
+					p
+						| Для того чтобы скрыть различные мелкие дефекты лакокрасочного покрытия автомобиля Вы можете купить пленку для авто в Москве. Это удобно и экономично, так как многим автомобилистам покраска машины может оказаться не по карману. Поэтому автовиниловая пленка – отличная альтернатива окраске, не только скрывающая все недостатки, но и, при желании, еще и создающая красивый дизайн Вашей машины. К тому же виниловая самоклеющаяся пленка многофункциональна, так как с её помощью можно легко оклеить мебель, кухню, бытовую технику, разнообразить дизайн помещения.
+
+					p
+						| Интернет-магазин «Vinyl4you» предлагает автопленку по достаточно выгодным ценам в Москве. Сотрудничество с нами – выгодное вложение в презентабельный внешний вид Вашего автомобиля.
+
+					p
+						| На нашем сайте Вы можете купить пленку для авто или другой аксессуар для машины с доставкой по Москве и в регионы РФ. Ознакомиться с условиями доставки Вы можете в соответствующем разделе. С нами Вы можете быть уверены в том, что получите заказанный товар в кратчайшие сроки!
+
+			aside.sidebar
+				.sidebar-social
+					.sidebar-social__header
+						h2.h2
+							span Мы 
+							| в соцсетях:
+						.sidebar-social__advice Добавляйся к нам:
+					.sidebar-social__item
+						a.sidebar-social__group(href="#club13")
+						.sidebar-social__network._vk
+							img(src="../assets/images/icons/sidebar-social__nw_vk.png", alt="")
+						.sidebar-social__follower Нас уже 
+							span 17 025
+						a.sidebar-social__subscribe(href="#subscribe") Подписаться
+					.sidebar-social__item
+						a.sidebar-social__group(href="#club13")
+						.sidebar-social__network._fb
+						.sidebar-social__follower Нас уже 
+							span 17 025
+						a.sidebar-social__subscribe(href="#subscribe") Подписаться
+
+
+				.bestsellers__item._sidebar(style='background-image: url("../assets/images/img/bestsellers__img-1.jpg")')
+					.bestsellers__item-title Жидкая резина
+					.bestsellers__item-desc._uppercase Розово-красный 450ML
+					.bestsellers__item-sale 549 руб.
+						span -20%
+					a.btn.btn__more._gray.bestsellers__item-more(href="#")
+						span Подробнее
+
+
+
+
 
 
 			

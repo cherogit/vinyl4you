@@ -1,3 +1,24 @@
 mixin product-slider(list)
 	each item in list
-		.product-slider__slide slide
+		.product-slider__slide
+			if(item.sale || item.hit)
+				.product-slider__slide-labels
+					if(item.sale)
+						.product-slider__slide-sale 
+							span Акция
+					if(item.hit)
+						.product-slider__slide-hit 
+							span Хит
+			figure.product-slider__slide-figure
+				.product-slider__slide-img
+					img(src= item.img, alt="")
+				if(item.caption)
+					figcaption.product-slider__slide-caption!= item.caption
+			.product-slider__slide-desc= item.desc
+			.product-slider__slide-price= item.price
+			a.product-slider__slide-btn(href="#")
+				span В корзину
+
+
+
+
