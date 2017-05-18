@@ -3,8 +3,10 @@
 @import "global/global";
 
 @import "blocks/header";
+@import "blocks/footer";
 @import "blocks/main-nav";
 @import "blocks/catalog-menu";
+@import "blocks/contacts";
 @import "blocks/search";
 @import "blocks/btns";
 @import "blocks/promo-block";
@@ -15,3 +17,5 @@
 @import "blocks/recently-viewed";
 @import "blocks/content";
 @import "blocks/sidebar";
+@import "blocks/news-block";
+@import "blocks/social";

@@ -43,7 +43,7 @@
 		&:hover {
 			&:after {
 				content: '';
-				background: #282828;
+				background: #282828 resolve('btn-more__arrow_white.svg') center/50% no-repeat;
 			}
 		}
 
@@ -56,20 +56,6 @@
 			background: var(--red);
 		}
 
-		&:before {
-			content: ' ';
-		    position: absolute;
-		    top: 50%;
-		    right: 0;
-		    display: none;
-		    width: 15px;
-		    height: 15px;
-		    border-top: 4px solid black;
-		    border-right: 4px solid black;
-		    transform: rotate(45deg) translate(0, -50%);
-		    z-index: 2;
-		}
-
 		&:after {
 			content: '';
 			position: absolute;
@@ -78,9 +64,15 @@
 			display: block;
 			width: 40px;
 			height: 38px;
-			background: #fff;
 			transition: 400ms;
 			z-index: 1;
+			background: #fff resolve('btn-more__arrow_black.svg') center/50% no-repeat;
+		}
+
+		&._posa {
+			position: absolute;
+			bottom: 25px;
+			left: 30px;
 		}
 	}
 }

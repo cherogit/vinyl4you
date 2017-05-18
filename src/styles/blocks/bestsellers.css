@@ -13,7 +13,7 @@
 	&__item {
 		position: relative;
 		width: 560px;
-		height: 260px;
+		/*height: 260px;*/
 		margin: 0 0 70px 0;
 		padding: 25px 30px;
 		padding-right: 110px;
@@ -25,6 +25,13 @@
 			width: 100%;
 			padding: 30px;
 			padding-left: 45px;
+			margin: 0;
+			background-position: right top;
+
+			&:after {
+				content: '';
+				width: 80px;
+			}
 
 			.bestsellers__item-title {
 				font-size: 24px;
@@ -43,8 +50,49 @@
 			}
 
 			.bestsellers__item-more {
-				bottom: 30px;
-				left: 45px;
+
+			}
+		}
+
+		&._sidebar-big {
+			width: 100%;
+			height: auto;
+			margin: 0 0 55px 0;
+			padding: 30px;
+			padding-left: 45px;
+			background: var(--red);
+
+			&:before {
+				content: '';
+				background: #18191d;
+			}
+
+			&:after {
+				content: '';
+				width: 80px;
+				background: resolve('bestsellers__item-after_gray.png') center/cover no-repeat;
+			}
+
+			.bestsellers__item-title {
+				font-size: 32px;
+				line-height: 36px;
+			}
+
+			.bestsellers__item-desc {
+				margin: 0 0 10px 0;
+				font-size: 16px;
+				line-height: 20px;
+			}
+
+			.bestsellers__item-sale {
+				margin: 0 0 15px 0;
+				color: #fff;
+			}
+
+			.bestsellers__item-more {
+				span {
+					background: #333333;
+				}
 			}
 		}
 
@@ -103,6 +151,7 @@
 
 		&-sale {
 			position: relative;
+			margin: 0 0 45px 0;
 			text-transform: uppercase;
 			font: 30px/30px var(--Lato-Bold);
 			color: var(--red);
@@ -113,16 +162,34 @@
 				display: inline-block;
 				margin: 0 0 0 15px;
 				padding: 0 15px 0 10px;
+				vertical-align: middle;
 				font: 18px/30px var(--Lato-Bold);
 				color: #18191d;
 				background: #fff;
+
+				&:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 100%;
+					display: block;
+					width: 0;
+					height: 0;
+					border-top: 15px solid transparent;
+					border-left: 15px solid #fff;
+					border-bottom: 15px solid transparent;
+				}
 			}
 		}
 
+		&-img {
+			position: relative;
+			left: -15px;
+			z-index: 2;
+		}
+
 		&-more {
-			position: absolute;
-			bottom: 25px;
-			left: 30px;
+			position: relative;
 			z-index: 2;
 		}
 	}

@@ -1,0 +1,37 @@
+.footer {
+
+	&__top {
+		background: #282828 resolve('footer-top-bg-carbon.png') center/cover repeat;
+		box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+
+		&-wrap {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			height: 60px;
+		}
+	}
+
+	&__bottom {
+
+		&-wrap {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			height: 105px;
+		}
+
+		.main-nav {
+
+			&__link {
+				color: #3c3b3b;
+
+				&._active, &:hover {
+					color: #0a0a0a;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,8 @@
+mixin news-block(list)
+	each item in list
+		a.news-block__item(href="#")
+			figure.news-block__item-figure
+				div.news-block__item-img
+					img(src= item.url, alt="")
+			.news-block__item-desc= item.desc
+			.news-block__item-date= item.date

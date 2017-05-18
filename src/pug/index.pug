@@ -1,6 +1,7 @@
 include mixins/_nav.pug
 include mixins/_categories.pug
 include mixins/_product-slider.pug
+include mixins/_news-block.pug
 
 doctype html
 html(lang="ru")
@@ -147,7 +148,7 @@ html(lang="ru")
 						.bestsellers__item-carbon
 						.bestsellers__item-title MERCEDES E-COUPE
 						.bestsellers__item-desc Полная оклейка кузова плёнкой Hexis - Red Chrome. 
-						a.btn.btn__more._gray.bestsellers__item-more(href="#")
+						a.btn.btn__more._posa.bestsellers__item-more(href="#")
 							span Подробнее
 					.bestsellers__item(style='background-image: url("../assets/images/img/bestsellers__img-2.jpg")')
 						.bestsellers__item-title Жидкая резина
@@ -242,6 +243,16 @@ html(lang="ru")
 						| На нашем сайте Вы можете купить пленку для авто или другой аксессуар для машины с доставкой по Москве и в регионы РФ. Ознакомиться с условиями доставки Вы можете в соответствующем разделе. С нами Вы можете быть уверены в том, что получите заказанный товар в кратчайшие сроки!
 
 			aside.sidebar
+				.bestsellers__item._sidebar-big
+					.bestsellers__item-carbon
+					.bestsellers__item-title Жидкая резина
+					.bestsellers__item-desc._uppercase Розово-красный 450ML
+					.bestsellers__item-sale 549 руб.
+						span -20%
+					img.bestsellers__item-img(src="../assets/images/img/wheels.png", alt="")
+					a.btn.btn__more.bestsellers__item-more(href="#")
+						span Подробнее
+
 				.sidebar-social
 					.sidebar-social__header
 						h2.h2
@@ -258,6 +269,7 @@ html(lang="ru")
 					.sidebar-social__item
 						a.sidebar-social__group(href="#club13")
 						.sidebar-social__network._fb
+							img(src="../assets/images/icons/sidebar-social__nw_fb.png", alt="")
 						.sidebar-social__follower Нас уже 
 							span 17 025
 						a.sidebar-social__subscribe(href="#subscribe") Подписаться
@@ -270,15 +282,48 @@ html(lang="ru")
 						span -20%
 					a.btn.btn__more.bestsellers__item-more(href="#")
 						span Подробнее
-
-
-
-
-
+		.news-block
+			.news-block__title.container
+				h2.h2
+					span Наши 
+					| новости
+			.news-block__articles
+				+news-block([
+					{
+						url: '../assets/images/img/news-block__item-img-1.png',
+						desc: 'Новые условия программы лояльности',
+						date: '2016-03-31'
+					},
+					{
+						url: '../assets/images/img/news-block__item-img-1.png',
+						desc: 'Новые условия программы лояльности',
+						date: '2016-03-31'
+					},
+					{
+						url: '../assets/images/img/news-block__item-img-1.png',
+						desc: 'Новые условия программы лояльности',
+						date: '2016-03-31'
+					},
+					{
+						url: '../assets/images/img/news-block__item-img-1.png',
+						desc: 'Новые условия программы лояльности',
+						date: '2016-03-31'
+					},
+					{
+						url: '../assets/images/img/news-block__item-img-1.png',
+						desc: 'Новые условия программы лояльности',
+						date: '2016-03-31'
+					},
+					{
+						url: '../assets/images/img/news-block__item-img-1.png',
+						desc: 'Новые условия программы лояльности',
+						date: '2016-03-31'
+					}
+				])
+		
+		include includes/footer.pug
 
 			
-
-
 		script(src='js/vendor/jquery-3.1.0.min.js')
 		script(src='js/vendor/jquery.bxslider.min.js')
 		script(src='js/custom/script.js')

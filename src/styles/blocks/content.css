@@ -7,10 +7,6 @@
 			margin: 0 0 30px 0;
 			font: 15px/26px var(--Lato-Regular);
 			color: #383431;
-
-			&:last-child {
-				margin-bottom: 0;
-			}
 		}
 	}	
 }
