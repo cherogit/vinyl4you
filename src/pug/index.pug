@@ -102,96 +102,98 @@ html(lang="ru")
 						}
 					])
 		.bestsellers
-			.bestsellers__wrapper.container
-				h2.h2
-					span Хиты 
-					| продаж
+			.bestsellers__wrapper
+				.container
+					h2.h2
+						span Хиты 
+						| продаж
 				.product-slider
-					.bx-slider
-						+product-slider([
-							{
-								img: '../assets/images/img/product-slide__img-1.png',
-								caption: '<span>-17%</span> Осталось 2 дня',
-								desc: 'Алькантара Корея Decoin',
-								price: '549 руб.',
-								sale: 'Акция',
-							},
-							{
-								img: '../assets/images/img/product-slide__img-2.png',
-								caption: '<span>-17%</span> Осталось 2 дня',
-								desc: 'Диодные лампы в головной свет',
-								price: '549 руб.',
-								sale: 'Акция',
-							},
-							{
-								img: '../assets/images/img/product-slide__img-3.png',
-								caption: '<span>-17%</span> Осталось 2 дня',
-								desc: 'Ракель магнит + замша 3м.',
-								price: '549 руб.',
-								sale: 'Акция',
-								hit: 'Хит'
-							},
-							{
-								img: '../assets/images/img/product-slide__img-1.png',
-								desc: 'Алькантара Корея Decoin',
-								price: '549 руб.',
-								hit: 'Хит'
-							},
-							{
-								img: '../assets/images/img/product-slide__img-1.png',
-								desc: 'Алькантара Корея Decoin',
-								price: '549 руб.'
-							}
-						])
-				.bestsellers__inner
-					.bestsellers__item(style='background-image: url("../assets/images/img/bestsellers__img-1.jpg")')
-						.bestsellers__item-carbon
-						.bestsellers__item-title MERCEDES E-COUPE
-						.bestsellers__item-desc Полная оклейка кузова плёнкой Hexis - Red Chrome. 
-						a.btn.btn__more._posa.bestsellers__item-more(href="#")
-							span Подробнее
-					.bestsellers__item(style='background-image: url("../assets/images/img/bestsellers__img-2.jpg")')
-						.bestsellers__item-title Жидкая резина
-						.bestsellers__item-desc._uppercase Розово-красный 450ML
-						.bestsellers__item-sale 549 руб.
-							span -20%
-						a.btn.btn__more.bestsellers__item-more(href="#")
-							span Подробнее
+					+product-slider([
+						{
+							img: '../assets/images/img/product-slide__img-1.png',
+							caption: '<span>-17%</span> Осталось 2 дня',
+							desc: 'Алькантара Корея Decoin',
+							price: '549 руб.',
+							sale: 'Акция',
+						},
+						{
+							img: '../assets/images/img/product-slide__img-2.png',
+							caption: '<span>-17%</span> Осталось 2 дня',
+							desc: 'Диодные лампы в головной свет',
+							price: '549 руб.',
+							sale: 'Акция',
+						},
+						{
+							img: '../assets/images/img/product-slide__img-3.png',
+							caption: '<span>-17%</span> Осталось 2 дня',
+							desc: 'Ракель магнит + замша 3м.',
+							price: '549 руб.',
+							sale: 'Акция',
+							hit: 'Хит'
+						},
+						{
+							img: '../assets/images/img/product-slide__img-1.png',
+							desc: 'Алькантара Корея Decoin',
+							price: '549 руб.',
+							hit: 'Хит'
+						},
+						{
+							img: '../assets/images/img/product-slide__img-1.png',
+							desc: 'Алькантара Корея Decoin',
+							price: '549 руб.'
+						}
+					])
+				.container
+					.bestsellers__inner
+						.bestsellers__item(style='background-image: url("../assets/images/img/bestsellers__img-1.jpg")')
+							.bestsellers__item-carbon
+							.bestsellers__item-title MERCEDES E-COUPE
+							.bestsellers__item-desc Полная оклейка кузова плёнкой Hexis - Red Chrome. 
+							a.btn.btn__more._posa.bestsellers__item-more(href="#")
+								span Подробнее
+						.bestsellers__item(style='background-image: url("../assets/images/img/bestsellers__img-2.jpg")')
+							.bestsellers__item-carbon
+							.bestsellers__item-title Жидкая резина
+							.bestsellers__item-desc._uppercase Розово-красный 450ML
+							.bestsellers__item-sale 549 руб.
+								span -20%
+							a.btn.btn__more.bestsellers__item-more(href="#")
+								span Подробнее
 		.recently-viewed
-			.recently-viewed__wrapper.container
-				h2.h2
-					span Недавно 
-					| смотрели
+			.recently-viewed__wrapper
+				.container
+					h2.h2
+						span Недавно 
+						| смотрели
 				.product-slider._m0
-					.bx-slider
-						+product-slider([
-							{
-								img: '../assets/images/img/product-slide__img-1.png',
-								desc: 'Алькантара Корея Decoin',
-								price: '549 руб.'
-							},
-							{
-								img: '../assets/images/img/product-slide__img-2.png',
-								desc: 'Диодные лампы в головной свет',
-								price: '549 руб.',
-								hit: 'Хит'
-							},
-							{
-								img: '../assets/images/img/product-slide__img-3.png',
-								desc: 'Ракель магнит + замша 3м.',
-								price: '389 руб.'
-							},
-							{
-								img: '../assets/images/img/product-slide__img-1.png',
-								desc: 'Алькантара Корея Decoin',
-								price: '549 руб.'
-							},
-							{
-								img: '../assets/images/img/product-slide__img-1.png',
-								desc: 'Алькантара Корея Decoin',
-								price: '549 руб.'
-							}
-						])
+					+product-slider([
+						{
+							img: '../assets/images/img/product-slide__img-1.png',
+							desc: 'Алькантара Корея Decoin',
+							price: '549 руб.'
+						},
+						{
+							img: '../assets/images/img/product-slide__img-2.png',
+							desc: 'Диодные лампы в головной свет',
+							price: '549 руб.',
+							hit: 'Хит'
+						},
+						{
+							img: '../assets/images/img/product-slide__img-3.png',
+							desc: 'Ракель магнит + замша 3м.',
+							price: '389 руб.'
+						},
+						{
+							img: '../assets/images/img/product-slide__img-1.png',
+							desc: 'Алькантара Корея Decoin',
+							price: '549 руб.'
+						},
+						{
+							img: '../assets/images/img/product-slide__img-1.png',
+							desc: 'Алькантара Корея Decoin',
+							price: '549 руб.'
+						}
+					])
 		.container._info
 			.content
 				.content__inner
@@ -326,5 +328,6 @@ html(lang="ru")
 			
 		script(src='js/vendor/jquery-3.1.0.min.js')
 		script(src='js/vendor/jquery.bxslider.min.js')
+		script(src='js/vendor/slick.min.js')
 		script(src='js/custom/script.js')
 

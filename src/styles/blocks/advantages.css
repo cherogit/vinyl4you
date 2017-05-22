@@ -7,10 +7,14 @@
 		flex-wrap: wrap;
 		margin: 0 0 60px 0;
 		padding: 0 30px;
+
+		@media (--desktop) {
+			margin-bottom: 25px;
+			padding: 0 20px;
+		}
 	}
 
 	&__item {
-		
 		text-align: center;
 	}
 
@@ -19,6 +23,12 @@
 		width: 115px;
 		height: 75px;
 		margin: 0 0 25px 0;
+
+		@media (--desktop) {
+			width: 80px;
+			height: 55px;
+			margin-bottom: 15px;
+		}
 
 		&:before {
 			content: '';
@@ -38,6 +48,11 @@
 	&__desc {
 		font: 18px/22px var(--Lato-Regular);
 		color: #000000;
+
+		@media (--desktop) {
+			font-size: 12px;
+			line-height: 14px;
+		}
 
 		span {
 			font-family: var(--Lato-Bold);

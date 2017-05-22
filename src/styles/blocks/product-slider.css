@@ -1,18 +1,48 @@
 .product-slider {
+	position: relative;
+	max-width: 1200px;
 	width: 100%;
 	margin: 0 auto 85px auto;
+	padding: 0 50px;
+
+	@media (--desktop) {
+		margin-bottom: 70px;
+		padding: 0;
+	}
+
+	.slick-list {
+		max-width: 100%;
+		margin: 0 auto;
+		padding: 0 8px;
+		overflow: hidden;
+
+		@media (--desktop) {
+			max-width: 768px;
+		}
+	}
 
 	&._m0 {
 		margin: 0 auto;
 	}
 
 	&__slide {
+		position: relative;
 		display: inline-block;
+		width: 231px;
 		min-height: 330px;
 		margin: 0 40px 0 0;
 		padding: 20px;
 		border: 2px solid #efeded;
 		background: #ffffff;
+		outline: none;
+
+		@media (--desktop) {
+			width: 225px;
+		}
+
+		@media (--desktop) {
+			max-width: 225px;
+		}
 
 		&-labels {
 			position: absolute;
@@ -140,49 +170,62 @@
 				font: 18px/38px var(--Lato-Regular);
 				color: #fff;
 				background: var(--red);
+
+				@media (--desktop) {
+					padding: 0 28px;
+				}
 			}
 		}
 	}
 }
 
+.slider-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	text-decoration: none;
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: #282828;
+	transition: 400ms;
+	z-index: 99;
 
-.bx-wrapper .bx-controls-direction {
-	a {
+	&:hover {
+		background: var(--red);
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
 		display: block;
-		width: 40px;
-		height: 40px;
-		margin-top: -20px;
-		background: #282828;
-		transition: 400ms;
+		width: 100%;
+		height: 100%;
+		background: resolve('slider-arrow.svg') center/50% no-repeat;
+	}
 
-		&:hover {
-			background: var(--red);
+	&._next {
+		right: 20px;
+
+		@media (--desktop) {
+			right: 0;
+		}
+	}
+
+	&._prev {
+		left: 20px;
+
+		@media (--desktop) {
+			left: 0;
 		}
 
 		&:before {
 			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			display: block;
-			width: 100%;
-			height: 100%;
-			background: resolve('slider-arrow.svg') center/50% no-repeat;
-		}
-
-		&.bx-prev {
-			left: initial;
-			right: calc(100% + 20px);
-
-			&:before {
-				content: '';
-				transform: rotate(180deg);
-			}
-		}
-
-		&.bx-next {
-			left: calc(100% + 20px);
+			transform: rotate(180deg);
 		}
 	}
-	
 }
+
+

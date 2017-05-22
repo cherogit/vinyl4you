@@ -1,7 +1,12 @@
 .content {
+	/*display: none;*/
 	
 	&__inner {
 		max-width: 790px;
+
+		@media (--desktop) {
+			max-width: 100%;
+		}
 
 		p {
 			margin: 0 0 30px 0;

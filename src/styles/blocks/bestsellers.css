@@ -2,24 +2,37 @@
 
 	&__wrapper {
 		padding: 0 20px;
+
+		@media (--desktop) {
+			padding: 0;
+		}
 	}
 
 	&__inner {
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
+
+		@media (--desktop) {
+			padding-bottom: 20px;
+		}
 	}
 
 	&__item {
 		position: relative;
 		width: 560px;
-		/*height: 260px;*/
+		height: 270px;
 		margin: 0 0 70px 0;
 		padding: 25px 30px;
 		padding-right: 110px;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: left center;
+
+		@media (--desktop) {
+			width: 100%;
+			margin-bottom: 25px;
+		}
 
 		&._sidebar {
 			width: 100%;

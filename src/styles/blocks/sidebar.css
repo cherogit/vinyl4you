@@ -1,6 +1,10 @@
 .sidebar {
 	max-width: 300px;
 	width: 100%;
+
+	@media (--desktop) {
+		display: none;
+	}
 }
 
 .sidebar-social {

@@ -3,5 +3,9 @@
 
 	&__wrapper {
 		padding: 55px 20px 65px 20px;
+
+		@media (--desktop) {
+			padding: 50px 0 40px 0;
+		}
 	}
 }

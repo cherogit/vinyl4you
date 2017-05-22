@@ -1,8 +1,16 @@
 .promo-block {
 	margin: -160px 0 0 0;
 
+	@media (--desktop) {
+		margin: 0;
+	}
+
 	.bx-wrapper {
 		margin: 0 0 60px 0;
+
+		@media (--desktop) {
+			margin-bottom: 25px;
+		}
 	}
 
 	&__slider {
@@ -16,6 +24,11 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
+
+		@media (--desktop) {
+			height: 500px;
+			padding: 75px 0;
+		}
 	}
 
 	&__title {
@@ -51,7 +64,7 @@
     outline: 0;
     border-radius: 0;
 
-   &.active {
+   &.active, &:hover {
    	background: var(--red);
    }
 }
