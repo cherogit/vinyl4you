@@ -31,22 +31,22 @@ $(document).ready(function() {
 		nextArrow: '<a href="" class="slider-arrow _next"></a>',
 		prevArrow: '<a href="" class="slider-arrow _prev"></a>',
 		centerMode: false,
-		// centerPadding: 30,
 		variableWidth: true,
 		responsive: [
 			{
 				breakpoint: 1024,
 				settings: {
+					infinite: true,
 					slidesToShow: 3,
 					variableWidth: true,
 					centerMode: true,
-					infinite: true,
 				}
 			},
 			{
 				breakpoint: 760,
 				settings: {
-					slidesToShow: 3,
+					infinite: true,
+					slidesToShow: 2,
 					variableWidth: true,
 					centerMode: true,
 				}
@@ -54,10 +54,10 @@ $(document).ready(function() {
 			{
 				breakpoint: 480,
 				settings: {
+					infinite: true,
 					slidesToShow: 1,
 					variableWidth: true,
 					centerMode: true,
-					centerPadding: 30,
 				}
 			}
 		]
