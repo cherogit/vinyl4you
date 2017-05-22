@@ -24,20 +24,6 @@ $(document).ready(function() {
 		responsive: true,
 	});
 
-	// $('.product-slider .bx-slider').bxSlider({
-	// 	mode: 'horizontal',
-	// 	slideMargin: 40,
-	// 	touchEnabled: false,
-	// 	infiniteLoop: true,
-	// 	pager: false,
-	// 	// slideWidth: 231,
-	// 	minSlides: 1,
-	// 	maxSlides: 4,
-	// 	moveSlides: 1,
-	// 	controls: true,
-	// 	responsive: true,
-	// });
-
 	$('.product-slider').slick({
 		infinite: true,
 		slidesToShow: 4,

@@ -11,10 +11,14 @@
 	}
 
 	.slick-list {
-		max-width: 100%;
+		max-width: 1060px;
 		margin: 0 auto;
 		padding: 0 8px;
 		overflow: hidden;
+
+		@media (--mobile) {
+			max-width: 280px;
+		}
 
 		@media (--desktop) {
 			max-width: 768px;
@@ -207,19 +211,12 @@
 	}
 
 	&._next {
-		right: 20px;
+		right: 0;
 
-		@media (--desktop) {
-			right: 0;
-		}
 	}
 
 	&._prev {
-		left: 20px;
-
-		@media (--desktop) {
-			left: 0;
-		}
+		left: 0;
 
 		&:before {
 			content: '';

@@ -3,6 +3,10 @@
 	margin: 0 45px 0 0;
 	font-size: 0;
 
+	@media (--desktop) {
+		margin: 0;
+	}
+
 	&._footer {
 		margin-left: auto;
 		margin-right: 45px;
@@ -21,6 +25,24 @@
 				}
 			}
 		}
+
+		@media (--desktop) {
+			margin-right: 40px;
+
+			&:last-child {
+				margin: 0;
+
+				.contacts__phone {
+					margin: 0 10px 0 0;
+					padding: 0 5px 0 0;
+
+					&:after {
+						content: '';
+						display: block;
+					}
+				}
+			}
+		}
 	}
 
 	&__phone {
@@ -31,6 +53,19 @@
 		text-decoration: none;
 		font: 18px/22px var(--Lato-Medium);
 		color: #fff;
+
+		@media (--desktop) {
+			margin: 0 10px 0 0;
+			padding: 0 5px 0 0;
+			font-size: 16px;
+			line-height: 18px;
+
+			&:after {
+				content: '';
+				background: #363636;
+				height: 14px;
+			}
+		}
 
 		span {
 			color: #c8c8c8;
@@ -52,5 +87,12 @@
 	&__info {
 		font: 14px/16px var(--Lato-Light);
 		color: #a7a7a7;
+
+		@media (--desktop) {
+			display: inline-block;
+			vertical-align: top;
+			font-size: 12px;
+			line-height: 18px;
+		}
 	}
 }

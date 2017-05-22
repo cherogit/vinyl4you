@@ -11,9 +11,14 @@
 		margin: 0 auto 20px auto;
 		text-align: center;
 
+		@media (--tablet) {
+			justify-content: center;
+		}
+
 		@media (--desktop) {
 			display: flex;
 			justify-content: space-between;
+			flex-wrap: wrap;
 			max-width: 768px;
 			padding: 0 10px;
 		}
@@ -38,6 +43,18 @@
 
 			&:nth-child(3) {
 				margin-right: 0;
+			}
+		}
+
+		@media (--large) {
+			&:nth-child(5), &:nth-child(6) {
+				display: none;
+			}
+		}
+
+		@media (--wide) {
+			&:nth-child(6) {
+				display: none;
 			}
 		}
 

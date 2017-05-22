@@ -6,6 +6,10 @@
 	&__top {
 		background: rgba(0, 0, 0, .74);
 
+		@media (--desktop) {
+			/*background: #fff;*/
+		}
+
 		&-wrap {
 			display: flex;
 			justify-content: space-between;
@@ -22,6 +26,11 @@
 			width: 100px;
 			height: 65px;
 			text-decoration: none;
+
+			@media (--desktop) {
+				width: 55px;
+				height: 35px;
+			}
 
 			img {
 				max-width: 100%;
@@ -74,6 +83,10 @@
 
 		&-count {
 			font: 16px/20px var(--Lato-Medium);
+
+			@media (--desktop) {
+				display: inline-block;
+			}
 		}
 
 		&-price {
@@ -81,6 +94,10 @@
 
 			span {
 				font-family: var(--Lato-Medium);
+			}
+
+			@media (--desktop) {
+				display: inline-block;
 			}
 		}
 	}
