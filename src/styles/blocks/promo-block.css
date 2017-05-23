@@ -24,6 +24,11 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
+		
+		@media (--mobile) {
+			height: 250px;
+			padding: 30px 0;
+		}
 
 		@media (--desktop) {
 			height: 500px;
@@ -36,6 +41,12 @@
 		text-transform: uppercase;
 		font: 36px/40px var(--Lato-Regular);
 		color: #fff;
+
+		@media (--mobile) {
+			margin-bottom: 5px;
+			font-size: 24px;
+			line-height: 28px;
+		}
 	}
 
 	&__desc {
@@ -43,11 +54,22 @@
 		margin: 0 0 30px 0;
 		font: 18px/22px var(--Lato-Regular);
 		color: #fff;
+
+		@media (--mobile) {
+			margin-bottom: 10px;
+		}
 	}
 }
 
 .bx-wrapper .bx-pager {
 	bottom: 30px;
+
+	@media (--mobile) {
+		left: 0;
+		bottom: 75px;
+		padding: 0 5px;
+		text-align: left;
+	}
 }
 
 .bx-wrapper .bx-pager-item {

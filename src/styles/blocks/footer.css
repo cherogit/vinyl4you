@@ -1,5 +1,5 @@
 .footer {
-	display: none;
+	/*margin-bottom: 1000px;*/
 
 	&__top {
 		background: #282828 resolve('footer-top-bg-carbon.png') center/cover repeat;
@@ -11,6 +11,23 @@
 			align-items: center;
 			flex-wrap: wrap;
 			height: 60px;
+
+			@media (--desktop) {
+				.search {
+					width: 490px;
+					margin-right: 0;
+				}
+
+				.contacts {
+					display: none;
+				}
+
+				.btn__callback {
+					width: 235px;
+				}
+			}
+
+			
 		}
 	}
 
@@ -22,10 +39,38 @@
 			align-items: center;
 			flex-wrap: wrap;
 			height: 105px;
+
+			.contacts {
+				display: none;
+			}
+
+			@media (--desktop) {
+				.contacts {
+					display: inline-block;
+					margin-left: 0;
+					margin-right: auto;
+
+					&._footer {
+						margin-right: 0;
+					}
+
+					&__phone {
+						color: #363636;
+					}
+
+					&__reg {
+						margin-right: 20px;
+					}
+				}
+
+				.main-logo, .main-nav {
+					display: none;
+				}
+
+			}
 		}
 
 		.main-nav {
-
 			&__link {
 				color: #3c3b3b;
 

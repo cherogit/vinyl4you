@@ -1,13 +1,12 @@
 .header {
 	position: relative;
-	z-index: 999;
-	/*display: none;*/
+	z-index: 99;
 
 	&__top {
 		background: rgba(0, 0, 0, .74);
 
 		@media (--desktop) {
-			/*background: #fff;*/
+			background: #fff;
 		}
 
 		&-wrap {
@@ -15,6 +14,10 @@
 			justify-content: space-between;
 			align-items: center;
 			height: 100px;
+
+			@media (--desktop) {
+				height: 60px;
+			}
 
 			.btn__callback {
 				display: none;
@@ -28,13 +31,76 @@
 			text-decoration: none;
 
 			@media (--desktop) {
-				width: 55px;
-				height: 35px;
+				width: 60px;
+				height: 40px;
+				margin-left: 0;
+				margin-right: auto;
+
+				img {
+					&._desk {
+						display: block;
+					}
+
+					&._wide {
+						display: none;
+					}
+				}
 			}
 
 			img {
 				max-width: 100%;
 				max-height: 100%;
+
+				&._desk {
+					display: none;
+				}
+			}
+		}
+
+		@media (--mobile) {
+			.btn__callback {
+				display: inline-block; 
+				width: 40px;
+				height: 40px;
+				padding: 0 20px; 
+				font-size: 0;
+				
+				&:before {
+					content: '';
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+				&:after {
+					content: '';
+					display: none;
+				}
+			}
+
+			.header__busket {
+				width: 40px;
+				height: 40px;
+				padding: 0;
+				margin: 0 5px 0 0;
+				background: #282828;
+
+				&:before {
+					content: '';
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 25px;
+					height: 25px;
+					background: resolve('busket-icon.svg') center/cover no-repeat;
+				}
+				
+				&:after {
+					display: none;
+				}
+
+				&-count, &-price {
+					display: none;
+				}
 			}
 		}
 
@@ -57,6 +123,10 @@
 		text-decoration: none;
 		color: #fff;
 
+		@media (--desktop) {
+			margin: 0 55px 0 0;
+		}
+
 		&:before {
 			content: '';
 			position: absolute;
@@ -67,6 +137,10 @@
 			width: 24px;
 			height: 24px;
 			background: resolve('busket-icon.svg') center/cover no-repeat;
+
+			@media (--desktop) {
+				background-image: resolve('busket-icon_black.svg');
+			}
 		}
 
 		&:after {
@@ -86,6 +160,11 @@
 
 			@media (--desktop) {
 				display: inline-block;
+				color: #c8c8c8;
+
+				span {
+					color: #282828;
+				}
 			}
 		}
 
@@ -98,6 +177,11 @@
 
 			@media (--desktop) {
 				display: inline-block;
+				color: #282828;
+
+				span {
+					color: #282828;
+				}
 			}
 		}
 	}
@@ -106,6 +190,10 @@
 		background: #282828;
 		color: white;
 		box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+
+		@media (--mobile) {
+			display: none;
+		}
 
 		&-wrap {
 			display: flex;

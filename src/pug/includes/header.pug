@@ -1,8 +1,11 @@
 header.header
 	.header__top.container_fluid
 		.header__top-wrap.container
+			a.burger-menu(href="#")
+				span
 			a.main-logo(href='/')
-				img(src="./assets/images/img/main-logo.png", alt="Логотип")
+				img._wide(src="./assets/images/img/main-logo.png", alt="Логотип")
+				img._desk(src="./assets/images/img/main-logo_black.png", alt="Логотип")
 			+nav(['О компании', 'Доставка и оплата', 'Отзывы', 'Оптовые закупки', 'Контакты'], 1)
 			a.header__busket(href='#')
 				.header__busket-count 
@@ -10,7 +13,6 @@ header.header
 					| товаров 
 				.header__busket-price на сумму 
 					span 1200 руб.
-					| 7
 			a.btn.btn__callback(href='#') Заказать звонок
 	
 	.header__bottom.container_fluid
@@ -86,7 +88,7 @@ header.header
 							span Шумоизоляция
 
 
-			form.search
+			form.search._toggle
 				input(type="text" placeholder="Поиск товаров")
 				button(type="submit")
 					

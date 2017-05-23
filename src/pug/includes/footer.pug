@@ -25,9 +25,21 @@ footer.footer
 		.footer__bottom-wrap.container
 
 			a.main-logo(href='/')
-				img(src="./assets/images/img/main-logo_footer.png", alt="Логотип")
+				img(src="./assets/images/img/main-logo_black.png", alt="Логотип")
 
 			+nav(['О компании', 'Доставка и оплата', 'Отзывы', 'Оптовые закупки', 'Контакты'], 1)
+
+			.contacts._footer
+				.contacts__reg
+					a.contacts__phone(href="tel:84951502262")
+						span 8 (495) 
+						| 150-22-62
+					.contacts__info Звонки по Москве
+				.contacts__reg
+					a.contacts__phone(href="tel:88005502262")
+						span 8 (800) 
+						| 550-22-62
+					.contacts__info Звонки по всей России
 
 			.social
 				a.social__link(href="#")

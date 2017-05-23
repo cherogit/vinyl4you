@@ -6,6 +6,7 @@
 		display: inline-block;
 		width: 210px;
 		padding: 0 20px 0 55px;
+		text-align: center;
 		font: 18px/40px var(--Lato-Regular);
 		color: #fff;
 		background: var(--red);

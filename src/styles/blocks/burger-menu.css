@@ -1,0 +1,40 @@
+.burger-menu {
+	position: relative;
+	display: none;
+	width: 30px;
+	height: 22px;
+	margin: 0 15px 0 0;
+
+	span {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translate(0, -50%);
+		display: inline-block;
+		width: 30px;
+		height: 3px;
+		background: var(--red);
+	}
+
+	&:before, &:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		display: inline-block;
+		width: 30px;
+		height: 3px;
+		background: var(--red);
+	}
+
+	&:before {
+		top: 0;
+	}
+
+	&:after {
+		bottom: 0;
+	}
+
+	@media (--desktop) {
+		display: inline-block;
+	}
+}

@@ -5,21 +5,21 @@
 	margin: 0 45px 0 0;
 	transition: 400ms;
 
-	@media (--desktop) {
-		width: 30px;
-
-		&.active {
-			width: 300px;
+	&._toggle {
+		@media (--desktop) {
+			width: 30px;
 
 			input {
-				padding: 0 45px 0 15px;
+				padding: 0;
 			}
 
 			button {
-				background-position: center left;
+				background-position: center;
 			}
 		}
 	}
+
+	
 
 	input {
 		display: inline-block;
@@ -29,10 +29,6 @@
 		padding: 0 45px 0 15px;
 		font: 14px var(--Lato-Light);
 		color: #646464;
-
-		@media (--desktop) {
-			padding: 0;
-		}
 	}
 
 	button {
@@ -44,9 +40,5 @@
 		height: 30px;
 		background: #fff resolve('search-icon.png') center left no-repeat;
 		cursor: pointer;
-
-		@media (--desktop) {
-			background-position: center;
-		}
 	}
 }
