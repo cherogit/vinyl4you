@@ -1,19 +1,19 @@
 $(document).ready(function() {
 
-	if ($(window).width() <= 1200) {
-		$('.search').click(function() {
-			$(this).toggleClass('active');
-			return false
-		});
-	}
-	
+	$('.search-link').click(function(event) {
+		var searchForm = $('.search._toggle');
+
+		event.preventDefault();
+		$(this).hide();
+		searchForm.addClass('_active');
+	});
 	
 	$('.promo-block__slider._slider').bxSlider({
 		mode: 'horizontal',
 		slideMargin: 0,
-		touchEnabled: false,
-		auto: false,
-		pause: 2000,
+		touchEnabled: true,
+		auto: true,
+		pause: 3000,
 		pager: true,
 		minSlides: 1,
 		maxSlides: 1,
@@ -48,16 +48,8 @@ $(document).ready(function() {
 					infinite: true,
 					slidesToShow: 2,
 					variableWidth: true,
-					centerMode: true,
-				}
-			},
-			{
-				breakpoint: 480,
-				settings: {
-					infinite: true,
-					slidesToShow: 1,
-					variableWidth: true,
-					centerMode: true,
+					arrows: false,
+					// centerMode: true,
 				}
 			}
 		]

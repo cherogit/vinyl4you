@@ -3,6 +3,10 @@
 	padding: 35px 0;
 	background: #efeded;
 
+	@media (--mobile) {
+		background: #fff;
+	}
+
 	&__title {
 		padding: 0 20px;
 	}
@@ -10,11 +14,7 @@
 	&__articles {
 		margin: 0 auto 20px auto;
 		text-align: center;
-
-		@media (--tablet) {
-			justify-content: center;
-		}
-
+		
 		@media (--desktop) {
 			display: flex;
 			justify-content: space-between;
@@ -59,6 +59,18 @@
 
 			&:nth-child(5) {
 				margin-right: 0;
+			}
+		}
+
+		@media (--mobile) {
+			margin-bottom: 35px;
+
+			&:nth-child(3) {
+				display: none;
+			}
+
+			&:nth-child(2) {
+				margin-bottom: 0;
 			}
 		}
 

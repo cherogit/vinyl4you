@@ -8,6 +8,10 @@
 		margin: 0 0 60px 0;
 		padding: 0 30px;
 
+		@media (--mobile) {
+			margin-bottom: 0;
+		}
+
 		@media (--desktop) {
 			margin-bottom: 25px;
 			padding: 0;
@@ -16,6 +20,15 @@
 
 	&__item {
 		text-align: center;
+
+		@media (--mobile) {
+			width: 50%;
+			margin-bottom: 40px;
+
+			&:nth-child(3) {
+				display: none;
+			}
+		}
 	}
 
 	&__img {

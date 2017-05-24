@@ -58,6 +58,10 @@
 			left: -10px;
 			display: block;
 			z-index: 9;
+
+			@media (--mobile) {
+				left: 0;
+			}
 		}
 
 		&-sale, &-hit {
@@ -154,6 +158,7 @@
 			text-decoration: none;
 
 			&:hover {
+		
 				&:after {
 					content: '';
 					background-color: black;
@@ -178,6 +183,11 @@
 				font: 18px/38px var(--Lato-Regular);
 				color: #fff;
 				background: var(--red);
+				transition: 400ms;
+
+				&:hover {
+					background: #c30101;
+				}
 
 				@media (--desktop) {
 					padding: 0 28px;
@@ -198,6 +208,10 @@
 	background: #282828;
 	transition: 400ms;
 	z-index: 99;
+
+	@media (--mobile) {
+		display: none;
+	}
 
 	&:hover {
 		background: var(--red);

@@ -7,5 +7,9 @@
 		@media (--desktop) {
 			padding: 50px 0 40px 0;
 		}
+
+		@media (--mobile) {
+			padding-top: 0;
+		}
 	}
 }

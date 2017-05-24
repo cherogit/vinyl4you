@@ -7,6 +7,7 @@
 input, button {
 	border: none;
 	outline: none;
+	border-radius: 0;
 }
 
 .container-fluid {
@@ -22,6 +23,10 @@ input, button {
 	@media (--desktop) {
 		max-width: 768px;
 		padding: 0 24px;
+	}
+
+	@media (--mobile) {
+		padding: 0 20px;
 	}
 
 	&._info {
@@ -47,6 +52,10 @@ input, button {
 	margin: 0 0 40px 0;
 	font: 32px/34px var(--Lato-Regular);
 	color: #000000;
+
+	@media (--mobile) {
+		font-size: 24px;
+	}
 
 	&._white {
 		color: #ffffff;

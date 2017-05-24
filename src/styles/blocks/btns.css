@@ -10,6 +10,11 @@
 		font: 18px/40px var(--Lato-Regular);
 		color: #fff;
 		background: var(--red);
+		transition: 400ms;
+
+		&:hover {
+			background: #c30101;
+		}
 
 		@media (--desktop) {
 			width: 235px;
@@ -46,6 +51,7 @@
 		padding: 0 43px 0 0;
 
 		&:hover {
+
 			&:after {
 				content: '';
 				background: #282828 resolve('btn-more__arrow_white.svg') center/50% no-repeat;
@@ -59,6 +65,11 @@
 			font: 18px/38px var(--Lato-Regular);
 			color: #fff;
 			background: var(--red);
+			transition: 400ms;
+
+			&:hover {
+				background: #c30101;
+			}
 		}
 
 		&:after {

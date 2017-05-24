@@ -1,5 +1,5 @@
 .footer {
-	margin-bottom: 1000px;
+	padding: 0 0 125px 0;
 
 	&__top {
 		background: #282828 resolve('footer-top-bg-carbon.png') center/cover repeat;
@@ -23,6 +23,14 @@
 				}
 			}
 
+			@media (--mobile) {
+				margin-bottom: 25px;
+
+				.btn__callback {
+					display: none;
+				}
+			}
+
 			
 		}
 	}
@@ -37,6 +45,10 @@
 			height: 105px;
 
 			.contacts {
+				display: none;
+			}
+
+			.btn__callback {
 				display: none;
 			}
 
@@ -57,12 +69,41 @@
 					&__reg {
 						margin-right: 20px;
 					}
+
+					&__info {
+						font-size: 11px;
+					}
 				}
 
 				.main-logo, .main-nav {
 					display: none;
 				}
+			}
 
+			@media (--mobile) {
+				.contacts {
+					margin-bottom: 25px;
+
+					&__reg {
+						margin-bottom: 5px;
+
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+
+				.btn__callback {
+					display: block;
+					width: 100%;
+					margin-bottom: 25px;
+					padding: 0 10px 0 48px;
+
+					&:after {
+						content: '';
+						left: 40px;
+					}
+				}
 			}
 		}
 
@@ -74,6 +115,50 @@
 					color: #0a0a0a;
 				}
 			}
+		}
+	}
+
+	&__fixed {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 60px;
+		z-index: 9999;
+		background: #282828;
+		display: none;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 20px;
+
+		&-catalog {
+			position: relative;
+			padding: 0 20px 0 0;
+			text-decoration: none;
+			font: 14px/16px var(--Lato-Bold);
+			color: #fff;
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 5px;
+				right: 0;
+				width: 8px;
+				height: 8px;
+				border-top: 2px solid #fff;
+				border-left: 2px solid #fff;
+				transform: rotate(45deg);
+			}
+		}
+
+		&-contacts {
+			text-decoration: none;
+			font: 14px/16px var(--Lato-Bold);
+			color: #fff;
+		}
+
+		@media (--mobile) {
+			display: flex;
 		}
 	}
 }
