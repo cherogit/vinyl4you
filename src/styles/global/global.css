@@ -21,7 +21,7 @@ input, button {
 
 	@media (--desktop) {
 		max-width: 768px;
-		padding: 0 10px;
+		padding: 0 24px;
 	}
 
 	&._info {
@@ -30,7 +30,7 @@ input, button {
 		padding: 80px 0 15px 20px;
 
 		@media (--desktop) {
-			padding: 60px 10px 0 10px;
+			padding: 60px 24px 0 24px;
 		}
 	}
 }

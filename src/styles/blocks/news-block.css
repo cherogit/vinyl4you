@@ -20,7 +20,7 @@
 			justify-content: space-between;
 			flex-wrap: wrap;
 			max-width: 768px;
-			padding: 0 10px;
+			padding: 0 24px;
 		}
 	}
 	
@@ -55,6 +55,10 @@
 		@media (--wide) {
 			&:nth-child(6) {
 				display: none;
+			}
+
+			&:nth-child(5) {
+				margin-right: 0;
 			}
 		}
 

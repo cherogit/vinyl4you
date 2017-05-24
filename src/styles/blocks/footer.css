@@ -1,5 +1,5 @@
 .footer {
-	/*margin-bottom: 1000px;*/
+	margin-bottom: 1000px;
 
 	&__top {
 		background: #282828 resolve('footer-top-bg-carbon.png') center/cover repeat;
@@ -14,16 +14,12 @@
 
 			@media (--desktop) {
 				.search {
-					width: 490px;
+					width: 465px;
 					margin-right: 0;
 				}
 
 				.contacts {
 					display: none;
-				}
-
-				.btn__callback {
-					width: 235px;
 				}
 			}
 

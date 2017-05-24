@@ -65,8 +65,6 @@
 	bottom: 30px;
 
 	@media (--mobile) {
-		left: 0;
-		bottom: 75px;
 		padding: 0 5px;
 		text-align: left;
 	}

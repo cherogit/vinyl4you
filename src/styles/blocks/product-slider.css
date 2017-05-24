@@ -19,9 +19,12 @@
 			max-width: 280px;
 		}
 
+		@media (--tablet) {
+			max-width: 720px;
+		}
+
 		@media (--desktop) {
-			max-width: 768px;
-			padding: 0 10px;
+			max-width: 736px;
 		}
 	}
 
@@ -40,12 +43,13 @@
 		background: #ffffff;
 		outline: none;
 
-		@media (--desktop) {
-			width: 225px;
+		@media (--tablet) {
+			margin-right: 15px;
 		}
 
 		@media (--desktop) {
-			max-width: 225px;
+			width: 225px;
+			margin-right: 25px;
 		}
 
 		&-labels {

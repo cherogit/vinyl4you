@@ -11,6 +11,10 @@
 		color: #fff;
 		background: var(--red);
 
+		@media (--desktop) {
+			width: 235px;
+		}
+
 		&:before {
 			content: '';
 			position: absolute;

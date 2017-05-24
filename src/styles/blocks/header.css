@@ -16,7 +16,7 @@
 			height: 100px;
 
 			@media (--desktop) {
-				height: 60px;
+				height: 80px;
 			}
 
 			.btn__callback {
@@ -89,8 +89,8 @@
 					top: 50%;
 					left: 50%;
 					transform: translate(-50%, -50%);
-					width: 25px;
-					height: 25px;
+					width: 26px;
+					height: 26px;
 					background: resolve('busket-icon.svg') center/cover no-repeat;
 				}
 				
@@ -124,7 +124,7 @@
 		color: #fff;
 
 		@media (--desktop) {
-			margin: 0 55px 0 0;
+			margin: 0 42px 0 0;
 		}
 
 		&:before {
