@@ -107,6 +107,10 @@
 		@media (--desktop) {
 			.main-nav {
 				display: none;
+
+				&.active {
+					display: flex;
+				}
 			}
 
 			.btn__callback {

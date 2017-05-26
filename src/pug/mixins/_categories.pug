@@ -5,12 +5,10 @@ mixin categories(list)
 				figure
 					.categories__img
 						img(src= item.url, alt="")
-						img.categories__img-hover(src= item.urlHover, alt="")
 					figcaption.categories__caption= item.caption
 		else 
 			a.categories__item(href="#")
 				figure
 					.categories__img
 						img(src= item.url, alt="")
-						img.categories__img-hover(src= item.urlHover, alt="")
 					figcaption.categories__caption= item.caption

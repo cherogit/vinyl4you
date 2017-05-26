@@ -7,13 +7,24 @@ $(document).ready(function() {
 		$(this).hide();
 		searchForm.addClass('_active');
 	});
+
+	// $(document).on('click', function(e) {
+	//     if ($(e.target).closest('.search._toggle').length === 0) {
+	//         $('.search._toggle').removeClass('_active');
+	//     }
+	// });
+
+	$('.burger-menu').click(function() {
+		$(this).toggleClass('active');
+		$('.header__top-wrap .main-nav').toggleClass('active');
+	});
 	
 	$('.promo-block__slider._slider').bxSlider({
 		mode: 'horizontal',
 		slideMargin: 0,
 		touchEnabled: true,
 		auto: true,
-		pause: 3000,
+		pause: 5000,
 		pager: true,
 		minSlides: 1,
 		maxSlides: 1,
@@ -49,7 +60,6 @@ $(document).ready(function() {
 					slidesToShow: 2,
 					variableWidth: true,
 					arrows: false,
-					// centerMode: true,
 				}
 			}
 		]
