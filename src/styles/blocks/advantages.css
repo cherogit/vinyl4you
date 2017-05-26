@@ -22,12 +22,16 @@
 		text-align: center;
 
 		@media (--mobile) {
-			width: 50%;
+			width: 25%;
 			margin-bottom: 40px;
 
 			&:nth-child(3) {
 				display: none;
 			}
+		}
+
+		@media (--small) {
+			width: 50%;
 		}
 	}
 

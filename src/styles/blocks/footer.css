@@ -1,5 +1,7 @@
 .footer {
-	padding: 0 0 125px 0;
+	@media (--mobile) {
+		padding: 0 0 125px 0;
+	}
 
 	&__top {
 		background: #282828 resolve('footer-top-bg-carbon.png') center/cover repeat;
@@ -25,6 +27,10 @@
 
 			@media (--mobile) {
 				margin-bottom: 25px;
+				
+				.search {
+					width: 100%;
+				}
 
 				.btn__callback {
 					display: none;
@@ -95,14 +101,28 @@
 
 				.btn__callback {
 					display: block;
-					width: 100%;
-					margin-bottom: 25px;
+					width: 55%;
 					padding: 0 10px 0 48px;
 
 					&:after {
 						content: '';
 						left: 40px;
 					}
+				}
+
+				.social {
+					width: 40%;
+				}
+			}
+
+			@media (--small) {
+				.btn__callback {
+					width: 100%;
+					margin-bottom: 25px;
+				}
+
+				.social {
+					width: 100%;
 				}
 			}
 		}
