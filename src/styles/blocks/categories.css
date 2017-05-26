@@ -44,6 +44,7 @@
 		}
 
 		@media (--small) {
+			justify-content: center;
 			padding-right: 0;
 		}
 	}
