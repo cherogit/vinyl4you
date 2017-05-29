@@ -28,6 +28,10 @@
 		@media (--mobile) {
 			height: 250px;
 			padding: 30px 0;
+
+			.btn__more {
+				display: none;
+			}
 		}
 
 		@media (--desktop) {
