@@ -5,9 +5,9 @@
 	&__top {
 		background: rgba(0, 0, 0, .74);
 
-		/*@media (--desktop) {
-			background: #fff;
-		}*/
+		@media (--desktop) {
+			background: #282828;
+		}
 
 		&-wrap {
 			display: flex;
@@ -35,16 +35,6 @@
 				height: 40px;
 				margin-left: 0;
 				margin-right: auto;
-
-				img {
-					&._desk {
-						display: block;
-					}
-
-					&._wide {
-						display: none;
-					}
-				}
 			}
 
 			img {
@@ -149,10 +139,6 @@
 			width: 24px;
 			height: 24px;
 			background: resolve('busket-icon.svg') center/cover no-repeat;
-
-			@media (--desktop) {
-				background-image: resolve('busket-icon_black.svg');
-			}
 		}
 
 		&:after {
@@ -175,7 +161,7 @@
 				color: #c8c8c8;
 
 				span {
-					color: #282828;
+					color: #fff;
 				}
 			}
 		}
@@ -189,11 +175,6 @@
 
 			@media (--desktop) {
 				display: inline-block;
-				color: #282828;
-
-				span {
-					color: #282828;
-				}
 			}
 		}
 	}

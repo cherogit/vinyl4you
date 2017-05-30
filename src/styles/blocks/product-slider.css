@@ -207,7 +207,7 @@
 	height: 40px;
 	background: #282828;
 	transition: 400ms;
-	z-index: 99;
+	z-index: 98;
 
 	@media (--mobile) {
 		display: none;

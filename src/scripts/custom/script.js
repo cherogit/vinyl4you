@@ -1,5 +1,14 @@
 $(document).ready(function() {
 
+	$(".fancy").fancybox({
+	    padding: 0,
+	    scrolling: 'no',
+	    fixed: false,
+	    autoCenter: true,
+	});
+
+	$("#phone").mask("+7 (999) 999-99-99");
+
 	$('.search-link').click(function(event) {
 		var searchForm = $('.search._toggle');
 

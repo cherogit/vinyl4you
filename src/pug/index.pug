@@ -314,6 +314,17 @@ html(lang="ru")
 						date: '2016-03-31'
 					}
 				])
+
+		.callback#callback-form
+			.callback__title
+				span Заказать 
+				| обратный звонок
+			.callback__field
+				input(type="text" placeholder="Ваше имя")
+			.callback__field
+				input(type="text" placeholder="Введите Ваш номер телефона")#phone
+			.callback__info В ближайшее время с Вами свяжутся наши менеджеры.
+			button(type="submit").btn.btn__callback Заказать звонок
 		
 		include includes/footer.pug
 
@@ -321,5 +332,8 @@ html(lang="ru")
 		script(src='js/vendor/jquery-3.1.0.min.js')
 		script(src='js/vendor/jquery.bxslider.min.js')
 		script(src='js/vendor/slick.min.js')
+		script(src='js/vendor/jquery.mousewheel-3.0.6.pack.js')
+		script(src='js/vendor/jquery.fancybox.pack.js')
+		script(src='js/vendor/jquery.mask.js')
 		script(src='js/custom/script.js')
 
