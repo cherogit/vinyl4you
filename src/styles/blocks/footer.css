@@ -73,7 +73,7 @@
 					}
 
 					&__phone {
-						font-size: 17px;
+						font-size: 16px;
 						color: #363636;
 					}
 
@@ -82,7 +82,7 @@
 					}
 
 					&__info {
-						font-size: 12px;
+						font-size: 11px;
 					}
 				}
 
@@ -101,6 +101,14 @@
 						&:last-child {
 							margin-bottom: 0;
 						}
+					}
+
+					&__phone {
+						font-size: 17px;
+					}
+
+					&__info {
+						font-size: 12px;
 					}
 				}
 

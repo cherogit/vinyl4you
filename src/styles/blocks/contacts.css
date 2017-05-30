@@ -12,6 +12,65 @@
 		margin-right: 45px;
 	}
 
+	&._callback {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		padding: 20px 50px;
+		background: #1b1b1b;
+
+		.contacts__reg {
+			position: relative;
+			display: inline-block;
+			margin-bottom: 20px;
+			margin-right: 60px;
+
+			@media (--small) {
+				display: block;
+				margin-right: 0;
+				
+				&:first-child {
+					padding-bottom: 20px;
+
+					&:after {
+						content: '';
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						display: block;
+						width: 40px;
+						height: 2px;
+						background: #838383;
+					}
+				}
+			}
+
+			.contacts__phone {
+				font-size: 18px;
+
+				&:after {
+					content: '';
+					display: none;
+				}
+			}
+		}
+
+		.contacts__info {
+			display: block;
+			font-size: 14px;
+		}
+
+		&._active {
+			display: block;
+
+			&__btn {
+				display: inline-block;
+			}
+		}
+	}
+
 	&__reg {
 		display: inline-block;
 
@@ -93,6 +152,59 @@
 			vertical-align: top;
 			font-size: 12px;
 			line-height: 18px;
+		}
+	}
+
+	&__btn {
+		position: relative;
+		text-decoration: none;
+		display: inline-block;
+		width: 210px;
+		padding: 0 20px 0 55px;
+		margin-bottom: 5px;
+		text-align: center;
+		font: 16px/40px var(--Lato-Regular);
+		color: #fff;
+		background: var(--red);
+		transition: 400ms;
+
+		&._sms {
+			margin-left: 5px;
+			text-align: left;
+			background: #1b1b1b;
+
+			@media (--small) {
+				margin: 0;
+			}
+
+			&:before {
+				content: '';
+				background: resolve('contacts__btn_sms-icon.svg') center/contain no-repeat;
+			}
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 10px;
+			transform: translate(0, -50%);
+			display: block;
+			width: 25px;
+			height: 25px;
+			background: resolve('callback-icon.svg') center/cover no-repeat;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 45px;
+			transform: translate(0, -50%);
+			display: block;
+			height: 26px;
+			width: 2px;
+			background: #fff;
 		}
 	}
 }

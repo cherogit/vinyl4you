@@ -53,8 +53,13 @@
 			width: 100%;
 			height: 40px;
 			padding: 0 20px;
-			font: 18px/20px var(--Lato-Light);
-			color: #646464;
+			font: 18px/20px var(--Lato-Regular);
+			color: #282828;
+
+			&::-webkit-input-placeholder {color:#646464; font-family: var(--Lato-Light);}
+			&::-moz-placeholder          {color:#646464; font-family: var(--Lato-Light);}/* Firefox 19+ */
+			&:-moz-placeholder           {color:#646464; font-family: var(--Lato-Light);}/* Firefox 18- */
+			&:-ms-input-placeholder      {color:#646464; font-family: var(--Lato-Light);}
 
 			@media (--small) {
 				font-size: 14px;

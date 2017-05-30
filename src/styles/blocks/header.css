@@ -5,10 +5,6 @@
 	&__top {
 		background: rgba(0, 0, 0, .74);
 
-		@media (--desktop) {
-			background: #282828;
-		}
-
 		&-wrap {
 			display: flex;
 			justify-content: space-between;
@@ -21,6 +17,10 @@
 
 			.btn__callback {
 				display: none;
+
+				&._callback {
+					display: none;
+				}
 			}
 		}
 
@@ -57,21 +57,10 @@
 
 		@media (--mobile) {
 			.btn__callback {
-				display: inline-block; 
-				width: 40px;
-				height: 40px;
-				padding: 0 20px; 
-				font-size: 0;
-				
-				&:before {
-					content: '';
-					top: 50%;
-					left: 50%;
-					transform: translate(-50%, -50%);
-				}
-				&:after {
-					content: '';
-					display: none;
+				display: none;
+
+				&._callback {
+					display: inline-block;
 				}
 			}
 
@@ -80,7 +69,7 @@
 				height: 40px;
 				padding: 0;
 				margin: 0 5px 0 0;
-				background: #282828;
+				background: #fff;
 
 				&:before {
 					content: '';
@@ -89,7 +78,7 @@
 					transform: translate(-50%, -50%);
 					width: 26px;
 					height: 26px;
-					background: resolve('busket-icon.svg') center/cover no-repeat;
+					background: resolve('busket-icon_black.svg') center/cover no-repeat;
 				}
 				
 				&:after {

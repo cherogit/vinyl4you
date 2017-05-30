@@ -12,6 +12,46 @@
 		background: var(--red);
 		transition: 400ms;
 
+		&._callback {
+			width: 40px;
+			height: 40px;
+			padding: 0 20px; 
+			font-size: 0;
+			
+			&:before {
+				content: '';
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				transform: translate(-50%, 0);
+				display: none;
+				width: 0;
+				height: 0;
+				border-left: 8px solid transparent;
+				border-right: 8px solid transparent;
+				border-top: 10px solid var(--red);
+				background: transparent;
+			}
+
+			&._active {
+				
+				&:hover {
+					background: var(--red);
+				}
+
+				&:after {
+					content: '';
+					display: block;
+				}
+			}
+		}
+
 		&:hover {
 			background: #c30101;
 		}
