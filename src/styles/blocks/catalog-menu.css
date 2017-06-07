@@ -250,6 +250,27 @@
 	list-style: none;
 	transition: 400ms;
 
+	&._aside {
+		position: initial;
+		display: none;
+
+		.catalog-submenu__item {
+			width: 100%;
+			padding: 0;
+			background: white;
+		}
+
+		.catalog-submenu__link {
+			background: white;
+			color: #282828;
+
+			&:hover {
+				background: #282828;
+				color: white;
+			}
+		}
+	}
+
 	&__item {
 		width: 225px;
 		padding: 0 0 0 3px;

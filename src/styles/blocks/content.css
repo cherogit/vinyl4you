@@ -1,5 +1,4 @@
 .content {
-	/*display: none;*/
 	
 	&__inner {
 		max-width: 790px;
@@ -16,6 +15,8 @@
 	}
 
 	&__product {
+		display: inline-block;
 		max-width: 900px;
+		vertical-align: top;
 	} 
 }
