@@ -5,6 +5,62 @@
 	&__top {
 		background: rgba(0, 0, 0, .74);
 
+		&._white {
+			background: white;
+
+			@media (--mobile) {
+				box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+			}
+
+			.main-logo {
+				display: inline-block;
+
+				img {
+					
+					&._wide {
+						display: none;
+					}
+
+					&._desk {
+						display: inline-block;
+					}
+				}
+			}
+
+			.main-nav {
+
+				&__link {
+					color: #3c3b3b;
+
+					@media (--mobile) {
+						color: white;
+					}
+				}
+
+
+			}
+
+			.header__busket {
+
+				&:before {
+					content: '';
+					background: resolve('busket-icon_black.svg') center/cover no-repeat;;
+				}
+
+				&-count {
+					color: #c8c8c8;
+
+					span {
+						color: #282828;
+					}
+				}
+
+				&-price {
+					color: #282828;
+				}
+			}
+		}
+
 		&-wrap {
 			display: flex;
 			justify-content: space-between;

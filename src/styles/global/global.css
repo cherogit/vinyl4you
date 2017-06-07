@@ -48,7 +48,8 @@ input, button {
 	background: transparent;
 }
 
-.h2 {
+
+.h2, .h1 {
 	position: relative;
 	margin: 0 0 40px 0;
 	font: 32px/34px var(--Lato-Regular);
@@ -98,6 +99,7 @@ input, button {
 	width: 40px;
 	height: 40px;
 	background: #282828;
+	z-index: 8041;
 
 	&:before, &:after {
 		content: '';

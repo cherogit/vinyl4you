@@ -1,0 +1,33 @@
+.counter {
+	display: inline-block;
+	width: 144px;
+	vertical-align: top;
+	margin: 0 25px 0 0;
+	padding: 0;
+	border: 3px solid #efeded;
+	font-size: 0;
+
+	&__minus, &__plus {
+		display: inline-block;
+		width: 35px;
+		text-decoration: none;
+		text-align: center;
+		font: 24px/26px var(--Lato-Regular);
+		color: #b1b1b1;
+		background: #efeded;
+	}
+
+	&__field {
+		display: inline-block;
+		width: 68px;
+		padding: 0 10px;
+		vertical-align: top;
+		text-align: center;
+		font: 14px/24px var(--Lato-Regular);
+		color: black;
+
+		&:focus {
+			border-color: transparent;
+		}
+	}
+}

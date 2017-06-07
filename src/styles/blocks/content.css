@@ -13,5 +13,9 @@
 			font: 15px/26px var(--Lato-Regular);
 			color: #383431;
 		}
-	}	
+	}
+
+	&__product {
+		max-width: 900px;
+	} 
 }
