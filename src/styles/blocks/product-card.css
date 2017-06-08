@@ -294,45 +294,30 @@
 	position: relative;
 	padding: 0 40px;
 
-	&__arrow {
+	a.slider-thumbs__arrow {
 		position: absolute;
 		top: 50%;
-		transform: translate(0, -50%);
-		text-decoration: none;
-		display: block;
-		width: 40px;
-		height: 40px;
-		background: #282828;
+		width: 20px;
+		height: 20px;
+		border-color: transparent; 
+		border-top: 4px solid #efeded;
+		border-right: 4px solid #efeded;
 		transition: 400ms;
 		z-index: 98;
 
 		&:hover {
-			background: var(--red);
-		}
-
-		&:before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			display: block;
-			width: 100%;
-			height: 100%;
-			background: #000 resolve('slider-arrow.svg') center/50% no-repeat;
+			border-top: 4px solid var(--red);
+			border-right: 4px solid var(--red);
 		}
 
 		&._next {
 			right: 0;
-
+			transform: rotate(45deg) translate(0, -50%);
 		}
 
 		&._prev {
 			left: 0;
-
-			&:before {
-				content: '';
-				transform: rotate(180deg);
-			}
+			transform: rotate(-135deg) translate(0, -50%);
 		}
 	}
 	
