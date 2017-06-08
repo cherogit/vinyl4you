@@ -41,9 +41,9 @@ $(document).ready(function() {
 		return false;
 	});
 
-	$('.catalog-aside__list-item').click(function() {
-		$('.catalog-aside__list-link._l2').toggleClass('_active');
-		$('.catalog-aside__list-link._l2').next('.catalog-submenu._aside').slideToggle().stop();
+	$('.catalog-aside__list-link._l2').click(function() {
+		$(this).siblings('.catalog-submenu._aside').closest('.catalog-aside__list-item').toggleClass('_active');
+		$(this).siblings('.catalog-submenu._aside').slideToggle();
 		return false;
 	});
 
@@ -147,30 +147,29 @@ $(document).ready(function() {
 
 	// responsive accordion to tabs
 
-	$(document).ready(function() {
-		if ($('.accordion')[0]) {
+	if ($('.accordion')[0]) {
+		if ($(window).width() > 768) {
+			$('.accordion-content:not(:first)').hide();
+			$('.accordion-title:first-child').addClass('active');
+		} else {
+			$('.accordion-content').hide();
+		};
+
+		$('.accordion-title').on('click', function() {
+			$('.accordion-title').removeClass('active');
+			
 			if ($(window).width() > 768) {
-				$('.accordion-content:not(:first)').hide();
-				$('.accordion-title:first-child').addClass('active');
-			} else {
+
 				$('.accordion-content').hide();
+				$(this).next().show().prev().addClass('active').siblings().removeClass('active');
+
+				return false;
+
+			} else {
+				$(this).next().toggle().prev().toggleClass('active');
+				return false;
 			};
-
-			$('.accordion-title').on('click', function() {
-
-				if ($(window).width() > 768) {
-
-					$('.accordion-content').hide();
-					$(this).next().show().prev().addClass('active').siblings().removeClass('active');
-
-					return false;
-
-				} else {
-					$(this).next().toggle().prev().toggleClass('active');
-					return false;
-				};
-			});
-		}
-	});
+		});
+	}
 
 });

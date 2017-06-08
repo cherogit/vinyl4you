@@ -29,8 +29,7 @@
 		}
 
 		&-link {
-			position: relative;
-			padding: 0 15px 0 0;
+			display: block;
 			text-decoration: none;
 			text-transform: uppercase;
 			font: 14px/36px var(--Lato-Regular);
@@ -38,18 +37,24 @@
 			transition: 400ms;
 
 			&._l2 {
-				&:after {
-					content: '';
-					position: absolute;
-					top: 50%;
-					right: 0;
-					transform: translate(0, -50%);
-					width: 0;
-					height: 0;
-					border-left: 3px solid transparent;
-					border-right: 3px solid transparent;
-					border-top: 5px solid #000;
+				
+				span {
+					position: relative;
+					display: inline-block;
+					padding: 0 15px 0 0;
 
+					&:after {
+						content: '';
+						position: absolute;
+						top: 50%;
+						right: 0;
+						transform: translate(0, -50%);
+						width: 0;
+						height: 0;
+						border-left: 3px solid transparent;
+						border-right: 3px solid transparent;
+						border-top: 5px solid #000;
+					}
 				}
 			}
 		}
