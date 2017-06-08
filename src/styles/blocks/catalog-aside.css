@@ -1,11 +1,11 @@
 .catalog-aside {
-	float: left;
+	
 	display: inline-block;
 	vertical-align: top;
-	max-width: 240px;
 	width: 100%;
-	margin: 0 60px 0 0;
-	border: 1px solid black;
+	margin: 0 0 40px 0;
+	border: 3px solid #efeded;
+	border-bottom-color: var(--red);
 
 	&__list {
 		padding: 10px 0;

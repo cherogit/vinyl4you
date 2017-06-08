@@ -1,0 +1,15 @@
+.product-sidebar {
+	float: left;
+	max-width: 245px;
+	width: 100%;
+	margin: 0 55px 0 0;
+
+	.h2 {
+		margin: 0 0 20px 0;
+		font-size: 30px;
+	}
+
+	.sidebar-social__advice {
+		margin-bottom: 10px;
+	}
+}
