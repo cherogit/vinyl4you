@@ -1,5 +1,6 @@
 .content {
-	
+	overflow: hidden;
+
 	&__inner {
 		max-width: 790px;
 
@@ -18,5 +19,6 @@
 		display: inline-block;
 		max-width: 900px;
 		vertical-align: top;
+		margin: 0 0 50px 0;
 	} 
 }

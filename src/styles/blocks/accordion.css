@@ -33,17 +33,25 @@
 	&-content {
 		float: right;
 		width: 100%;
-		margin: 0 0 50px 0;
-		padding: 40px 0;
+		padding: 50px 0;
 		text-align: left;
 		font: 15px/26px var(--Lato-Regular);
 		color: #282828;
+
+		@media (--desktop) {
+			float: none;
+		}
 		
 		iframe {
 			max-width: 560px;
 			width: 100%;
 			height: 315px;
 			margin: 0 0 20px 0;
+
+			@media (--desktop) {
+				max-width: none;
+
+			}
 		}
 
 		p {
@@ -64,7 +72,8 @@
 
 			&-form {
 				float: right;
-				width: 690px;
+				max-width: 690px;
+				width: 100%;
 
 				textarea {
 					width: 100%;

@@ -97,7 +97,11 @@ html(lang="ru")
 							.sidebar-social__follower
 								span 17 025
 							a.sidebar-social__subscribe(href="#subscribe") Подписаться
-
+					.product-sidebar__slider
+						.product-sidebar__slider-item
+							img(src="http://placehold.it/245x100", alt="")
+						.product-sidebar__slider-item
+							img(src="http://placehold.it/245x100", alt="")
 				.content__product
 					+breadcrumbs(['Товар 1'])
 					h1.h1
@@ -135,7 +139,7 @@ html(lang="ru")
 								form(action="").product-card__form
 									.counter
 										a(href="#").counter__minus -
-										input.counter__field(type="text" value="2" data-min="1" data-max="10")
+										input.counter__field(type="number" value="2" data-min="1" data-max="10")
 										a(href="#").counter__plus +
 									.product-card__form-field
 										input(type="checkbox", name="", id="check1")

@@ -42,7 +42,7 @@ $(document).ready(function() {
 
 	$('.catalog-aside__list-link._l2').click(function() {
 		$(this).parent().toggleClass('_active');
-		$(this).next().slideToggle();
+		$(this).next().stop().slideToggle();
 		return false;
 	});
 
@@ -115,12 +115,23 @@ $(document).ready(function() {
 		infinite: true,
 		slidesToShow: 3,
 		slidesToScroll: 1,
-		nextArrow: '<a href="" class="slider-arrow _next"></a>',
-		prevArrow: '<a href="" class="slider-arrow _prev"></a>',
+		nextArrow: '<a href="" class="slider-thumbs__arrow _next"></a>',
+		prevArrow: '<a href="" class="slider-thumbs__arrow _prev"></a>',
 		centerMode: false,
 		variableWidth: true,
 	});
 
+
+	$('.product-sidebar__slider').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 3000,
+		arrows: false,
+		centerMode: false,
+		variableWidth: true,
+	});
 
 
 	// counter

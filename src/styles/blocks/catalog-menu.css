@@ -248,7 +248,6 @@
 	left: 100%;
 	display: none;
 	list-style: none;
-	transition: 400ms;
 
 	&._aside {
 		position: initial;
