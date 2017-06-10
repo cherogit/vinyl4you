@@ -169,9 +169,11 @@ $(document).ready(function() {
 		accordion_content.hide();
 		$(this).addClass('active').next().show();
 
-		$('html, body').animate({
-		    scrollTop: accordion_title.offset().top
-		}, 400)
+		if ($(window).width() < 800) {
+			$('html, body').animate({
+			    scrollTop: accordion_title.offset().top
+			}, 400);
+		}
 	});
 	accordion_title.eq(0).trigger('click');
 });
