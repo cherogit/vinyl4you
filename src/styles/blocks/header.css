@@ -32,7 +32,7 @@
 				&__link {
 					color: #3c3b3b;
 
-					@media (--mobile) {
+					@media (--tablet) {
 						color: white;
 					}
 				}

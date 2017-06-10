@@ -64,6 +64,10 @@ input[type="number"] {
 	font: 32px/34px var(--Lato-Regular);
 	color: #000000;
 
+	@media (--desktop) {
+		font-size: 28px;
+	}
+
 	@media (--mobile) {
 		font-size: 24px;
 		line-height: 26px;
@@ -131,6 +135,53 @@ input[type="number"] {
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, 0) rotate(-45deg);
+	}
+}
+
+
+.fancybox-nav {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	width: 40px;
+	height: 40px;
+	background: #282828;
+	z-index: 8040;
+
+	span {
+		display: none;
+	}
+}
+
+.fancybox-next {
+	
+	&:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) rotate(45deg);
+		display: block;
+		width: 15px;
+		height: 15px;
+		border-top: 3px solid white;
+		border-right: 3px solid white;
+	}
+}
+
+.fancybox-prev {
+	
+	&:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translate(-50%, -50%) rotate(-135deg);
+		display: block;
+		width: 15px;
+		height: 15px;
+		border-top: 3px solid white;
+		border-right: 3px solid white;
 	}
 }
 

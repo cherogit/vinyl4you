@@ -168,6 +168,10 @@ $(document).ready(function() {
 		accordion_title.removeClass('active');
 		accordion_content.hide();
 		$(this).addClass('active').next().show();
+
+		$('html, body').animate({
+		    scrollTop: accordion_title.offset().top
+		}, 400)
 	});
 	accordion_title.eq(0).trigger('click');
 });
