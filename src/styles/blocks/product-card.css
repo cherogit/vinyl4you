@@ -1,6 +1,5 @@
 .product-card {
 	margin: 0 0 75px 0;
-	/*border: 1px solid black;*/
 
 	@media (--mobile) {
 		margin-bottom: 30px;
@@ -95,8 +94,47 @@
 		color: #282828;
 	}
 
+	&__code {
+		margin: 0 0 10px 0;
+	}
+
 	&__status {
 		margin: 0 0 10px 0;
+
+		span {
+
+			&.inStock {
+				position: relative;
+				padding: 0 25px 0 0;
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 50%;
+					right: 0;
+					transform: translate(0, -50%);
+					display: block;
+					width: 15px;
+					height: 15px;
+					background: resolve('inStock-icon.svg') center/contain no-repeat;
+				}
+			}
+		}
+	}
+
+	&__desc {
+		list-style: none;
+		margin: 0 0 15px 0;
+
+		li {
+			font: 18px/22px var(--Lato-Regular);
+			color: #282828;
+
+			span {
+
+
+			}
+		}
 	}
 
 	&__form {
@@ -244,9 +282,7 @@
 				background: #c30101;
 			}
 
-			@media (--desktop) {
-				/*padding: 0 28px;*/
-			}
+			
 		}
 	}
 
@@ -267,7 +303,6 @@
 	&__preview {
 		margin: 0 0 5px 0;
 		border: 2px solid #efeded;
-		/*border: 2px solid red;*/
 
 		a {
 			position: relative;
