@@ -127,12 +127,23 @@
 		margin: 0 0 15px 0;
 
 		li {
-			font: 18px/22px var(--Lato-Regular);
+			position: relative;
+			margin: 0 0 5px 0;
+			padding: 0 0 0 15px;
+			font: 18px/18px var(--Lato-Regular);
 			color: #282828;
 
-			span {
-
-
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translate(0, -50%);
+				display: block;
+				width: 5px;
+				height: 5px;
+				border-radius: 50%;
+				background: var(--red);
 			}
 		}
 	}
