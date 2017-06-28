@@ -11,4 +11,5 @@ mixin categories(list)
 				figure
 					.categories__img
 						img(src= item.url, alt="")
-					figcaption.categories__caption= item.caption
+					figcaption.categories__caption
+						span= item.caption

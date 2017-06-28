@@ -8,6 +8,16 @@
 		margin: 0 0 60px 0;
 		padding: 0 30px;
 
+		&._catalog {
+			padding: 50px;
+			background: #efeded;
+
+			.advantages__img {
+				width: 75px;
+				height: 50px;
+			}
+		}
+
 		@media (--mobile) {
 			margin-bottom: 0;
 		}

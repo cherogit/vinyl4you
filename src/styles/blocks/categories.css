@@ -4,6 +4,13 @@
 	background: #282828;
 	box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
 
+	&._white {
+		margin-bottom: 30px;
+		padding: 0;
+		background: white;
+		box-shadow: none;
+	}
+
 	@media (--desktop) {
 		margin-bottom: 70px;
 		padding: 55px 0 35px 0;
@@ -98,7 +105,6 @@
 
 				.categories__caption {
 					font-size: 20px;
-					line-height: 65px;
 				}
 			}
 
@@ -201,18 +207,25 @@
 	}
 
 	&__caption {
+		display: inline-block;
+		width: 100%;
 		text-align: center;
-		font: 20px/65px var(--Lato-Regular);
+		height: 65px;
+		font: 20px/22px var(--Lato-Regular);
 		color: #373737;
+
+		span {
+			display: inline-block;
+			vertical-align: top;
+		}
 
 		@media (--mobile) {
 			font-size: 18px;
-			line-height: 65px;
 		}
 
 		@media (--desktop) {
 			font-size: 14px;
-			line-height: 40px;
+			height: 40px;
 		}
 	}
 }
