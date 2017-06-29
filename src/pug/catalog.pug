@@ -106,12 +106,20 @@ html(lang="ru")
 							span Подробнее
 
 
-				.content__product
+				.content__catalog
 					+breadcrumbs(['Автовинил', 'Подраздел'])
 					
+					.catalog-promo(style="background-image: url('./assets/images/img/promo-catalog__img-1.jpg')")
+						.catalog-promo__title Красный хром
+						.catalog-promo__desc
+							| Полная оклейка автомобиля плёнкой Красный хром <br /> комбинированный с лакированным карбоном.
+						a.btn.btn__more(href='#') 
+							span Подробнее
+
 					h2.h2
 						span Категории 
 						| подраздела
+
 					.categories._white
 						.categories__wrapper
 							.categories__inner
