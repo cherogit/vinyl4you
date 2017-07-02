@@ -26,6 +26,7 @@ $(document).ready(function() {
 	$('.burger-menu').click(function() {
 		$(this).toggleClass('active');
 		$('.header__top-wrap .main-nav').toggleClass('active');
+		return false;
 	});
 
 	$('.btn__callback._callback').click(function() {

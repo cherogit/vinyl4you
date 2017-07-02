@@ -208,15 +208,23 @@
 
 	&__caption {
 		display: inline-block;
+		vertical-align: middle;
 		width: 100%;
 		text-align: center;
 		height: 65px;
 		font: 20px/22px var(--Lato-Regular);
 		color: #373737;
 
+		&:before {
+			content: '';
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+		}
+
 		span {
 			display: inline-block;
-			vertical-align: top;
+			vertical-align: middle;
 		}
 
 		@media (--mobile) {

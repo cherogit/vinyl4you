@@ -12,10 +12,16 @@
 			padding: 50px;
 			background: #efeded;
 
+			@media (--mobile) {
+				margin: 0 0 25px 0;
+				padding: 40px 0 0;
+			}
+
 			.advantages__img {
 				width: 75px;
 				height: 50px;
 			}
+
 		}
 
 		@media (--mobile) {

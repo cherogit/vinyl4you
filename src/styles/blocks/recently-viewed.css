@@ -1,6 +1,10 @@
 .recently-viewed {
 	background: #efeded;
 
+	&._catalog {
+		padding-top: 30px;
+	}
+
 	&__wrapper {
 		padding: 55px 20px 65px 20px;
 

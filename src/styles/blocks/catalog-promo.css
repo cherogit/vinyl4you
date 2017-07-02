@@ -6,17 +6,31 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+
+	@media (--small) {
+		padding: 15px;
+	}
 	
 	&__title {
 		margin: 0 0 10px 0;
 		text-transform: uppercase;
 		font: 36px/40px var(--Lato-Regular);
 		color: white;
+
+		@media (--small) {
+			font-size: 26px;
+			line-height: 30px;
+		}
 	}
 
 	&__desc {
 		margin: 0 0 20px 0;
 		font: 18px/22px var(--Lato-Regular);
 		color: white;
+
+		@media (--small) {
+			font-size: 16px;
+			line-height: 18px;
+		}
 	}
 }
