@@ -9,7 +9,7 @@
 	border-top: 2px solid var(--red);
 	font: 18px/26px var(--Lato-Medium);
 	color: white;
-	background: #282828 resolve('conversion-bg.jpg') center/cover no-repeat;
+	background: #282828 resolve('conversion-bg.jpg') top/contain repeat;
 
 	@media (--desktop) {
 		justify-content: flex-start;

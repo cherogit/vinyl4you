@@ -15,7 +15,7 @@
 		}
 	}
 
-	&__product, &__catalog {
+	&__product, &__category {
 		display: inline-block;
 		max-width: 900px;
 		width: 100%;
@@ -27,7 +27,7 @@
 		}
 	}
 
-	&__catalog {
+	&__category {
 		
 		.categories__item {
 				

@@ -183,13 +183,23 @@
 
 		&-desc {
 			position: relative;
-			margin: 0 0 30px 0;
+			margin: 0 0 10px 0;
 			font: 18px/22px var(--Lato-Regular);
 			color: #fff;
 			z-index: 2;
 
 			&._uppercase {
 				text-transform: uppercase;
+			}
+		}
+
+		&-oldPrice {
+			text-decoration: line-through;
+			font: 14px/22px var(--Lato-Regular);
+			color: var(--red);
+
+			&._black {
+				color: var(--font-color);
 			}
 		}
 
