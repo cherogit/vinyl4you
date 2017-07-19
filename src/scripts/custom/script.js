@@ -7,7 +7,147 @@ $(document).ready(function() {
 		autoCenter: true,
 	});
 
-	$("#phone").mask("+7 (999) 999-99-99");
+	$(".phone").mask("+7 (999) 999-99-99");
+
+	$('select').styler({
+		'selectPlaceholder': '',
+	});
+
+	//ordering-form start
+
+	$(function() {
+		var form = $('.ordering-form'),
+			step_links = $('.step-links a'),
+			step_contents = $('.step-content');
+
+		form.submit(function() {
+			if (form.validate()) return false;
+		});
+			
+		step_links.click(function() {
+			var item = $(this);
+			if (!item.index() || item.prev().attr('class') && (item.hasClass('done') || !form.validate())) {
+				step_links.removeClass('active')
+				item.prev().addClass('done');
+				item.addClass('active');
+				step_contents.hide();
+				$(item.attr('href')).show();
+			}
+			if (!item.index()) {
+				//скрыть кнопку назад
+				$('.ordering-form__prev').hide();
+			} else {
+				//отобразить кнопку назад
+				$('.ordering-form__prev').show();
+			}
+			if (item.is(':last-child')) {
+				//скрыть кнопку вперед
+				$('.ordering-form__next').hide();
+				//отобразить сабмит
+				$('.ordering-form__submit').show();
+			} else {
+				//отобразить кнопку вперед
+				$('.ordering-form__next').show();
+				//скрыть сабмит
+				$('.ordering-form__submit').hide();
+			}
+			return false;
+		});
+
+		$('.ordering-form__prev').click(function() {
+			step_links.filter('.active').prev().trigger('click');
+			return false;
+		});
+
+		$('.ordering-form__next').click(function() {
+			if ($('.step-links a.active').is(':last-child')) {
+				form.submit();
+			} else {
+				step_links.filter('.active').next().trigger('click');
+			}
+			return false;
+		});
+	});
+
+	//ordering-form finish
+
+	// validate start
+
+	(function( $ ){
+		$.fn.validate = function() {
+
+			var $this = this,
+				num_errors = 0,
+				validators = {
+					email	: /^([a-z0-9_\.\-\+]+)@([\da-z\.\-]+)\.([a-z\.]{2,6})$/i,
+					phone	: /^(\d|\+\d ?)?( )?\(?\d{3}\)?(-| )?\d{3}(-| )?\d{2}(-| )?\d{2}$/,
+				}
+
+			$this.show_error = function(element, msg) {
+				var $element = $(element);
+				if($element.data('error')) msg = $element.data('error');
+				$element.addClass('has-error');
+				var em = $('<span>'+msg+'</span>').insertAfter($(element)).addClass('error-text');
+				num_errors++;
+			}
+
+			$this.check_input = function(input) {
+				var $input = $(input),
+					require = $input.data('required');
+				if (require) {
+					$input.removeClass('has-error');
+					if ($input.val() == '') return $this.show_error(input, "Поле, необходимое для заполнения!");
+					if (require == 'mixed') return ;
+					if (require == 'phone') {
+						if (!validators.phone.test($input.val())) {
+							return $this.show_error(input, "Необходим телефонный номер в формате x (yyy) zzz-zz-zz!"); 
+						}
+					}
+					if (require == 'email') {
+						if (!validators.email.test($input.val())) {
+							return $this.show_error(input, "Некорректный электронный адрес!"); 
+						}
+					}
+				}
+			}
+
+			$this.check_select = function(select) {
+				var $select = $(select);
+				if ($select.data('required') && !$select.val()) {
+					return $this.show_error($select, "Выберите подходящий пункт!");
+				}
+			}
+
+			$this.check_checkbox = function(checkbox) {
+				var $checkbox = $(checkbox);
+				if ($checkbox.data('required') && !$checkbox.is(':checked')) {
+					return $this.show_error($checkbox, "Поставьте галочку!");
+				}
+			}
+
+			this.each(function (){
+				$(".error-text").remove();
+				$(this).find('input:text:visible, input[type="email"]:visible').each(function(){
+					$this.check_input(this);
+				});
+
+				$(this).find('select:visible').each(function(){
+					$this.check_select(this);
+				});
+
+				$(this).find('textarea:visible').each(function(){
+					$this.check_input(this);
+				});
+
+				$(this).find('input:checkbox:visible').each(function(){
+					$this.check_checkbox(this);
+				});
+			});
+			
+			return num_errors;
+		}
+	})(jQuery);
+	// validate finish
 
 	$('.search-link').click(function(event) {
 		var searchForm = $('.search._toggle');
@@ -17,11 +157,6 @@ $(document).ready(function() {
 		searchForm.addClass('_active');
 	});
 
-	// $(document).on('click', function(e) {
-	//     if ($(e.target).closest('.search._toggle').length === 0) {
-	//         $('.search._toggle').removeClass('_active');
-	//     }
-	// });
 
 	$('.burger-menu').click(function() {
 		$(this).toggleClass('active');
@@ -94,8 +229,52 @@ $(document).ready(function() {
 				settings: {
 					infinite: true,
 					slidesToShow: 2,
+					slidesToScroll: 2,
 					variableWidth: true,
 					arrows: false,
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToScroll: 1,
+				}
+			}
+		]
+	});
+
+	$('.related-products__slider').slick({
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		nextArrow: '<a href="" class="slider-arrow _next"></a>',
+		prevArrow: '<a href="" class="slider-arrow _prev"></a>',
+		centerMode: false,
+		variableWidth: true,
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					infinite: true,
+					slidesToShow: 3,
+					variableWidth: true,
+					centerMode: true,
+				}
+			},
+			{
+				breakpoint: 760,
+				settings: {
+					infinite: true,
+					slidesToShow: 2,
+					slidesToScroll: 2,
+					variableWidth: true,
+					arrows: false,
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToScroll: 1,
 				}
 			}
 		]
@@ -160,7 +339,6 @@ $(document).ready(function() {
 	});
 
 	// counter end
-
 
 	// responsive accordion to tabs
 	var accordion_title = $('.accordion-title'),

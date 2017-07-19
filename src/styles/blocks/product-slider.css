@@ -15,16 +15,16 @@
 		padding: 0 8px;
 		overflow: hidden;
 
-		@media (--mobile) {
-			max-width: 280px;
+		@media (--desktop) {
+			max-width: 736px;
 		}
 
 		@media (--tablet) {
 			max-width: 720px;
 		}
 
-		@media (--desktop) {
-			max-width: 736px;
+		@media (--small) {
+			max-width: 280px;
 		}
 	}
 
@@ -43,13 +43,13 @@
 		background: #ffffff;
 		outline: none;
 
-		@media (--tablet) {
-			margin-right: 15px;
-		}
-
 		@media (--desktop) {
 			width: 225px;
 			margin-right: 25px;
+		}
+
+		@media (--tablet) {
+			margin-right: 15px;
 		}
 
 		&-labels {

@@ -107,82 +107,37 @@ html(lang="ru")
 							span Подробнее
 
 
-				.content__catalog
-					+breadcrumbs(['Автовинил', 'Подраздел'])
+				.content__inner._big.text-block
+					+breadcrumbs(['Каталог товаров', 'товар 1'])
 					
-					.catalog-promo(style="background-image: url('./assets/images/img/promo-catalog__img-1.jpg')")
-						.catalog-promo__title Красный хром
-						.catalog-promo__desc
-							| Полная оклейка автомобиля плёнкой Красный хром <br /> комбинированный с лакированным карбоном.
-						a.btn.btn__more(href='#') 
-							span Подробнее
+					h1.h1
+						span Заголовок 
+						| H1
+					p
+						| Пленка под карбон 3d графит (мокрый асфальт) по своему цвету отличается от серебра и от черного. Цвет графит темнее на 2-3 тона чем серебряный цвет карбоной пленки, но гораздо светлее чем оттенок черной карбоновой пленки. Подойдет для тех, кому слишком ярким будет серебряный цвет, но не хочется оклеивать в черный цвет. <br /> Стоит отметить особенность всех карбоновых 3д пленок: в тени карбоновая пленка смотрится на оклееных деталях, как матовая пленка, когда же на пленку попадает солнечный свет или свет от других источников, пленка преображается, структура карбона переливается по лучами света.<br /> Карбон пленка графитового цвета может быть использована для оклеивания внутренних деталей автомобиля: торпеды, приборной панели, пластиковых вставок, различных деталей, ручек, руля и других деталей. <br /> Карбоновая пленка 3д чаще всего используется для оклеивания деталей кузова автомобиля: капоты, крыши, багажника, бамперов, дверей, спойлера. Так же очень часто пленка под карбон используется для полной оклейки автомобиля. 
 
 					h2.h2
-						span Категории 
-						| подраздела
-
-					.categories._white
-						.categories__wrapper
-							.categories__inner
-								+categories([
-									{
-										url: '../assets/images/img/categories__img-1.png',
-										caption: 'Алькантара стандарт'
-									},
-									{
-										url: '../assets/images/img/categories__img-2.png',
-										caption: 'Алькантара премиум'
-									},
-									{
-										url: '../assets/images/img/categories__img-3.png',
-										caption: 'Алькантара корея decor'
-									},
-									{
-										url: '../assets/images/img/categories__img-5.png',
-										caption: 'Карпет'
-									}
-								])
-
-					.advantages
-						.advantages__wrapper._catalog
-							.advantages__item
-								.advantages__img
-									img(src="../assets/images/img/advantages__img-1.svg", alt="")
-								.advantages__desc Выгодная 
-									br
-									span бонусная
-							.advantages__item
-								.advantages__img
-									img(src="../assets/images/img/advantages__img-2.svg", alt="")
-								.advantages__desc Широкий 
-									br 
-									span ассортимент
-							.advantages__item
-								.advantages__img
-									img(src="../assets/images/img/advantages__img-3.svg", alt="")
-								.advantages__desc Нашли товар 
-									br 
-									| дешевле?
-							.advantages__item
-								.advantages__img
-									img(src="../assets/images/img/advantages__img-4.svg", alt="")
-								.advantages__desc Эксклюзивный  
-									br
-									span дистрибьютор
-							.advantages__item
-								.advantages__img
-									img(src="../assets/images/img/advantages__img-5.svg", alt="")
-								.advantages__desc Доставки  
-									br
-									span по всей России
-					
-					h2.h2
-						span Что 
-						| отличает алькантару от других
+						span Заголовок 
+						| H2
 
 					p
 						| Планируете купить алькантару, предназначенную для обшивки авто, в Москве? Вы делаете правильный выбор, поскольку этот материал:
 					ul
+						li не истирается при длительном использовании;
+						li не расходится по швам благодаря высокой прочности;
+						li обладает устойчивостью к механическим повреждениям;
+						li не загорается от искр или непотушенных сигарет;
+						li приятен и мягок на ощупь;
+						li не требует особого ухода;
+						li не выгорает под действием ультрафиолетовых лучей;
+						li не теряет первоначальный вид в течение продолжительного времени;
+						li пропускает воздух.
+
+					h3.h3
+						span Заголовок 
+						| H3
+
+					ol
 						li не истирается при длительном использовании;
 						li не расходится по швам благодаря высокой прочности;
 						li обладает устойчивостью к механическим повреждениям;
@@ -213,45 +168,43 @@ html(lang="ru")
 						.conversion__callback 
 							span или можете 
 							a.conversion__btn.fancy(href="#callback-form") Оставить заявку
+					
+					table
+						caption
+							span Таблица 
+							| 1 Название таблицы
+						tr
+							th
+							th Заголовок для таблицы 1
+							th Заголовок для таблицы 2
+						tr
+							th 1.
+							td Значение для таблицы
+							td Значение для таблицы
+						tr
+							th 2.
+							td Значение для таблицы
+							td Значение для таблицы
+						tr
+							th 3.
+							td Значение для таблицы
+							td Значение для таблицы
+						tr
+							th 4.
+							td Значение для таблицы
+							td Значение для таблицы
+
+
+
+					img(src="./assets/images/img/promo-catalog__img-1.jpg", alt="")
 
 					p
 						| В интернет-магазине «Vinyl4you» Вы можете купить обивочный самоклеющийся материал, предназначенный для автомобильных салонов, – алькантару. Она визуально похожа на искусственную замшу, но обладает более высокими эксплуатационными свойствами по сравнению с замшевым аналогом. Алькантара на клеевой основе принадлежит к разновидности микрофибры, имеет однородную поверхность и плотность. Материал очень мягкий и приятный на ощупь.
 
-		.recently-viewed._catalog
-			.recently-viewed__wrapper
-				.container
-					h2.h2
-						span Недавно 
-						| смотрели
-				.product-slider._m0
-					+product-slider([
-						{
-							img: '../assets/images/img/product-slide__img-1.png',
-							desc: 'Алькантара Корея Decoin',
-							price: '549 руб.'
-						},
-						{
-							img: '../assets/images/img/product-slide__img-2.png',
-							desc: 'Диодные лампы в головной свет',
-							price: '549 руб.',
-							hit: 'Хит'
-						},
-						{
-							img: '../assets/images/img/product-slide__img-3.png',
-							desc: 'Ракель магнит + замша 3м.',
-							price: '389 руб.'
-						},
-						{
-							img: '../assets/images/img/product-slide__img-1.png',
-							desc: 'Алькантара Корея Decoin',
-							price: '549 руб.'
-						},
-						{
-							img: '../assets/images/img/product-slide__img-1.png',
-							desc: 'Алькантара Корея Decoin',
-							price: '549 руб.'
-						}
-					])
+					img(src="./assets/images/img/tipovaya-img.jpg", alt="")
+					
+					p
+						| В интернет-магазине «Vinyl4you» Вы можете купить обивочный самоклеющийся материал, предназначенный для автомобильных салонов, – алькантару. Она визуально похожа на искусственную замшу, но обладает более высокими эксплуатационными свойствами по сравнению с замшевым аналогом. Алькантара на клеевой основе принадлежит к разновидности микрофибры, имеет однородную поверхность и плотность. Материал очень мягкий и приятный на ощупь.
 		
 		.callback#callback-form
 			.callback__title
@@ -273,5 +226,6 @@ html(lang="ru")
 		script(src='js/vendor/jquery.mousewheel-3.0.6.pack.js')
 		script(src='js/vendor/jquery.fancybox.pack.js')
 		script(src='js/vendor/jquery.mask.js')
+		script(src='js/vendor/jquery.formstyler.min.js')
 		script(src='js/custom/script.js')
 
