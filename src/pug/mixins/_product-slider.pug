@@ -15,7 +15,13 @@ mixin product-slider(list)
 				if(item.caption)
 					figcaption.product-slider__slide-caption!= item.caption
 			.product-slider__slide-desc= item.desc
-			.product-slider__slide-price= item.price
+
+			if(item.sale)
+				.product-slider__slide-price= item.price
+					span= item.oldPrice
+			else 
+				.product-slider__slide-price= item.price
+
 			a.product-slider__slide-btn(href="#")
 				span В корзину
 

@@ -144,11 +144,22 @@
 			color: #373737;
 		}
 
+
+
 		&-price {
 			margin: 0 0 15px 0;
 			text-transform: uppercase;
 			font: 25px/28px var(--Lato-Bold);
 			color: #46474a;
+
+			span {
+				display: inline-block;
+				vertical-align: top;
+				text-decoration: line-through;
+				text-transform: none;
+				font: 14px/28px var(--Lato-Regular);
+				color: var(--red);
+			}
 		}
 
 		&-btn {

@@ -1,7 +1,7 @@
 .recently-viewed {
 	background: #efeded;
 
-	&._catalog {
+	&._category {
 		padding-top: 30px;
 	}
 
