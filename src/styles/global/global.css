@@ -48,6 +48,14 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
+a {
+
+	&:hover, &:focus {
+		color: inherit;
+		text-decoration: none;
+	}
+}
+
 .container-fluid {
 
 }
@@ -56,6 +64,7 @@ input[type="number"] {
 	max-width: 1200px;
 	width: 100%;
 	margin: 0 auto;
+	padding: 0;
 
 	@media (--desktop) {
 		max-width: 768px;

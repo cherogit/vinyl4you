@@ -206,29 +206,29 @@
 				}
 			}
 		}
-	}
 
-	.jq-selectbox {
-		width: 100%;
-		margin-bottom: 15px;
-		border: 2px solid #efeded;
-	}
+		.jq-selectbox {
+			width: 100%;
+			margin-bottom: 15px;
+			border: 2px solid #efeded;
+		}
 
-	.jq-selectbox__select-text {
-		font-size: 12px;
-	}
+		.jq-selectbox__select-text {
+			font-size: 12px;
+		}
 
-	.jq-selectbox__dropdown {
-		border: 2px solid #efeded;
-	}
+		.jq-selectbox__dropdown {
+			border: 2px solid #efeded;
+		}
 
-	.jq-selectbox__trigger {
-		background: #efeded resolve('checkbox-icon-white.svg') center/60% no-repeat;
-	}
+		.jq-selectbox__trigger {
+			background: #efeded resolve('checkbox-icon-white.svg') center/60% no-repeat;
+		}
 
-	.jq-selectbox li.selected, .jq-selectbox li:hover {
-		background-color: #efeded;
-		color: #282828;
+		.jq-selectbox li.selected, .jq-selectbox li:hover {
+			background-color: #efeded;
+			color: #282828;
+		}
 	}
 }
 
