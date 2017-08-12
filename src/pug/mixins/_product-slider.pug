@@ -1,6 +1,6 @@
 mixin product-slider(list)
 	each item in list
-		.product-slider__slide
+		form.product-slider__slide(action="")
 			if(item.sale || item.hit)
 				.product-slider__slide-labels
 					if(item.sale)
@@ -15,15 +15,21 @@ mixin product-slider(list)
 				if(item.caption)
 					figcaption.product-slider__slide-caption!= item.caption
 			.product-slider__slide-desc= item.desc
-
+			
 			if(item.sale)
 				.product-slider__slide-price= item.price
 					span= item.oldPrice
 			else 
 				.product-slider__slide-price= item.price
-
+			select(name="")
+				option(value="1") Погонными метрами (1,52 х 1 м)
+				option(value="2") Рулонами (1,52 х 15 м)
+				option(value="3") Рулонами (1 х 12 м)
+					
 			a.product-slider__slide-btn(href="#")
 				span В корзину
+			a.btn.btn__more._catalog(href='#') 
+				span Подробнее
 
 
 

@@ -355,4 +355,24 @@ $(document).ready(function() {
 		}
 	});
 	accordion_title.eq(0).trigger('click');
+
+	$('.catalog__view-tile').click(function() {
+		$('.catalog__view a').removeClass('active');
+		$(this).addClass('active');
+		$(this).closest('.catalog').find('.catalog__wrapper').removeClass('_list');
+		return false;
+	});
+
+	$('.catalog__view-list').click(function() {
+		$('.catalog__view a').removeClass('active');
+		$(this).addClass('active');
+		$(this).closest('.catalog').find('.catalog__wrapper').addClass('_list');
+		return false;
+	});
+
+	$(window).resize(function() {
+		if ($(window).width() < 480) {
+			$('.catalog__wrapper').removeClass('_list');
+		}
+	});
 });

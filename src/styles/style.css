@@ -30,4 +30,6 @@
 @import "blocks/category-promo";
 @import "blocks/conversion";
 @import "blocks/ordering-form";
+@import "blocks/catalog";
+@import "blocks/catalog-filter";
 

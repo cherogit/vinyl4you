@@ -1,0 +1,38 @@
+mixin catalog(list)
+	each item in list
+		form.catalog__item(action="")
+			if(item.sale || item.hit)
+				.catalog__item-labels
+					if(item.sale)
+						.catalog__item-sale 
+							span Акция
+					if(item.hit)
+						.catalog__item-hit 
+							span Хит
+			figure.catalog__item-figure
+				.catalog__item-img
+					img(src= item.img, alt="")
+				if(item.caption)
+					figcaption.catalog__item-caption!= item.caption
+			
+			.catalog__item-info
+				.catalog__item-desc= item.desc
+
+				if(item.sale)
+					.catalog__item-price= item.price
+						span= item.oldPrice
+				else 
+					.catalog__item-price= item.price
+				select(name="")
+					option(value="1") Погонными метрами (1,52 х 1 м)
+					option(value="2") Рулонами (1,52 х 15 м)
+					option(value="3") Рулонами (1 х 12 м)
+			.catalog__item-btns
+				button.catalog__item-btn(type="submit")
+					span В корзину
+				a.btn.btn__more._catalog(href='#') 
+					span Подробнее
+
+
+
+

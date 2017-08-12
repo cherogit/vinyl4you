@@ -125,6 +125,28 @@
 			background: #fff resolve('btn-more__arrow_black.svg') center/50% no-repeat;
 		}
 
+		&._catalog {
+			display: block;
+			padding: 0;
+
+			span {
+				width: 100%;
+				text-align: center;
+				background: #efeded;
+				color: var(--font-color);
+			}
+			
+			&:after {
+				content: '';
+				display: none;
+			}
+
+			&:hover {
+
+				
+			}
+		}
+
 		&._posa {
 			position: absolute;
 			bottom: 25px;
