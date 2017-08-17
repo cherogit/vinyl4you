@@ -101,6 +101,10 @@
 	&__status {
 		margin: 0 0 10px 0;
 
+		@media (--mobile) {
+			font-size: 16px;
+		}
+
 		span {
 
 			&.inStock {
@@ -112,7 +116,7 @@
 					position: absolute;
 					top: 50%;
 					right: 0;
-					transform: translate(0, -50%);
+					transform: translate(0, -50%) rotate(15deg);
 					display: block;
 					width: 15px;
 					height: 15px;
@@ -159,6 +163,15 @@
 		&-field {
 			display: inline-block;
 			vertical-align: top;
+			width: 250px;
+
+			@media (--desktop) {
+				width: 57%;
+			}
+
+			@media (--mobile) {
+				width: 100%;
+			}
 
 			label {
 				position: relative;
@@ -200,6 +213,30 @@
 				}
 			}
 
+			.jq-selectbox {
+				width: 100%;
+				margin: 0;
+				border: 2px solid #efeded;
+			}
+
+			.jq-selectbox__select-text {
+				font-size: 12px;
+			}
+
+			.jq-selectbox__dropdown {
+				width: calc(100% + 6px);
+				border: 2px solid #efeded;
+			}
+
+			.jq-selectbox__trigger {
+				background: #efeded resolve('checkbox-icon-white.svg') center/60% no-repeat;
+			}
+
+			.jq-selectbox li.selected, .jq-selectbox li:hover {
+				background-color: #efeded;
+				color: #282828;
+			}
+
 		}
 	}
 
@@ -228,7 +265,7 @@
 			}
 
 			@media (--mobile) {
-				font-size: 11px;
+				font-size: 10px;
 			}
 
 			&:before {

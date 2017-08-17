@@ -7,6 +7,10 @@
 	border: 3px solid #efeded;
 	font-size: 0;
 
+	@media (--mobile) {
+		margin-bottom: 15px;
+	}
+
 	&__minus, &__plus {
 		display: inline-block;
 		width: 35px;
