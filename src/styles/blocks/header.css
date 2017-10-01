@@ -67,6 +67,10 @@
 			align-items: center;
 			height: 100px;
 
+			@media (--small) {
+				height: 60px;
+			}
+
 			@media (--desktop) {
 				height: 80px;
 			}

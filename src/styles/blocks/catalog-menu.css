@@ -271,7 +271,7 @@
 	}
 
 	&__item {
-		width: 225px;
+		width: 300px;
 		padding: 0 0 0 3px;
 		background: #282828;
 	}
@@ -280,7 +280,6 @@
 		display: block;
 		text-decoration: none;
 		padding: 0 30px;
-		text-align: center;
 		font: 16px/45px var(--Lato-Regular);
 		color: #fff;
 		background: #282828;
