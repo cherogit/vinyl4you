@@ -1,6 +1,250 @@
 .bestsellers {
 
 	&__wrapper {
+		padding: 0 20px;
 
+		@media (--desktop) {
+			padding: 0;
+		}
+
+		@media (--mobile) {
+			padding-top: 30px;
+			background: #efeded;
+		}
+
+		@media (--small) {
+			.container {
+				&._full-mobile {
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		@media (--desktop) {
+			padding-bottom: 20px;
+		}
+	}
+
+	&__item {
+		position: relative;
+		width: 560px;
+		height: 270px;
+		margin: 0 0 70px 0;
+		padding: 25px 30px;
+		padding-right: 110px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: left center;
+
+		@media (--desktop) {
+			width: 100%;
+			min-height: 270px;
+			height: auto;
+			margin-bottom: 25px;
+		}
+
+		@media (--small) {
+			padding-right: 30px;
+		}
+
+		&._sidebar {
+			width: 100%;
+			padding: 30px;
+			padding-left: 45px;
+			margin: 0;
+			background-position: right top;
+
+			&:after {
+				content: '';
+				width: 80px;
+			}
+
+			.bestsellers__item-title {
+				font-size: 24px;
+				line-height: 28px;
+			}
+
+			.bestsellers__item-desc {
+				margin: 0 0 10px 0;
+				font-size: 16px;
+				line-height: 20px;
+			}
+
+			.bestsellers__item-sale {
+				margin: 0 0 15px 0;
+				color: #fff;
+			}
+
+			.bestsellers__item-more {
+
+			}
+		}
+
+		&._sidebar-big {
+			width: 100%;
+			height: auto;
+			margin: 0 0 55px 0;
+			padding: 30px;
+			padding-left: 45px;
+			background: var(--red);
+
+			&:before {
+				content: '';
+				background: #18191d;
+			}
+
+			&:after {
+				content: '';
+				width: 80px;
+				background: resolve('bestsellers__item-after_gray.png') center/cover no-repeat;
+			}
+
+			.bestsellers__item-title {
+				font-size: 32px;
+				line-height: 36px;
+			}
+
+			.bestsellers__item-desc {
+				margin: 0 0 10px 0;
+				font-size: 16px;
+				line-height: 20px;
+			}
+
+			.bestsellers__item-sale {
+				margin: 0 0 15px 0;
+				color: #fff;
+			}
+
+			.bestsellers__item-more {
+				span {
+					background: #333333;
+				}
+			}
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 45px;
+			left: -15px;
+			display: block;
+			width: 40px;
+			height: 3px;
+			background: var(--red);
+
+			@media (--small) {
+				display: none;
+			}
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 10px;
+			display: block;
+			width: 100px;
+			height: 100%;
+			background: resolve('bestsellers__item-after.png') center/cover no-repeat;
+
+			@media (--small) {
+				display: none;
+			}
+		}
+
+		&-carbon {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			display: block;
+			background: resolve('carbon-texture.png');
+		}
+
+		&-title {
+			position: relative;
+			margin: 0 0 10px 0;
+			text-transform: uppercase;
+			font: 36px/40px var(--Lato-Regular);
+			color: #fff;
+			z-index: 2;
+
+			@media (--mobile) {
+				font-size: 26px;
+			}
+		}
+
+		&-desc {
+			position: relative;
+			margin: 0 0 10px 0;
+			font: 18px/22px var(--Lato-Regular);
+			color: #fff;
+			z-index: 2;
+
+			&._uppercase {
+				text-transform: uppercase;
+			}
+		}
+
+		&-oldPrice {
+			text-decoration: line-through;
+			font: 14px/22px var(--Lato-Regular);
+			color: var(--red);
+
+			&._black {
+				color: var(--font-color);
+			}
+		}
+
+		&-sale {
+			position: relative;
+			margin: 0 0 45px 0;
+			text-transform: uppercase;
+			font: 30px/30px var(--Lato-Bold);
+			color: var(--red);
+			z-index: 2;
+
+			span {
+				position: relative;
+				display: inline-block;
+				margin: 0 0 0 15px;
+				padding: 0 15px 0 10px;
+				vertical-align: middle;
+				font: 18px/30px var(--Lato-Bold);
+				color: #18191d;
+				background: #fff;
+
+				&:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 100%;
+					display: block;
+					width: 0;
+					height: 0;
+					border-top: 15px solid transparent;
+					border-left: 15px solid #fff;
+					border-bottom: 15px solid transparent;
+				}
+			}
+		}
+
+		&-img {
+			position: relative;
+			left: -15px;
+			z-index: 2;
+		}
+
+		&-more {
+			position: relative;
+			z-index: 2;
+		}
 	}
 }

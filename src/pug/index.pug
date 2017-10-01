@@ -1,6 +1,7 @@
 include mixins/_nav.pug
 include mixins/_categories.pug
 include mixins/_product-slider.pug
+include mixins/_news-block.pug
 
 doctype html
 html(lang="ru")
@@ -10,56 +11,68 @@ html(lang="ru")
 
 		.promo-block
 			.promo-block__slider._slider.bxslider
-				.promo-block__slide(style='background-image: url("../assets/images/pict/slide-1.jpg")')
-					.container
-						.promo-block__title MERCEDES E-COUPE
-						.promo-block__desc Полная оклейка кузова плёнкой Hexis - Red Chrome.
-						a.promo-block__more(href='#') Подробнее
-				.promo-block__slide(style='background-image: url("../assets/images/pict/slide-2.jpg")')
-					.container
-						.promo-block__title ANOTHER CAR
-						.promo-block__desc Полная оклейка кузова плёнкой Hexis - Blue Chrome.
-						a.promo-block__more(href='#') Подробнее
-				.promo-block__slide(style='background-image: url("../assets/images/pict/slide-3.jpg")')
-					.container
-						.promo-block__title ANOTHER CAR
-						.promo-block__desc Another description
-						a.promo-block__more(href='#') Подробнее
-				.promo-block__slide(style='background-image: url("../assets/images/pict/slide-4.jpg")')
-					.container
-						.promo-block__title ANOTHER CAR
-						.promo-block__desc Another description
-						a.promo-block__more(href='#') Подробнее
+				.promo-block__slide(style='background-image: url("./assets/images/pict/slide-1.jpg")')
+					img(src="./assets/images/pict/slide-1.jpg", alt="")
+					.promo-block__slide-info
+						.container
+							.promo-block__title MERCEDES E-COUPE
+							.promo-block__desc Полная оклейка кузова плёнкой Hexis - Red Chrome.
+							a.btn.btn__more(href='#') 
+								span Подробнее
+				.promo-block__slide(style='background-image: url("./assets/images/pict/slide-2.jpg")')
+					img(src="./assets/images/pict/slide-2.jpg", alt="")
+					.promo-block__slide-info
+						.container
+							.promo-block__title ANOTHER CAR
+							.promo-block__desc Полная оклейка кузова плёнкой Hexis - Blue Chrome.
+							a.btn.btn__more(href='#') 
+								span Подробнее
+				.promo-block__slide(style='background-image: url("./assets/images/pict/slide-3.jpg")')
+					img(src="./assets/images/pict/slide-3.jpg", alt="")
+					.promo-block__slide-info
+						.container
+							.promo-block__title ANOTHER CAR
+							.promo-block__desc Another description
+							a.btn.btn__more(href='#') 
+								span Подробнее
+				.promo-block__slide(style='background-image: url("./assets/images/pict/slide-4.jpg")')
+					img(src="./assets/images/pict/slide-4.jpg", alt="")
+					.promo-block__slide-info
+						.container
+							.promo-block__title ANOTHER CAR
+							.promo-block__desc Another description
+							a.btn.btn__more(href='#') 
+								span Подробнее
 		.advantages.container
 			.advantages__wrapper
 				.advantages__item
 					.advantages__img
-						img(src="../assets/images/img/advantages__img-1.svg", alt="")
+						img(src="./assets/images/img/advantages__img-1.svg", alt="")
 					.advantages__desc Выгодная 
 						br
 						span бонусная 
 						| программа
 				.advantages__item
 					.advantages__img
-						img(src="../assets/images/img/advantages__img-2.svg", alt="")
+						img(src="./assets/images/img/advantages__img-2.svg", alt="")
 					.advantages__desc Широкий 
 						br 
 						span ассортимент
 				.advantages__item
 					.advantages__img
-						img(src="../assets/images/img/advantages__img-3.svg", alt="")
+						img(src="./assets/images/img/advantages__img-3.svg", alt="")
 					.advantages__desc Нашли товар дешевле?  
 						br
 						span Cнизим цену!
 				.advantages__item
 					.advantages__img
-						img(src="../assets/images/img/advantages__img-4.svg", alt="")
+						img(src="./assets/images/img/advantages__img-4.svg", alt="")
 					.advantages__desc Эксклюзивный  
 						br
 						span дистрибьютор
 				.advantages__item
 					.advantages__img
-						img(src="../assets/images/img/advantages__img-5.svg", alt="")
+						img(src="./assets/images/img/advantages__img-5.svg", alt="")
 					.advantages__desc Доставки  
 						br
 						span по всей России
@@ -71,69 +84,270 @@ html(lang="ru")
 				.categories__inner
 					+categories([
 						{
-							url: '../assets/images/img/categories__img-1.png',
+							url: './assets/images/img/categories__img-1.png',
 							caption: 'Инструменты'
 						},
 						{
-							url: '../assets/images/img/categories__img-2.png',
+							url: './assets/images/img/categories__img-2.png',
 							caption: 'Тонировка'
 						},
 						{
-							url: '../assets/images/img/categories__img-3.png',
+							url: './assets/images/img/categories__img-3.png',
 							caption: 'Алькантара'
 						},
 						{
-							url: '../assets/images/img/categories__img-4.png',
+							url: './assets/images/img/categories__img-4.png',
 							caption: 'Жидкая резина'
 						},
 						{
-							url: '../assets/images/img/categories__img-5.png',
+							url: './assets/images/img/categories__img-5.png',
 							caption: 'Автосвет'
 						}
 					])
 		.bestsellers
-			.bestsellers__wrapper.container
-				h2.h2
-					span Хиты 
-					| продаж
+			.bestsellers__wrapper
+				.container
+					h2.h2
+						span Хиты 
+						| продаж
 				.product-slider
-					.bx-slider
-						+product-slider([
-							{
-								img: 'test.png',
-								caption: '-17%  Осталось 2 дня',
-								desc: 'Алькантара Корея Decoin',
-								price: '549 руб.',
-								sale: 'Акция',
-							},
-							{
-								img: 'test.png',
-								caption: '-17%  Осталось 2 дня',
-								desc: 'Алькантара Корея Decoin',
-								price: '549 руб.',
-								sale: 'Акция',
-							},
-							{
-								img: 'test.png',
-								caption: '-17%  Осталось 2 дня',
-								desc: 'Алькантара Корея Decoin',
-								price: '549 руб.',
-								sale: 'Акция',
-								hit: 'Хит'
-							},
-							{
-								img: 'test.png',
-								desc: 'Алькантара Корея Decoin',
-								price: '549 руб.',
-								hit: 'Хит'
-							}
-						])
+					+product-slider([
+						{
+							img: './assets/images/img/product-slide__img-1.png',
+							caption: '<span>-17%</span> Осталось 2 дня',
+							desc: 'Алькантара Корея Decoin',
+							price: '549 руб. ',
+							oldPrice: '642 руб.',
+							sale: 'Акция',
+						},
+						{
+							img: './assets/images/img/product-slide__img-2.png',
+							caption: '<span>-17%</span> Осталось 2 дня',
+							desc: 'Диодные лампы в головной свет',
+							price: '549 руб. ',
+							oldPrice: '642 руб.',
+							sale: 'Акция',
+						},
+						{
+							img: './assets/images/img/product-slide__img-3.png',
+							caption: '<span>-17%</span> Осталось 2 дня',
+							desc: 'Ракель магнит + замша 3м.',
+							price: '549 руб. ',
+							oldPrice: '642 руб.',
+							sale: 'Акция',
+							hit: 'Хит'
+						},
+						{
+							img: './assets/images/img/product-slide__img-1.png',
+							desc: 'Алькантара Корея Decoin',
+							price: '549 руб. ',
+							hit: 'Хит'
+						},
+						{
+							img: './assets/images/img/product-slide__img-1.png',
+							desc: 'Алькантара Корея Decoin',
+							price: '549 руб. '
+						}
+					])
+				.container._full-mobile
+					.bestsellers__inner
+						.bestsellers__item(style='background-image: url("./assets/images/img/bestsellers__img-1.jpg")')
+							.bestsellers__item-carbon
+							.bestsellers__item-title MERCEDES E-COUPE
+							.bestsellers__item-desc Полная оклейка кузова плёнкой Hexis - Red Chrome. 
+							a.btn.btn__more._posa.bestsellers__item-more(href="#")
+								span Подробнее
+						.bestsellers__item(style='background-image: url("./assets/images/img/bestsellers__img-2.jpg")')
+							.bestsellers__item-carbon
+							.bestsellers__item-title Жидкая резина
+							.bestsellers__item-desc._uppercase Розово-красный 450ML
+							.bestsellers__item-oldPrice 659 руб.
+							.bestsellers__item-sale 549 руб.
+								span -20%
+							a.btn.btn__more.bestsellers__item-more(href="#")
+								span Подробнее
+		.recently-viewed
+			.recently-viewed__wrapper
+				.container
+					h2.h2
+						span Недавно 
+						| смотрели
+				.product-slider._m0
+					+product-slider([
+						{
+							img: './assets/images/img/product-slide__img-1.png',
+							desc: 'Алькантара Корея Decoin',
+							price: '549 руб.'
+						},
+						{
+							img: './assets/images/img/product-slide__img-2.png',
+							desc: 'Диодные лампы в головной свет',
+							price: '549 руб.',
+							hit: 'Хит'
+						},
+						{
+							img: './assets/images/img/product-slide__img-3.png',
+							desc: 'Ракель магнит + замша 3м.',
+							price: '389 руб.'
+						},
+						{
+							img: './assets/images/img/product-slide__img-1.png',
+							desc: 'Алькантара Корея Decoin',
+							price: '549 руб.'
+						},
+						{
+							img: './assets/images/img/product-slide__img-1.png',
+							desc: 'Алькантара Корея Decoin',
+							price: '549 руб.'
+						}
+					])
+		.container._info
+			.content
+				.content__inner.text-block
+					h2.h2
+						span Пленки 
+						| для авто
+					p
+						| В интернет-магазине «Vinyl4you» представлен большой выбор автопленок, которые можно купить по выгодным ценам в Москве. На Ваш выбор разнообразные виниловые, тонировочные пленки, тонировка для фар, а также материалы для отделки салона машины и создания в автомобиле шумоизоляции. Мы работаем с оптовыми и розничными покупателями.
+					.categories._content
+						.categories__inner
+							+categories([
+								{
+									url: './assets/images/img/categories__img-2.png',
+									caption: 'Тонировка',
+									borderItem: ' '
+								},
+								{
+									url: './assets/images/img/categories__img-6-hover.png',
+									caption: 'Автовинил',
+									borderItem: ' '
+								},
+								{
+									url: './assets/images/img/categories__img-5.png',
+									caption: 'Автосвет',
+									borderItem: ' '
+								}
+							])
 
+					h2.h2
+						span Автовинил 
+						| – отличное решение для любого
+
+					p
+						| Виниловая самоклеющаяся пленка – один из самых эффективных способов сохранить лакокрасочное покрытие автомобиля. Она надежно защищает машину от сколов, царапин и других повреждений. Сейчас на рынках авто товаров в Москве можно найти и купить различную самоклеющуюся пленку для авто, различаемую по качеству и цене.
+
+					p
+						| Автовинил отличается по своему типу и функциональности. Это могут быть защитные прозрачные, глянцевые и матовые пленки, пленки под карбон, антигравийные или декоративные пленки с цветными рисунками. Широкий ассортимент автовинила облегчает выбор вариантов, которые лучше всего подходят для конкретной модели автомобиля
+
+					p
+						| Для того чтобы скрыть различные мелкие дефекты лакокрасочного покрытия автомобиля Вы можете купить пленку для авто в Москве. Это удобно и экономично, так как многим автомобилистам покраска машины может оказаться не по карману. Поэтому автовиниловая пленка – отличная альтернатива окраске, не только скрывающая все недостатки, но и, при желании, еще и создающая красивый дизайн Вашей машины. К тому же виниловая самоклеющаяся пленка многофункциональна, так как с её помощью можно легко оклеить мебель, кухню, бытовую технику, разнообразить дизайн помещения.
+
+					p
+						| Интернет-магазин «Vinyl4you» предлагает автопленку по достаточно выгодным ценам в Москве. Сотрудничество с нами – выгодное вложение в презентабельный внешний вид Вашего автомобиля.
+
+					p
+						| На нашем сайте Вы можете купить пленку для авто или другой аксессуар для машины с доставкой по Москве и в регионы РФ. Ознакомиться с условиями доставки Вы можете в соответствующем разделе. С нами Вы можете быть уверены в том, что получите заказанный товар в кратчайшие сроки!
+
+			aside.sidebar
+				.bestsellers__item._sidebar-big
+					.bestsellers__item-carbon
+					.bestsellers__item-title Жидкая резина
+					.bestsellers__item-desc._uppercase Розово-красный 450ML
+					.bestsellers__item-oldPrice._black 659 руб.
+					.bestsellers__item-sale 549 руб.
+						span -20%
+					img.bestsellers__item-img(src="./assets/images/img/wheels.png", alt="")
+					a.btn.btn__more.bestsellers__item-more(href="#")
+						span Подробнее
+
+				.sidebar-social
+					.sidebar-social__header
+						h2.h2
+							span Мы 
+							| в соцсетях:
+						.sidebar-social__advice Добавляйся к нам:
+					.sidebar-social__item
+						a.sidebar-social__group(href="#club13")
+						.sidebar-social__network._vk
+							img(src="./assets/images/icons/sidebar-social__nw_vk.png", alt="")
+						.sidebar-social__follower Нас уже 
+							span 17 025
+						a.sidebar-social__subscribe(href="#subscribe") Подписаться
+					.sidebar-social__item
+						a.sidebar-social__group(href="#club13")
+						.sidebar-social__network._fb
+							img(src="./assets/images/icons/sidebar-social__nw_fb.png", alt="")
+						.sidebar-social__follower Нас уже 
+							span 17 025
+						a.sidebar-social__subscribe(href="#subscribe") Подписаться
+
+
+				.bestsellers__item._sidebar(style='background-image: url("./assets/images/img/bestsellers__img-1.jpg")')
+					.bestsellers__item-carbon
+					.bestsellers__item-title Жидкая резина
+					.bestsellers__item-desc._uppercase Розово-красный 450ML
+					.bestsellers__item-oldPrice 659 руб.
+					.bestsellers__item-sale 549 руб.
+						span -20%
+					a.btn.btn__more.bestsellers__item-more(href="#")
+						span Подробнее
+		.news-block
+			.news-block__title.container
+				h2.h2
+					span Наши 
+					| новости
+			.news-block__articles
+				+news-block([
+					{
+						url: './assets/images/img/news-block__item-img-1.png',
+						desc: 'Новые условия программы лояльности',
+						date: '2016-03-31'
+					},
+					{
+						url: './assets/images/img/news-block__item-img-1.png',
+						desc: 'Новые условия программы лояльности',
+						date: '2016-03-31'
+					},
+					{
+						url: './assets/images/img/news-block__item-img-1.png',
+						desc: 'Новые условия программы лояльности',
+						date: '2016-03-31'
+					},
+					{
+						url: './assets/images/img/news-block__item-img-1.png',
+						desc: 'Новые условия программы лояльности',
+						date: '2016-03-31'
+					},
+					{
+						url: './assets/images/img/news-block__item-img-1.png',
+						desc: 'Новые условия программы лояльности',
+						date: '2016-03-31'
+					},
+					{
+						url: './assets/images/img/news-block__item-img-1.png',
+						desc: 'Новые условия программы лояльности',
+						date: '2016-03-31'
+					}
+				])
+
+		.callback#callback-form
+			.callback__title 
+			.callback__field
+				input(type="text" placeholder="Ваше имя")
+			.callback__field#phone
+				input(type="text" placeholder="Введите Ваш номер телефона")
+			.callback__info В ближайшее время с Вами свяжутся наши менеджеры.
+			button(type="submit").btn.btn__callback Заказать звонок
+		
+		include includes/footer.pug
 
 			
-
-
 		script(src='js/vendor/jquery-3.1.0.min.js')
 		script(src='js/vendor/jquery.bxslider.min.js')
+		script(src='js/vendor/slick.min.js')
+		script(src='js/vendor/jquery.mousewheel-3.0.6.pack.js')
+		script(src='js/vendor/jquery.fancybox.pack.js')
+		script(src='js/vendor/jquery.mask.js')
+		script(src='js/vendor/jquery.formstyler.min.js')
 		script(src='js/custom/script.js')
 

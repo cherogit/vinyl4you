@@ -6,9 +6,59 @@
 		display: inline-block;
 		width: 210px;
 		padding: 0 20px 0 55px;
+		text-align: center;
 		font: 18px/40px var(--Lato-Regular);
 		color: #fff;
 		background: var(--red);
+		transition: 400ms;
+
+		&._callback {
+			width: 40px;
+			height: 40px;
+			padding: 0 20px; 
+			font-size: 0;
+			
+			&:before {
+				content: '';
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				transform: translate(-50%, 0);
+				display: none;
+				width: 0;
+				height: 0;
+				border-left: 8px solid transparent;
+				border-right: 8px solid transparent;
+				border-top: 10px solid var(--red);
+				background: transparent;
+			}
+
+			&._active {
+				
+				&:hover {
+					background: var(--red);
+				}
+
+				&:after {
+					content: '';
+					display: block;
+				}
+			}
+		}
+
+		&:hover {
+			background: #c30101;
+		}
+
+		@media (--desktop) {
+			width: 235px;
+		}
 
 		&:before {
 			content: '';
@@ -32,6 +82,75 @@
 			height: 26px;
 			width: 2px;
 			background: #fff;
+		}
+	}
+
+	&__more {
+		position: relative;
+		display: inline-block;
+		padding: 0 43px 0 0;
+
+		&:hover {
+
+			&:after {
+				content: '';
+				background: #282828 resolve('btn-more__arrow_white.svg') center/50% no-repeat;
+			}
+		}
+
+		span {
+			display: inline-block;
+			height: 38px;
+			padding: 0 25px;
+			font: 18px/38px var(--Lato-Regular);
+			color: #fff;
+			background: var(--red);
+			transition: 400ms;
+
+			&:hover {
+				background: #c30101;
+			}
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: block;
+			width: 40px;
+			height: 38px;
+			transition: 400ms;
+			z-index: 1;
+			background: #fff resolve('btn-more__arrow_black.svg') center/50% no-repeat;
+		}
+
+		&._catalog {
+			display: block;
+			padding: 0;
+
+			span {
+				width: 100%;
+				text-align: center;
+				background: #efeded;
+				color: var(--font-color);
+			}
+			
+			&:after {
+				content: '';
+				display: none;
+			}
+
+			&:hover {
+
+				
+			}
+		}
+
+		&._posa {
+			position: absolute;
+			bottom: 25px;
+			left: 30px;
 		}
 	}
 }

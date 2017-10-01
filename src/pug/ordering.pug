@@ -1,0 +1,285 @@
+include mixins/_nav.pug
+include mixins/_categories.pug
+include mixins/_product-slider.pug
+include mixins/_news-block.pug
+include mixins/_breadcrumbs.pug
+
+doctype html
+html(lang="ru")
+	include includes/head.pug
+	body
+		include includes/header._white.pug
+		
+		.content
+			.container
+				aside.product-sidebar
+					.catalog-aside
+						ul.catalog-aside__list
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link._l2(href="#")
+									span Автовинил
+								ul.catalog-submenu._aside
+									li.catalog-submenu__item
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link._l2(href="#")
+									span Алькантара
+								ul.catalog-submenu._aside
+									li.catalog-submenu__item
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link._l2(href="#")
+									span Жидкая резина
+								ul.catalog-submenu._aside
+									li.catalog-submenu__item
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link._l2(href="#")
+									span Тонировочные пленки
+								ul.catalog-submenu._aside
+									li.catalog-submenu__item
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Тонировка на фары
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Автосвет
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Чехлы
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Аксуссуары
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Автовинил
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Шумоизоляция
+					.sidebar-social
+						.sidebar-social__header
+							h2.h2
+								span Мы 
+								| в соцсетях:
+							.sidebar-social__advice Добавляйся к нам:
+						.sidebar-social__item
+							a.sidebar-social__group(href="#club13")
+							.sidebar-social__network._vk
+								img(src="../assets/images/icons/sidebar-social__nw_vk.png", alt="")
+							.sidebar-social__follower
+								span 17 025
+							a.sidebar-social__subscribe(href="#subscribe") Подписаться
+						.sidebar-social__item
+							a.sidebar-social__group(href="#club13")
+							.sidebar-social__network._fb
+								img(src="../assets/images/icons/sidebar-social__nw_fb.png", alt="")
+							.sidebar-social__follower
+								span 17 025
+							a.sidebar-social__subscribe(href="#subscribe") Подписаться
+				.content__inner._big
+					+breadcrumbs(['Каталог товаров', 'Товар 1'])
+					h1.h1
+						span Оформление 
+						| заказа
+					form.ordering-form(action="")
+						.step-links
+							a.active(href="#step1")
+								span.step-links__after
+								span.step-links__text Товары в заказе
+							a(href="#step2") 
+								span.step-links__before
+								span.step-links__after
+								span.step-links__text Регион
+							a(href="#step3") 
+								span.step-links__before
+								span.step-links__after
+								span.step-links__text Доставка
+							a(href="#step4") 
+								span.step-links__before
+								span.step-links__after
+								span.step-links__text Оплата
+							a(href="#step5") 
+								span.step-links__before
+								span.step-links__after
+								span.step-links__text Покупатель
+
+						.step-content#step1
+							.cart-list
+								.cart-list__product
+									a.cart-list__product-img(href="#")
+										img(src="http://placehold.it/80x80", alt="")
+									a.cart-list__product-desc(href="#") Экокожа орегон без клея бежевая перфорированная
+									.counter
+										a(href="#").counter__minus -
+										input.counter__field(type="number" value="1" data-min="1" data-max="10")
+										a(href="#").counter__plus +
+									.cart-list__product-price
+										span 389
+										| Руб.
+									a.cart-list__product-del(href="")
+								.cart-list__product
+									a.cart-list__product-img(href="#")
+										img(src="http://placehold.it/80x80", alt="")
+									a.cart-list__product-desc(href="#") Экокожа орегон без клея бежевая перфорированная
+									.counter
+										a(href="#").counter__minus -
+										input.counter__field(type="number" value="1" data-min="1" data-max="10")
+										a(href="#").counter__plus +
+									.cart-list__product-price
+										span 389
+										| Руб.
+									a.cart-list__product-del(href="")
+							.cart-list__footer
+								.ordering-form__coupon._empty
+									label(for="coupon") Применить купон:
+									input(type="text" id="coupon" placeholder="Применить купон")
+								.cart-list__total Итого:
+									.cart-list__total-price
+										span 389
+										| Руб.
+						.step-content#step2
+							h4.h4 Тип плательщика:
+							fieldset
+								.ordering-form__field
+									input(type="radio", name="radio", id="check2", checked)
+									label(for="check2") Физическое лицо
+								.ordering-form__field
+									input(type="radio", name="radio", id="check3")
+									label(for="check3") Юридическое лицо
+
+							h4.h4 Местоположение:
+							select(data-required="mixed")
+								option(value="") Выберите свой город в списке
+								option(value="1") Санкт-Петербург
+								option(value="2") Москва
+								option(value="3") Владивосток
+
+						.step-content#step3
+							h4.h4 Способ доставки:
+							fieldset
+								.ordering-form__field
+									input(type="radio", name="radio2", id="check4", checked)
+									label(for="check4") Самовывоз
+								.ordering-form__field
+									input(type="radio", name="radio2", id="check5")
+									label(for="check5") Транспортной компанией по РФ
+								.ordering-form__field
+									input(type="radio", name="radio2", id="check6")
+									label(for="check6") Почта России (Посылка стандарт)
+								
+							.ordering-form__coupon
+								label(for="coupon") Применить купон:
+								input(type="text" id="coupon" placeholder="Применить купон")
+							
+						.step-content#step4
+							h4.h4 Способ оплаты:
+							fieldset
+								.ordering-form__field
+									input(type="radio", name="radio3", id="check7", checked)
+									label(for="check7") Банковской картой
+								.ordering-form__field
+									input(type="radio", name="radio3", id="check8")
+									label(for="check8") Наличными при получении
+								.ordering-form__field
+									input(type="radio", name="radio3", id="check9")
+									label(for="check9") Электронным кошельком
+
+						.step-content#step5
+							.ordering-form__field._personal
+								label(for="firstName") ФИО:
+								input(type="text" id="firstName" placeholder="Иван Васильевич Пупкин" data-required="mixed")
+							.ordering-form__field._personal
+								label(for="mail") E-mail:
+								input(type="email" id="mail" placeholder="ivan_petrov@mail.ru" data-required="email")
+							.ordering-form__field._personal
+								label(for="phone") Телефон:
+								input.phone(type="text" id="phone" placeholder="+7 (123) 456-78-90" data-required="mixed")
+							.ordering-form__field._personal
+								textarea(name="" placeholder="Комментарии к заказу")
+
+
+
+						.ordering-form__controls
+							a.ordering-form__prev(href="") Назад
+							a.ordering-form__next(href="") Далее
+							button.ordering-form__submit(type="submit") Оформить заказ
+					
+
+					.related-products
+						h2.h2
+							span Сопутствующие 
+							| товары
+						.related-products__slider
+							+product-slider([
+								{
+									img: '../assets/images/img/product-slide__img-1.png',
+									desc: 'Алькантара Корея Decoin',
+									price: '549 руб.'
+								},
+								{
+									img: '../assets/images/img/product-slide__img-2.png',
+									desc: 'Диодные лампы в головной свет',
+									price: '549 руб.',
+									hit: 'Хит'
+								},
+								{
+									img: '../assets/images/img/product-slide__img-3.png',
+									desc: 'Ракель магнит + замша 3м.',
+									price: '389 руб.'
+								},
+								{
+									img: '../assets/images/img/product-slide__img-1.png',
+									desc: 'Алькантара Корея Decoin',
+									price: '549 руб.'
+								},
+								{
+									img: '../assets/images/img/product-slide__img-1.png',
+									desc: 'Алькантара Корея Decoin',
+									price: '549 руб.'
+								}
+							])
+					
+		.callback#callback-form
+			.callback__title
+				span Заказать 
+				| обратный звонок
+			.callback__field
+				input(type="text" placeholder="Ваше имя")
+			.callback__field
+				input.phone(type="text" placeholder="Введите Ваш номер телефона")
+			.callback__info В ближайшее время с Вами свяжутся наши менеджеры.
+			button(type="submit").btn.btn__callback Заказать звонок
+		
+		include includes/footer.pug
+
+			
+		script(src='js/vendor/jquery-3.1.0.min.js')
+		script(src='js/vendor/jquery.bxslider.min.js')
+		script(src='js/vendor/slick.min.js')
+		script(src='js/vendor/jquery.mousewheel-3.0.6.pack.js')
+		script(src='js/vendor/jquery.fancybox.pack.js')
+		script(src='js/vendor/jquery.mask.js')
+		script(src='js/vendor/jquery.formstyler.min.js')
+		script(src='js/custom/script.js')
+

@@ -1,7 +1,15 @@
 mixin categories(list)
 	each item in list
-		a.categories__item(href="")
-			figure
-				.categories__img
-					img(src= item.url, alt="")
-				figcaption.categories__caption= item.caption
+		if(item.borderItem)
+			a.categories__item._border(href="#")
+				figure
+					.categories__img
+						img(src= item.url, alt="")
+					figcaption.categories__caption= item.caption
+		else 
+			a.categories__item(href="#")
+				figure
+					.categories__img
+						img(src= item.url, alt="")
+					figcaption.categories__caption
+						span= item.caption

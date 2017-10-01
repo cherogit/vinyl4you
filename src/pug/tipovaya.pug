@@ -1,0 +1,231 @@
+include mixins/_nav.pug
+include mixins/_categories.pug
+include mixins/_product-slider.pug
+include mixins/_news-block.pug
+include mixins/_breadcrumbs.pug
+
+doctype html
+html(lang="ru")
+	include includes/head.pug
+	body
+		include includes/header._white.pug
+		
+		.content
+			.container
+				aside.product-sidebar
+					.catalog-aside
+						ul.catalog-aside__list
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link._l2(href="#")
+									span Автовинил
+								ul.catalog-submenu._aside
+									li.catalog-submenu__item
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link._l2(href="#")
+									span Алькантара
+								ul.catalog-submenu._aside
+									li.catalog-submenu__item
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link._l2(href="#")
+									span Жидкая резина
+								ul.catalog-submenu._aside
+									li.catalog-submenu__item
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link._l2(href="#")
+									span Тонировочные пленки
+								ul.catalog-submenu._aside
+									li.catalog-submenu__item
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Тонировка на фары
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Автосвет
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Чехлы
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Аксуссуары
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Автовинил
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Шумоизоляция
+					.sidebar-social
+						.sidebar-social__header
+							h2.h2
+								span Мы 
+								| в соцсетях:
+							.sidebar-social__advice Добавляйся к нам:
+						.sidebar-social__item
+							a.sidebar-social__group(href="#club13")
+							.sidebar-social__network._vk
+								img(src="../assets/images/icons/sidebar-social__nw_vk.png", alt="")
+							.sidebar-social__follower
+								span 17 025
+							a.sidebar-social__subscribe(href="#subscribe") Подписаться
+						.sidebar-social__item
+							a.sidebar-social__group(href="#club13")
+							.sidebar-social__network._fb
+								img(src="../assets/images/icons/sidebar-social__nw_fb.png", alt="")
+							.sidebar-social__follower
+								span 17 025
+							a.sidebar-social__subscribe(href="#subscribe") Подписаться
+					.bestsellers__item._sidebar(style='background-image: url("../assets/images/img/bestsellers__img-1.jpg")')
+						.bestsellers__item-carbon
+						.bestsellers__item-title Жидкая резина
+						.bestsellers__item-desc._uppercase Розово-красный 450ML
+						.bestsellers__item-sale 549 руб.
+							span -20%
+						a.btn.btn__more.bestsellers__item-more(href="#")
+							span Подробнее
+
+
+				.content__inner._big.text-block
+					+breadcrumbs(['Каталог товаров', 'товар 1'])
+					
+					h1.h1
+						span Заголовок 
+						| H1
+					p
+						| Пленка под карбон 3d графит (мокрый асфальт) по своему цвету отличается от серебра и от черного. Цвет графит темнее на 2-3 тона чем серебряный цвет карбоной пленки, но гораздо светлее чем оттенок черной карбоновой пленки. Подойдет для тех, кому слишком ярким будет серебряный цвет, но не хочется оклеивать в черный цвет. <br /> Стоит отметить особенность всех карбоновых 3д пленок: в тени карбоновая пленка смотрится на оклееных деталях, как матовая пленка, когда же на пленку попадает солнечный свет или свет от других источников, пленка преображается, структура карбона переливается по лучами света.<br /> Карбон пленка графитового цвета может быть использована для оклеивания внутренних деталей автомобиля: торпеды, приборной панели, пластиковых вставок, различных деталей, ручек, руля и других деталей. <br /> Карбоновая пленка 3д чаще всего используется для оклеивания деталей кузова автомобиля: капоты, крыши, багажника, бамперов, дверей, спойлера. Так же очень часто пленка под карбон используется для полной оклейки автомобиля. 
+
+					h2.h2
+						span Заголовок 
+						| H2
+
+					p
+						| Планируете купить алькантару, предназначенную для обшивки авто, в Москве? Вы делаете правильный выбор, поскольку этот материал:
+					ul
+						li не истирается при длительном использовании;
+						li не расходится по швам благодаря высокой прочности;
+						li обладает устойчивостью к механическим повреждениям;
+						li не загорается от искр или непотушенных сигарет;
+						li приятен и мягок на ощупь;
+						li не требует особого ухода;
+						li не выгорает под действием ультрафиолетовых лучей;
+						li не теряет первоначальный вид в течение продолжительного времени;
+						li пропускает воздух.
+
+					h3.h3
+						span Заголовок 
+						| H3
+
+					ol
+						li не истирается при длительном использовании;
+						li не расходится по швам благодаря высокой прочности;
+						li обладает устойчивостью к механическим повреждениям;
+						li не загорается от искр или непотушенных сигарет;
+						li приятен и мягок на ощупь;
+						li не требует особого ухода;
+						li не выгорает под действием ультрафиолетовых лучей;
+						li не теряет первоначальный вид в течение продолжительного времени;
+						li пропускает воздух.
+
+					p
+						| В нашей компании Вы можете приобрести алькантару в любом количестве и по приемлемой цене, выбрав подходящее цветовое решение из представленных вариантов. Мы работаем без посредников, напрямую сотрудничая с производителями, что позволяет нам устанавливать выгодную стоимость на реализуемые товары.
+
+					p
+						| Заказывая у нас алькантару, Вы существенно экономите не только бюджет, но и свое время. Ведь мы доставим Ваш заказ в любую точку России, а расплатиться Вы сможете любым удобным для Вас способом из предложенных нами на сайте.
+
+					p Чтобы купить в Москве или любом другом городе самоклеющийся материал премиум-класса – алькантару. 
+						b Обращайтесь к нашим специалистам!
+					
+					.conversion Позвоните по телефонам:&nbsp
+						.conversion__phones
+							a.conversion__phone(href="tel:84951502262") (495) 
+								span 150-22-62
+								| ,&nbsp;
+							a.conversion__phone(href="tel:88005002262") (800) 
+								span 500-22-62
+								| . 
+						.conversion__callback 
+							span или можете 
+							a.conversion__btn.fancy(href="#callback-form") Оставить заявку
+					
+					table
+						caption
+							span Таблица 
+							| 1 Название таблицы
+						tr
+							th
+							th Заголовок для таблицы 1
+							th Заголовок для таблицы 2
+						tr
+							th 1.
+							td Значение для таблицы
+							td Значение для таблицы
+						tr
+							th 2.
+							td Значение для таблицы
+							td Значение для таблицы
+						tr
+							th 3.
+							td Значение для таблицы
+							td Значение для таблицы
+						tr
+							th 4.
+							td Значение для таблицы
+							td Значение для таблицы
+
+
+
+					img(src="./assets/images/img/promo-catalog__img-1.jpg", alt="")
+
+					p
+						| В интернет-магазине «Vinyl4you» Вы можете купить обивочный самоклеющийся материал, предназначенный для автомобильных салонов, – алькантару. Она визуально похожа на искусственную замшу, но обладает более высокими эксплуатационными свойствами по сравнению с замшевым аналогом. Алькантара на клеевой основе принадлежит к разновидности микрофибры, имеет однородную поверхность и плотность. Материал очень мягкий и приятный на ощупь.
+
+					img(src="./assets/images/img/tipovaya-img.jpg", alt="")
+					
+					p
+						| В интернет-магазине «Vinyl4you» Вы можете купить обивочный самоклеющийся материал, предназначенный для автомобильных салонов, – алькантару. Она визуально похожа на искусственную замшу, но обладает более высокими эксплуатационными свойствами по сравнению с замшевым аналогом. Алькантара на клеевой основе принадлежит к разновидности микрофибры, имеет однородную поверхность и плотность. Материал очень мягкий и приятный на ощупь.
+		
+		.callback#callback-form
+			.callback__title
+				span Заказать 
+				| обратный звонок
+			.callback__field
+				input(type="text" placeholder="Ваше имя")
+			.callback__field
+				input(type="text" placeholder="Введите Ваш номер телефона")#phone
+			.callback__info В ближайшее время с Вами свяжутся наши менеджеры.
+			button(type="submit").btn.btn__callback Заказать звонок
+		
+		include includes/footer.pug
+
+			
+		script(src='js/vendor/jquery-3.1.0.min.js')
+		script(src='js/vendor/jquery.bxslider.min.js')
+		script(src='js/vendor/slick.min.js')
+		script(src='js/vendor/jquery.mousewheel-3.0.6.pack.js')
+		script(src='js/vendor/jquery.fancybox.pack.js')
+		script(src='js/vendor/jquery.mask.js')
+		script(src='js/vendor/jquery.formstyler.min.js')
+		script(src='js/custom/script.js')
+

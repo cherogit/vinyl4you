@@ -1,0 +1,19 @@
+.recently-viewed {
+	background: #efeded;
+
+	&._category {
+		padding-top: 30px;
+	}
+
+	&__wrapper {
+		padding: 55px 20px 65px 20px;
+
+		@media (--desktop) {
+			padding: 50px 0 40px 0;
+		}
+
+		@media (--mobile) {
+			padding-top: 0;
+		}
+	}
+}

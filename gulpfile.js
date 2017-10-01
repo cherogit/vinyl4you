@@ -11,6 +11,7 @@ const short = require('postcss-short');
 const assets = require('postcss-assets');
 const Import = require('postcss-import');
 const cssnext = require('cssnext');
+const mqpacker = require("css-mqpacker");
 const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
 const concat = require('gulp-concat');
@@ -35,7 +36,7 @@ gulp.task('pug', function() {
 
 gulp.task('styles:vendor', function() {
     return gulp.src('./src/styles/vendorCss/*.css')
-        .pipe(gulp.dest('./build/css/vendorCSS/'))
+        .pipe(gulp.dest('./build/css/vendorCss/'))
 });
 
 gulp.task('styles', function () {
@@ -54,6 +55,7 @@ gulp.task('styles', function () {
     		loadPaths: ['src/assets/fonts/**/*', 'src/assets/images/**/*'],
     		relativeTo: 'src/styles/'
     	}),
+        mqpacker
     ];
     return gulp.src('./src/styles/style.css')
         .pipe(postcss(processors))

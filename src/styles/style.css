@@ -3,8 +3,10 @@
 @import "global/global";
 
 @import "blocks/header";
+@import "blocks/footer";
 @import "blocks/main-nav";
 @import "blocks/catalog-menu";
+@import "blocks/contacts";
 @import "blocks/search";
 @import "blocks/btns";
 @import "blocks/promo-block";
@@ -12,3 +14,22 @@
 @import "blocks/categories";
 @import "blocks/bestsellers";
 @import "blocks/product-slider";
+@import "blocks/recently-viewed";
+@import "blocks/content";
+@import "blocks/sidebar";
+@import "blocks/news-block";
+@import "blocks/social";
+@import "blocks/burger-menu";
+@import "blocks/callback-form";
+@import "blocks/breadcrumbs";
+@import "blocks/product-card";
+@import "blocks/counter";
+@import "blocks/accordion";
+@import "blocks/catalog-aside";
+@import "blocks/product-sidebar";
+@import "blocks/category-promo";
+@import "blocks/conversion";
+@import "blocks/ordering-form";
+@import "blocks/catalog";
+@import "blocks/catalog-filter";
+

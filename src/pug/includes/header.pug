@@ -1,16 +1,34 @@
-.header
+header.header
 	.header__top.container_fluid
 		.header__top-wrap.container
+			a.burger-menu(href="#")
+				span
 			a.main-logo(href='/')
-				img(src="./assets/images/img/main-logo.png", alt="Логотип")
-			+nav(['О компании', 'Доставка и оплата', 'Отзывы', 'Оптовые закупки', 'Контакты'], 1)
+				img._wide(src="./assets/images/img/main-logo.png", alt="Логотип")
+				img._desk(src="./assets/images/img/main-logo_black.png", alt="Логотип")
+			+nav(['Каталог', 'О компании', 'Доставка и оплата', 'Отзывы', 'Оптовые закупки', 'Контакты'], 2)
 			a.header__busket(href='#')
 				.header__busket-count 
 					span 10 
-					| товаров7
+					| товаров 
 				.header__busket-price на сумму 
 					span 1200 руб.
-					| 7
+			a.btn.btn__callback.fancy(href='#callback-form') Заказать звонок
+			a.btn.btn__callback._callback
+			.contacts._callback
+				.contacts__reg
+					a.contacts__phone(href="tel:84951502262")
+						span 8 (495) 
+						| 150-22-62
+					.contacts__info Звонки по Москве
+				.contacts__reg
+					a.contacts__phone(href="tel:88005502262")
+						span 8 (800) 
+						| 550-22-62
+					.contacts__info Звонки по всей России
+				a.contacts__btn.fancy(href="#callback-form") Обратный звонок
+				a.contacts__btn._sms(href="#") SMS заказ
+
 	
 	.header__bottom.container_fluid
 		.header__bottom-wrap.container
@@ -20,23 +38,178 @@
 						span
 						span
 						span
-			form.search
+				ul.catalog-menu__list
+					li.catalog-menu__list-item
+						a.catalog-menu__list-link._l2(href="#")
+							span Автовинил
+						ul.catalog-submenu
+							li.catalog-submenu__item
+								.catalog-submenu__link._l3
+									a(href="#")
+										span Алькантара стандарт
+									ul.catalog-submenu._l3
+										li.catalog-submenu__item._l3
+											a.catalog-submenu__link(href="#") level 3
+											a.catalog-submenu__link(href="#") level 3
+											a.catalog-submenu__link(href="#") level 3
+											a.catalog-submenu__link(href="#") level 3
+											a.catalog-submenu__link(href="#") level 3
+								.catalog-submenu__link
+									a(href="#")
+										span Алькантара стандарт
+								.catalog-submenu__link
+									a(href="#")
+										span Алькантара стандарт
+								.catalog-submenu__link._l3
+									a(href="#")
+										span Алькантара стандарт
+									ul.catalog-submenu._l3
+										li.catalog-submenu__item._l3
+											a.catalog-submenu__link(href="#") level 3.3
+								.catalog-submenu__link
+									a(href="#")
+										span Алькантара стандарт
+								.catalog-submenu__link
+									a(href="#")
+										span Алькантара стандарт
+					li.catalog-menu__list-item
+						a.catalog-menu__list-link._l2(href="#")
+							span Алькантара
+						ul.catalog-submenu
+							li.catalog-submenu__item
+								.catalog-submenu__link._l3
+									a(href="#")
+										span Алькантара стандарт
+									ul.catalog-submenu._l3
+										li.catalog-submenu__item._l3
+											a.catalog-submenu__link(href="#") level 3
+											a.catalog-submenu__link(href="#") level 3
+											a.catalog-submenu__link(href="#") level 3
+											a.catalog-submenu__link(href="#") level 3
+											a.catalog-submenu__link(href="#") level 3
+								.catalog-submenu__link
+									a(href="#")
+										span Алькантара стандарт
+								.catalog-submenu__link
+									a(href="#")
+										span Алькантара стандарт
+								.catalog-submenu__link._l3
+									a(href="#")
+										span Алькантара стандарт
+									ul.catalog-submenu._l3
+										li.catalog-submenu__item._l3
+											a.catalog-submenu__link(href="#") level 3.3
+								.catalog-submenu__link
+									a(href="#")
+										span Алькантара стандарт
+								.catalog-submenu__link
+									a(href="#")
+										span Алькантара стандарт
+					li.catalog-menu__list-item
+						a.catalog-menu__list-link._l2(href="#")
+							span Жидкая резина
+						ul.catalog-submenu
+							li.catalog-submenu__item
+								.catalog-submenu__link._l3
+									a(href="#")
+										span Алькантара стандарт
+									ul.catalog-submenu._l3
+										li.catalog-submenu__item._l3
+											a.catalog-submenu__link(href="#") level 3
+											a.catalog-submenu__link(href="#") level 3
+											a.catalog-submenu__link(href="#") level 3
+											a.catalog-submenu__link(href="#") level 3
+											a.catalog-submenu__link(href="#") level 3
+								.catalog-submenu__link
+									a(href="#")
+										span Алькантара стандарт
+								.catalog-submenu__link
+									a(href="#")
+										span Алькантара стандарт
+								.catalog-submenu__link._l3
+									a(href="#")
+										span Алькантара стандарт
+									ul.catalog-submenu._l3
+										li.catalog-submenu__item._l3
+											a.catalog-submenu__link(href="#") level 3.3
+								.catalog-submenu__link
+									a(href="#")
+										span Алькантара стандарт
+								.catalog-submenu__link
+									a(href="#")
+										span Алькантара стандарт
+					li.catalog-menu__list-item
+						a.catalog-menu__list-link._l2(href="#")
+							span Тонировочные пленки
+						ul.catalog-submenu
+							li.catalog-submenu__item
+								.catalog-submenu__link._l3
+									a(href="#")
+										span Алькантара стандарт
+									ul.catalog-submenu._l3
+										li.catalog-submenu__item._l3
+											a.catalog-submenu__link(href="#") level 3
+											a.catalog-submenu__link(href="#") level 3
+											a.catalog-submenu__link(href="#") level 3
+											a.catalog-submenu__link(href="#") level 3
+											a.catalog-submenu__link(href="#") level 3
+								.catalog-submenu__link
+									a(href="#")
+										span Алькантара стандарт
+								.catalog-submenu__link
+									a(href="#")
+										span Алькантара стандарт
+								.catalog-submenu__link._l3
+									a(href="#")
+										span Алькантара стандарт
+									ul.catalog-submenu._l3
+										li.catalog-submenu__item._l3
+											a.catalog-submenu__link(href="#") level 3.3
+								.catalog-submenu__link
+									a(href="#")
+										span Алькантара стандарт
+								.catalog-submenu__link
+									a(href="#")
+										span Алькантара стандарт
+					li.catalog-menu__list-item
+						a.catalog-menu__list-link(href="#")
+							span Тонировка на фары
+					li.catalog-menu__list-item
+						a.catalog-menu__list-link(href="#")
+							span Автосвет
+					li.catalog-menu__list-item
+						a.catalog-menu__list-link(href="#")
+							span Чехлы
+					li.catalog-menu__list-item
+						a.catalog-menu__list-link(href="#")
+							span Аксуссуары
+					li.catalog-menu__list-item
+						a.catalog-menu__list-link(href="#")
+							span Автовинил
+					li.catalog-menu__list-item
+						a.catalog-menu__list-link(href="#")
+							span Шумоизоляция
+
+			a.search-link(href="")
+			form.search._toggle
+				a.search__link(href="#")
 				input(type="text" placeholder="Поиск товаров")
 				button(type="submit")
-			.header__contacts
-				.header__contacts-reg
-					a.header__contacts-phone(href="tel:84951502262")
+					
+			.contacts
+				.contacts__reg
+					a.contacts__phone(href="tel:84951502262")
 						span 8 (495) 
 						| 150-22-62
-					.header__contacts-info Звонки по Москве
-				.header__contacts-reg
-					a.header__contacts-phone(href="tel:88005502262")
+					.contacts__info Звонки по Москве
+				.contacts__reg
+					a.contacts__phone(href="tel:88005502262")
 						span 8 (800) 
 						| 550-22-62
-					.header__contacts-info Звонки по всей России
+					.contacts__info Звонки по всей России
 
 
-			a.btn.btn__callback(href='#') Заказать звонок
+			a.btn.btn__callback.fancy(href='#callback-form') Заказать звонок
 
 
 

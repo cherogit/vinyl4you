@@ -1,0 +1,225 @@
+include mixins/_nav.pug
+include mixins/_categories.pug
+include mixins/_product-slider.pug
+include mixins/_catalog.pug
+include mixins/_news-block.pug
+include mixins/_breadcrumbs.pug
+
+doctype html
+html(lang="ru")
+	include includes/head.pug
+	body
+		include includes/header._white.pug
+		
+		.content
+			.container
+				aside.product-sidebar
+					.catalog-aside
+						ul.catalog-aside__list
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link._l2(href="#")
+									span Автовинил
+								ul.catalog-submenu._aside
+									li.catalog-submenu__item
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link._l2(href="#")
+									span Алькантара
+								ul.catalog-submenu._aside
+									li.catalog-submenu__item
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link._l2(href="#")
+									span Жидкая резина
+								ul.catalog-submenu._aside
+									li.catalog-submenu__item
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link._l2(href="#")
+									span Тонировочные пленки
+								ul.catalog-submenu._aside
+									li.catalog-submenu__item
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Тонировка на фары
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Автосвет
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Чехлы
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Аксуссуары
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Автовинил
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Шумоизоляция
+					.sidebar-social
+						.sidebar-social__header
+							h2.h2
+								span Мы 
+								| в соцсетях:
+							.sidebar-social__advice Добавляйся к нам:
+						.sidebar-social__item
+							a.sidebar-social__group(href="#club13")
+							.sidebar-social__network._vk
+								img(src="./assets/images/icons/sidebar-social__nw_vk.png", alt="")
+							.sidebar-social__follower
+								span 17 025
+							a.sidebar-social__subscribe(href="#subscribe") Подписаться
+						.sidebar-social__item
+							a.sidebar-social__group(href="#club13")
+							.sidebar-social__network._fb
+								img(src="./assets/images/icons/sidebar-social__nw_fb.png", alt="")
+							.sidebar-social__follower
+								span 17 025
+							a.sidebar-social__subscribe(href="#subscribe") Подписаться
+					.bestsellers__item._sidebar(style='background-image: url("./assets/images/img/bestsellers__img-1.jpg")')
+						.bestsellers__item-carbon
+						.bestsellers__item-title Жидкая резина
+						.bestsellers__item-desc._uppercase Розово-красный 450ML
+						.bestsellers__item-oldPrice 659 руб.
+						.bestsellers__item-sale 549 руб.
+							span -20%
+						a.btn.btn__more.bestsellers__item-more(href="#")
+							span Подробнее
+
+
+				.content__inner._big
+					+breadcrumbs(['Автовинил', 'Подраздел', 'Подраздел'])
+					
+					.category-promo(style="background-image: url('./assets/images/img/promo-category__img-1.jpg')")
+						.category-promo__title Красный хром
+						.category-promo__desc
+							| Полная оклейка автомобиля плёнкой Красный хром <br /> комбинированный с лакированным карбоном.
+						a.btn.btn__more(href='#') 
+							span Подробнее
+
+					h2.h2
+						span Пленка 
+						| под карбон 3D
+					
+					.catalog
+						+catalog([
+							{
+								img: './assets/images/img/product-slide__img-1.png',
+								caption: '<span>-17%</span> Осталось 2 дня',
+								desc: 'Алькантара Корея Decoin',
+								price: '549 руб. ',
+								oldPrice: '642 руб.',
+								sale: 'Акция',
+							},
+							{
+								img: './assets/images/img/product-slide__img-2.png',
+								caption: '<span>-17%</span> Осталось 2 дня',
+								desc: 'Диодные лампы в головной свет',
+								price: '549 руб. ',
+								oldPrice: '642 руб.',
+								sale: 'Акция',
+							},
+							{
+								img: './assets/images/img/product-slide__img-3.png',
+								caption: '<span>-17%</span> Осталось 2 дня',
+								desc: 'Ракель магнит + замша 3м.',
+								price: '549 руб. ',
+								oldPrice: '642 руб.',
+								sale: 'Акция',
+								hit: 'Хит'
+							},
+							{
+								img: './assets/images/img/product-slide__img-1.png',
+								desc: 'Алькантара Корея Decoin',
+								price: '549 руб. ',
+								hit: 'Хит'
+							},
+							{
+								img: './assets/images/img/product-slide__img-1.png',
+								desc: 'Алькантара Корея Decoin',
+								price: '549 руб. '
+							}
+						])
+					
+
+		.recently-viewed._category
+			.recently-viewed__wrapper
+				.container
+					h2.h2
+						span Недавно 
+						| смотрели
+				.product-slider._m0
+					+product-slider([
+						{
+							img: './assets/images/img/product-slide__img-1.png',
+							desc: 'Алькантара Корея Decoin',
+							price: '549 руб.'
+						},
+						{
+							img: './assets/images/img/product-slide__img-2.png',
+							desc: 'Диодные лампы в головной свет',
+							price: '549 руб.',
+							hit: 'Хит'
+						},
+						{
+							img: './assets/images/img/product-slide__img-3.png',
+							desc: 'Ракель магнит + замша 3м.',
+							price: '389 руб.'
+						},
+						{
+							img: './assets/images/img/product-slide__img-1.png',
+							desc: 'Алькантара Корея Decoin',
+							price: '549 руб.'
+						},
+						{
+							img: './assets/images/img/product-slide__img-1.png',
+							desc: 'Алькантара Корея Decoin',
+							price: '549 руб.'
+						}
+					])
+		
+		.callback#callback-form
+			.callback__title
+				span Заказать 
+				| обратный звонок
+			.callback__field
+				input(type="text" placeholder="Ваше имя")
+			.callback__field
+				input(type="text" placeholder="Введите Ваш номер телефона")#phone
+			.callback__info В ближайшее время с Вами свяжутся наши менеджеры.
+			button(type="submit").btn.btn__callback Заказать звонок
+		
+		include includes/footer.pug
+
+			
+		script(src='js/vendor/jquery-3.1.0.min.js')
+		script(src='js/vendor/jquery.bxslider.min.js')
+		script(src='js/vendor/slick.min.js')
+		script(src='js/vendor/jquery.mousewheel-3.0.6.pack.js')
+		script(src='js/vendor/jquery.fancybox.pack.js')
+		script(src='js/vendor/jquery.mask.js')
+		script(src='js/vendor/jquery.formstyler.min.js')
+		script(src='js/custom/script.js')
+

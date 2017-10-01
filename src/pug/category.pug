@@ -1,0 +1,279 @@
+include mixins/_nav.pug
+include mixins/_categories.pug
+include mixins/_product-slider.pug
+include mixins/_news-block.pug
+include mixins/_breadcrumbs.pug
+
+doctype html
+html(lang="ru")
+	include includes/head.pug
+	body
+		include includes/header._white.pug
+		
+		.content
+			.container
+				aside.product-sidebar
+					.catalog-aside
+						ul.catalog-aside__list
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link._l2(href="#")
+									span Автовинил
+								ul.catalog-submenu._aside
+									li.catalog-submenu__item
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link._l2(href="#")
+									span Алькантара
+								ul.catalog-submenu._aside
+									li.catalog-submenu__item
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link._l2(href="#")
+									span Жидкая резина
+								ul.catalog-submenu._aside
+									li.catalog-submenu__item
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link._l2(href="#")
+									span Тонировочные пленки
+								ul.catalog-submenu._aside
+									li.catalog-submenu__item
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Тонировка на фары
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Автосвет
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Чехлы
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Аксуссуары
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Автовинил
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Шумоизоляция
+					.sidebar-social
+						.sidebar-social__header
+							h2.h2
+								span Мы 
+								| в соцсетях:
+							.sidebar-social__advice Добавляйся к нам:
+						.sidebar-social__item
+							a.sidebar-social__group(href="#club13")
+							.sidebar-social__network._vk
+								img(src="./assets/images/icons/sidebar-social__nw_vk.png", alt="")
+							.sidebar-social__follower
+								span 17 025
+							a.sidebar-social__subscribe(href="#subscribe") Подписаться
+						.sidebar-social__item
+							a.sidebar-social__group(href="#club13")
+							.sidebar-social__network._fb
+								img(src="./assets/images/icons/sidebar-social__nw_fb.png", alt="")
+							.sidebar-social__follower
+								span 17 025
+							a.sidebar-social__subscribe(href="#subscribe") Подписаться
+					.bestsellers__item._sidebar(style='background-image: url("./assets/images/img/bestsellers__img-1.jpg")')
+						.bestsellers__item-carbon
+						.bestsellers__item-title Жидкая резина
+						.bestsellers__item-desc._uppercase Розово-красный 450ML
+						.bestsellers__item-oldPrice 659 руб.
+						.bestsellers__item-sale 549 руб.
+							span -20%
+						a.btn.btn__more.bestsellers__item-more(href="#")
+							span Подробнее
+
+
+				.content__inner._big._category.text-block
+					+breadcrumbs(['Автовинил', 'Подраздел'])
+					
+					.category-promo(style="background-image: url('./assets/images/img/promo-category__img-1.jpg')")
+						.category-promo__title Красный хром
+						.category-promo__desc
+							| Полная оклейка автомобиля плёнкой Красный хром <br /> комбинированный с лакированным карбоном.
+						a.btn.btn__more(href='#') 
+							span Подробнее
+
+					h2.h2
+						span Категории 
+						| подраздела
+
+					.categories._white
+						.categories__wrapper
+							.categories__inner
+								+categories([
+									{
+										url: './assets/images/img/categories__img-1.png',
+										caption: 'Алькантара стандарт'
+									},
+									{
+										url: './assets/images/img/categories__img-2.png',
+										caption: 'Алькантара премиум'
+									},
+									{
+										url: './assets/images/img/categories__img-3.png',
+										caption: 'Алькантара корея decor'
+									},
+									{
+										url: './assets/images/img/categories__img-5.png',
+										caption: 'Карпет'
+									}
+								])
+
+					.advantages
+						.advantages__wrapper._category
+							.advantages__item
+								.advantages__img
+									img(src="./assets/images/img/advantages__img-1.svg", alt="")
+								.advantages__desc Выгодная 
+									br
+									span бонусная
+							.advantages__item
+								.advantages__img
+									img(src="./assets/images/img/advantages__img-2.svg", alt="")
+								.advantages__desc Широкий 
+									br 
+									span ассортимент
+							.advantages__item
+								.advantages__img
+									img(src="./assets/images/img/advantages__img-3.svg", alt="")
+								.advantages__desc Нашли товар 
+									br 
+									| дешевле?
+							.advantages__item
+								.advantages__img
+									img(src="./assets/images/img/advantages__img-4.svg", alt="")
+								.advantages__desc Эксклюзивный  
+									br
+									span дистрибьютор
+							.advantages__item
+								.advantages__img
+									img(src="./assets/images/img/advantages__img-5.svg", alt="")
+								.advantages__desc Доставки  
+									br
+									span по всей России
+					
+					h2.h2
+						span Что 
+						| отличает алькантару от других
+
+					p
+						| Планируете купить алькантару, предназначенную для обшивки авто, в Москве? Вы делаете правильный выбор, поскольку этот материал:
+					ul
+						li не истирается при длительном использовании;
+						li не расходится по швам благодаря высокой прочности;
+						li обладает устойчивостью к механическим повреждениям;
+						li не загорается от искр или непотушенных сигарет;
+						li приятен и мягок на ощупь;
+						li не требует особого ухода;
+						li не выгорает под действием ультрафиолетовых лучей;
+						li не теряет первоначальный вид в течение продолжительного времени;
+						li пропускает воздух.
+
+					p
+						| В нашей компании Вы можете приобрести алькантару в любом количестве и по приемлемой цене, выбрав подходящее цветовое решение из представленных вариантов. Мы работаем без посредников, напрямую сотрудничая с производителями, что позволяет нам устанавливать выгодную стоимость на реализуемые товары.
+
+					p
+						| Заказывая у нас алькантару, Вы существенно экономите не только бюджет, но и свое время. Ведь мы доставим Ваш заказ в любую точку России, а расплатиться Вы сможете любым удобным для Вас способом из предложенных нами на сайте.
+
+					p Чтобы купить в Москве или любом другом городе самоклеющийся материал премиум-класса – алькантару. 
+						b Обращайтесь к нашим специалистам!
+					
+					.conversion Позвоните по телефонам:&nbsp
+						.conversion__phones
+							a.conversion__phone(href="tel:84951502262") (495) 
+								span 150-22-62
+								| ,&nbsp;
+							a.conversion__phone(href="tel:88005002262") (800) 
+								span 500-22-62
+								| . 
+						.conversion__callback 
+							span или можете 
+							a.conversion__btn.fancy(href="#callback-form") Оставить заявку
+
+					p
+						| В интернет-магазине «Vinyl4you» Вы можете купить обивочный самоклеющийся материал, предназначенный для автомобильных салонов, – алькантару. Она визуально похожа на искусственную замшу, но обладает более высокими эксплуатационными свойствами по сравнению с замшевым аналогом. Алькантара на клеевой основе принадлежит к разновидности микрофибры, имеет однородную поверхность и плотность. Материал очень мягкий и приятный на ощупь.
+
+		.recently-viewed._category
+			.recently-viewed__wrapper
+				.container
+					h2.h2
+						span Недавно 
+						| смотрели
+				.product-slider._m0
+					+product-slider([
+						{
+							img: './assets/images/img/product-slide__img-1.png',
+							desc: 'Алькантара Корея Decoin',
+							price: '549 руб.'
+						},
+						{
+							img: './assets/images/img/product-slide__img-2.png',
+							desc: 'Диодные лампы в головной свет',
+							price: '549 руб.',
+							hit: 'Хит'
+						},
+						{
+							img: './assets/images/img/product-slide__img-3.png',
+							desc: 'Ракель магнит + замша 3м.',
+							price: '389 руб.'
+						},
+						{
+							img: './assets/images/img/product-slide__img-1.png',
+							desc: 'Алькантара Корея Decoin',
+							price: '549 руб.'
+						},
+						{
+							img: './assets/images/img/product-slide__img-1.png',
+							desc: 'Алькантара Корея Decoin',
+							price: '549 руб.'
+						}
+					])
+		
+		.callback#callback-form
+			.callback__title
+				span Заказать 
+				| обратный звонок
+			.callback__field
+				input(type="text" placeholder="Ваше имя")
+			.callback__field
+				input(type="text" placeholder="Введите Ваш номер телефона")#phone
+			.callback__info В ближайшее время с Вами свяжутся наши менеджеры.
+			button(type="submit").btn.btn__callback Заказать звонок
+		
+		include includes/footer.pug
+
+			
+		script(src='js/vendor/jquery-3.1.0.min.js')
+		script(src='js/vendor/jquery.bxslider.min.js')
+		script(src='js/vendor/slick.min.js')
+		script(src='js/vendor/jquery.mousewheel-3.0.6.pack.js')
+		script(src='js/vendor/jquery.fancybox.pack.js')
+		script(src='js/vendor/jquery.mask.js')
+		script(src='js/vendor/jquery.formstyler.min.js')
+		script(src='js/custom/script.js')
+

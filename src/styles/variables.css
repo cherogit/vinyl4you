@@ -9,4 +9,10 @@
 	--red: #e60000;
 }
 
-@custom-media --small screen and (width <= 767px);
+@custom-media --small screen and (width <= 480px);
+@custom-media --standart screen and (width <= 700px);
+@custom-media --mobile screen and (width <= 767px);
+@custom-media --tablet screen and (width <= 992px);
+@custom-media --desktop screen and (width <= 1200px);
+@custom-media --large screen and (width <= 1365px);
+@custom-media --wide screen and (width <= 1599px);

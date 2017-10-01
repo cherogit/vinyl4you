@@ -35,4 +35,30 @@
 		}
 	}
 
+	&.active {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		margin: 0;
+		background: rgba(40, 40, 40, 0.94);
+		z-index: 999;
+
+		.main-nav__link {
+			display: block;
+			margin-right: 0;
+			margin-bottom: 30px;
+
+			&:first-child {
+				display: block;
+			}
+
+		}
+	}
+
 }

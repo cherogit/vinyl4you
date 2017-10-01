@@ -1,0 +1,317 @@
+include mixins/_nav.pug
+include mixins/_categories.pug
+include mixins/_product-slider.pug
+include mixins/_news-block.pug
+include mixins/_breadcrumbs.pug
+
+doctype html
+html(lang="ru")
+	include includes/head.pug
+	body
+		include includes/header._white.pug
+		
+		.content
+			.container
+				aside.product-sidebar
+					.catalog-aside
+						ul.catalog-aside__list
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link._l2(href="#")
+									span Автовинил
+								ul.catalog-submenu._aside
+									li.catalog-submenu__item
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link._l2(href="#")
+									span Алькантара
+								ul.catalog-submenu._aside
+									li.catalog-submenu__item
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link._l2(href="#")
+									span Жидкая резина
+								ul.catalog-submenu._aside
+									li.catalog-submenu__item
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link._l2(href="#")
+									span Тонировочные пленки
+								ul.catalog-submenu._aside
+									li.catalog-submenu__item
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+										a.catalog-submenu__link(href="#") Алькантара стандарт
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Тонировка на фары
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Автосвет
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Чехлы
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Аксуссуары
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Автовинил
+							li.catalog-aside__list-item
+								a.catalog-aside__list-link(href="#")
+									span Шумоизоляция
+					.sidebar-social
+						.sidebar-social__header
+							h2.h2
+								span Мы 
+								| в соцсетях:
+							.sidebar-social__advice Добавляйся к нам:
+						.sidebar-social__item
+							a.sidebar-social__group(href="#club13")
+							.sidebar-social__network._vk
+								img(src="./assets/images/icons/sidebar-social__nw_vk.png", alt="")
+							.sidebar-social__follower
+								span 17 025
+							a.sidebar-social__subscribe(href="#subscribe") Подписаться
+						.sidebar-social__item
+							a.sidebar-social__group(href="#club13")
+							.sidebar-social__network._fb
+								img(src="./assets/images/icons/sidebar-social__nw_fb.png", alt="")
+							.sidebar-social__follower
+								span 17 025
+							a.sidebar-social__subscribe(href="#subscribe") Подписаться
+					.product-sidebar__slider
+						.product-sidebar__slider-item
+							img(src="http://placehold.it/245x265", alt="")
+						.product-sidebar__slider-item
+							img(src="http://placehold.it/245x265", alt="")
+				.content__inner._big
+					+breadcrumbs(['Каталог товаров', 'Товар 1'])
+					h1.h1
+						span Экокожа 
+						| орегон без клея бежевая перфорированная
+					section.product-card
+						.product-card__wrapper
+							.product-card__gallery
+								.product-card__preview
+									a.fancy(rel="gallery" data-fancybox="images" href="http://farm2.staticflickr.com/1669/23976340262_a5ca3859f6_b.jpg")
+										img(src="http://www.dhresource.com/260x260/f2/albu/g4/M00/58/B5/rBVaEVdw5OqAXl0cAAIQJVXMjEE270.jpg", alt="")
+									a.fancy(rel="gallery" data-fancybox="images" href="http://farm2.staticflickr.com/1459/23610702803_83655c7c56_b.jpg")
+										img(src="http://placehold.it/260x260", alt="")
+									a.fancy(rel="gallery" data-fancybox="images" href="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_b.jpg")
+										img(src="http://www.dhresource.com/260x260/f2/albu/g5/M00/98/9D/rBVaI1kG6KGAY0y6AAgsPzGabKQ781.jpg", alt="")
+									a.fancy(rel="gallery" data-fancybox="images" href="http://placehold.it/260x260")
+										img(src="http://placehold.it/260x260", alt="")
+								.product-card__thumbs.slider-thumbs
+									a(href="http://farm2.staticflickr.com/1669/23976340262_a5ca3859f6_b.jpg")
+										img(src="http://placehold.it/50x50", alt="")
+									a(href="http://farm2.staticflickr.com/1459/23610702803_83655c7c56_b.jpg")
+										img(src="http://placehold.it/50x50", alt="")
+									a(href="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_b.jpg")
+										img(src="http://placehold.it/50x50", alt="")
+									a(href="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_b.jpg")
+										img(src="http://placehold.it/50x50", alt="")
+							.product-card__info
+								.product-card__more
+									a.product-card__favorites(href="#") Добавить в избранное
+									a.product-card__compare(href="#") Добавить в сравнение
+								.product-card__code Артикул: 
+									span ekb7
+								ul.product-card__desc
+									li Толщина: 
+										span ххх
+									li Ширина: 
+										span ххх
+									li Наличие каналов: 
+										span ххх
+									li Срок службы: 
+										span ххх
+									li Производитель: 
+										span ххх
+								.product-card__status Наличие: 
+									span.inStock товар есть в наличии
+								form(action="").product-card__form
+									.counter
+										a(href="#").counter__minus -
+										input.counter__field(type="number" value="2" data-min="1" data-max="10")
+										a(href="#").counter__plus +
+									.product-card__form-field
+										select()
+											option(value="1") Измерять погонными метрами
+											option(value="2") Измерять погонными метрами 2
+											option(value="3") Измерять погонными метрами 3
+											option(value="4") еще вариант
+								.product-card__cost
+									span.product-card__cost-price 389 
+									| руб. 
+									span.product-card__cost-label Постоянным клиентам дополнительные скидки
+								.product-card__wholesale
+									.product-card__wholesale-item Цена от 
+										span.product-card__wholesale-count 10 
+										| метров 
+										span.product-card__wholesale-price 320.00 
+										| р.
+									.product-card__wholesale-item Цена от 
+										span.product-card__wholesale-count 20 
+										| метров 
+										span.product-card__wholesale-price 320.00 
+										| р.
+								a.product-card__btn(href="#")
+									span Купить
+					
+					section.product-desc
+						.accordion
+							.accordion-title О товаре
+							.accordion-content
+								iframe(src="https://www.youtube.com/embed/M3K64ILQJvQ" frameborder="0" allowfullscreen)
+								p
+									| Пленка под карбон 3d графит (мокрый асфальт) по своему цвету отличается от серебра и от черного. Цвет графит темнее на 2-3 тона чем серебряный цвет карбоной пленки, но гораздо светлее чем оттенок черной карбоновой пленки. Подойдет для тех, кому слишком ярким будет серебряный цвет, но не хочется оклеивать в черный цвет.
+								p
+									| Стоит отметить особенность всех карбоновых 3д пленок: в тени карбоновая пленка смотрится на оклееных деталях, как матовая пленка, когда же на пленку попадает солнечный свет или свет от других источников, пленка преображается, структура карбона переливается по лучами света.
+								
+								p
+									| Карбон пленка графитового цвета может быть использована для оклеивания внутренних деталей автомобиля: торпеды, приборной панели, пластиковых вставок, различных деталей, ручек, руля и других деталей.Карбоновая пленка 3д чаще всего используется для оклеивания деталей кузова автомобиля: капоты, крыши, багажника, бамперов, дверей, спойлера. Так же очень часто пленка под карбон используется для полной оклейки автомобиля.
+								img(src="./assets/images/img/product-content__1.png", alt="")
+								p
+									| Пленка под карбон 3d графит (мокрый асфальт) по своему цвету отличается от серебра и от черного. Цвет графит темнее на 2-3 тона чем серебряный цвет карбоной пленки, но гораздо светлее чем оттенок черной карбоновой пленки. Подойдет для тех, кому слишком ярким будет серебряный цвет, но не хочется оклеивать в черный цвет.
+
+							.accordion-title Отзывы (
+								span 2
+								| )
+							.accordion-content
+								.accordion-content__reviews
+									.accordion-content__reviews-item
+										.accordion-content__reviews-item_info
+											.accordion-content__reviews-item_date 12.02.2017
+											.accordion-content__reviews-item_name Владимир Иванов
+										.accordion-content__reviews-item_message
+											| В интернет-магазине «Vinyl4you» представлен большой выбор автопленок, которые можно купить по выгодным ценам в Москве. На Ваш выбор разнообразные виниловые, тонировочные пленки, тонировка для фар, а также материалы для отделки салона машины и создания в автомобиле шумоизоляции. Мы работаем с оптовыми и розничными покупателями.
+									.accordion-content__reviews-item
+										.accordion-content__reviews-item_info
+											.accordion-content__reviews-item_date 12.02.2017
+											.accordion-content__reviews-item_name Владимир Иванов
+										.accordion-content__reviews-item_message
+											| В интернет-магазине «Vinyl4you» представлен большой выбор автопленок, которые можно купить по выгодным ценам в Москве. На Ваш выбор разнообразные виниловые, тонировочные пленки, тонировка для фар, а также материалы для отделки салона машины и создания в автомобиле шумоизоляции. Мы работаем с оптовыми и розничными покупателями.
+									form(action="").accordion-content__reviews-form
+										textarea(name="", cols="30", rows="10")
+										button(type="submit") Написать отзыв
+
+
+							.accordion-title Доставка
+							.accordion-content Доставка Контент
+
+
+		.recently-viewed
+			.recently-viewed__wrapper
+				.container
+					h2.h2
+						span Недавно 
+						| смотрели
+				.product-slider._m0
+					+product-slider([
+						{
+							img: './assets/images/img/product-slide__img-1.png',
+							desc: 'Алькантара Корея Decoin',
+							price: '549 руб.'
+						},
+						{
+							img: './assets/images/img/product-slide__img-2.png',
+							desc: 'Диодные лампы в головной свет',
+							price: '549 руб.',
+							hit: 'Хит'
+						},
+						{
+							img: './assets/images/img/product-slide__img-3.png',
+							desc: 'Ракель магнит + замша 3м.',
+							price: '389 руб.'
+						},
+						{
+							img: './assets/images/img/product-slide__img-1.png',
+							desc: 'Алькантара Корея Decoin',
+							price: '549 руб.'
+						},
+						{
+							img: './assets/images/img/product-slide__img-1.png',
+							desc: 'Алькантара Корея Decoin',
+							price: '549 руб.'
+						}
+					])
+		.news-block
+			.news-block__title.container
+				h2.h2
+					span Наши 
+					| новости
+			.news-block__articles
+				+news-block([
+					{
+						url: './assets/images/img/news-block__item-img-1.png',
+						desc: 'Новые условия программы лояльности',
+						date: '2016-03-31'
+					},
+					{
+						url: './assets/images/img/news-block__item-img-1.png',
+						desc: 'Новые условия программы лояльности',
+						date: '2016-03-31'
+					},
+					{
+						url: './assets/images/img/news-block__item-img-1.png',
+						desc: 'Новые условия программы лояльности',
+						date: '2016-03-31'
+					},
+					{
+						url: './assets/images/img/news-block__item-img-1.png',
+						desc: 'Новые условия программы лояльности',
+						date: '2016-03-31'
+					},
+					{
+						url: './assets/images/img/news-block__item-img-1.png',
+						desc: 'Новые условия программы лояльности',
+						date: '2016-03-31'
+					},
+					{
+						url: './assets/images/img/news-block__item-img-1.png',
+						desc: 'Новые условия программы лояльности',
+						date: '2016-03-31'
+					}
+				])
+
+		.callback#callback-form
+			.callback__title
+				span Заказать 
+				| обратный звонок
+			.callback__field
+				input(type="text" placeholder="Ваше имя")
+			.callback__field
+				input(type="text" placeholder="Введите Ваш номер телефона")#phone
+			.callback__info В ближайшее время с Вами свяжутся наши менеджеры.
+			button(type="submit").btn.btn__callback Заказать звонок
+		
+		include includes/footer.pug
+
+			
+		script(src='js/vendor/jquery-3.1.0.min.js')
+		script(src='js/vendor/jquery.bxslider.min.js')
+		script(src='js/vendor/slick.min.js')
+		script(src='js/vendor/jquery.mousewheel-3.0.6.pack.js')
+		script(src='js/vendor/jquery.fancybox.pack.js')
+		script(src='js/vendor/jquery.mask.js')
+		script(src='js/vendor/jquery.formstyler.min.js')
+		script(src='js/custom/script.js')
+

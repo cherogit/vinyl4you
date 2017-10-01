@@ -1,0 +1,11 @@
+mixin breadcrumbs(items)
+	.breadcrumbs
+		ul.breadcrumbs__list
+			//- li
+			//- 	a(href='#') Каталог товаров
+			for item, index in items
+				if (index === (items.length - 1))
+					li=item
+				else
+					li
+						a(href='#')=item
